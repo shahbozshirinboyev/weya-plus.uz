@@ -3,7 +3,7 @@ import logo from "../../public/assets/logo/weya_plus.png";
 
 function Navbar() {
   return (
-    <div className="container mx-auto sticky top-2 my-4">
+    <div className="container mx-auto sticky top-1 my-4">
       <div className="w-full bg-white/95 backdrop-sepia-0 shadow-none border-0 bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 rounded-full px-[25px] flex justify-between items-center h-[50px]">
         <img src={logo} alt="LOGO" className="w-[85px] cursor-pointer" />
         <div>
@@ -30,12 +30,52 @@ function Navbar() {
             </div>
 
             <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 mt-1 shadow-sm" >
+
               <li>
-                <a>Item 1</a>
+                <span>
+                  <i class="bi bi-person text-[18px] w-5 h-5 flex justify-center items-center"></i>
+                  <a>Mening profilim</a>
+                </span>
               </li>
+
               <li>
-                <a>Item 2</a>
+                <span>
+                  <i class="bi bi-columns-gap text-[14px] w-5 h-5 flex justify-center items-center"></i>
+                  <a>EDU</a>
+                </span>
               </li>
+
+              <li>
+                <span>
+                  <i class="bi bi-person text-[18px] flex justify-center items-center"></i>
+                  <a>Talk</a>
+                </span>
+              </li>
+
+              <li>
+                <span>
+                  <i class="bi bi-person text-[18px] flex justify-center items-center"></i>
+                  <a>Webtoon</a>
+                </span>
+              </li>
+
+
+              <li>
+                <span>
+                  <i class="bi bi-person text-[18px] flex justify-center items-center"></i>
+                  <a>Game</a>
+                </span>
+              </li>
+
+
+              <li>
+                <span>
+                  <i class="bi bi-person text-[18px] flex justify-center items-center"></i>
+                  <a>Media</a>
+                </span>
+              </li>
+
+
             </ul>
 
           </div>

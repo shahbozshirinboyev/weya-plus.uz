@@ -4,10 +4,7 @@ import { useState } from "react";
 
 function Navbar() {
   const [themeController, setThemeController] = useState(0);
-
-  const changeTheme = (value) => {
-    setThemeController(value);
-  };
+  const changeTheme = (value) => { setThemeController(value) };
 
   return (
     <div className="container mx-auto sticky top-1 my-4">
@@ -15,9 +12,9 @@ function Navbar() {
         <img src={logo} alt="LOGO" className="w-[85px] cursor-pointer" />
         <div>
           <ul className="gap-5 font-medium hidden md:flex text-[13px] lg:text-[16px]">
-            <li className="opacity-60 cursor-pointer">
+            {/* <li className="opacity-60 cursor-pointer">
               <i className="bi bi-lock"></i> Home
-            </li>
+            </li> */}
             <li className="cursor-pointer">EDU</li>
             <li className="opacity-60 cursor-pointer">
               <i className="bi bi-lock"></i> Talk
@@ -82,21 +79,21 @@ function Navbar() {
                 </span>
               </li>
 
-              <li>
-                <span>
+              <li className="tooltip tooltip-left" data-tip="Block">
+                <span >
                   <i className="bi bi-chat-quote text-[18px] flex justify-center items-center"></i>
                   <a>Talk</a>
                 </span>
               </li>
 
-              <li>
+              <li className="tooltip tooltip-left" data-tip="Block">
                 <span>
                   <i className="bi bi-people text-[18px] flex justify-center items-center"></i>
                   <a>Webtoon</a>
                 </span>
               </li>
 
-              <li>
+              <li className="tooltip tooltip-left" data-tip="Block">
                 <span>
                   <i className="bi bi-controller text-[18px] flex justify-center items-center"></i>
                   <a>Game</a>
@@ -104,7 +101,7 @@ function Navbar() {
               </li>
 
               <li>
-                <span>
+                <span className="tooltip tooltip-left" data-tip="Block">
                   <i className="bi bi-cast text-[18px] flex justify-center items-center"></i>
                   <a>Media</a>
                 </span>
@@ -124,7 +121,7 @@ function Navbar() {
 
                 <div className="flex gap-2 justify-center items-center border border-gray-300 relative p-1 rounded-md">
                   <div
-                    className="absolute bg-red-200 top-0 w-[33.333%] h-full rounded-md transition-all duration-300"
+                    className="absolute bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 top-0 w-[33.333%] h-full rounded-md transition-all duration-300"
                     style={{ left: `${themeController}%` }}
                   ></div>
 

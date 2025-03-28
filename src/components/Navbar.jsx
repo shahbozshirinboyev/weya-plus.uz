@@ -31,9 +31,9 @@ function Navbar() {
             <li className="opacity-60 cursor-pointer">
               <i className="bi bi-lock"></i> Media
             </li>
-            <li className="opacity-60 cursor-pointer">
+            {/* <li className="opacity-60 cursor-pointer">
               <i className="bi bi-lock"></i> Contest
-            </li>
+            </li> */}
           </ul>
         </div>
         <div className="flex gap-2 items-center">

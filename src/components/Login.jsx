@@ -6,7 +6,7 @@ function Login() {
       {/* Open the modal using document.getElementById('ID').showModal() method */}
 
       <dialog id="login" className="modal glass">
-        <div className="modal-box w-3/12 max-w-5xl">
+        <div className="modal-box max-w-md">
 
           <h3 className="font-bold text-2xl uppercase text-center mt-4"> Welcome </h3>
           <p className="text-[13px] text-center mb-8 opacity-60">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>

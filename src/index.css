@@ -1,5 +1,7 @@
 @import "tailwindcss";
-@plugin "daisyui" { themes: light --default; }
+@plugin "daisyui" {
+  themes: light --default;
+}
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
 .btn-primary-edu {

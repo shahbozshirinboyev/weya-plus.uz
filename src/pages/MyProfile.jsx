@@ -31,13 +31,24 @@ function MyProfile() {
             {
               to: "my-devices",
               icon: "bi-tv",
-              label: "My devices"
+              label: "My devices",
             },
           ].map(({ to, icon, label }) => (
             <li key={to}>
-              <button onClick={()=>{setSelectMenu(to)}} className={`btn border-0 w-full flex justify-start items-center gap-2 px-3 py-2 rounded-lg
-                ${ selectMenu === to ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-800" }`}>
-                <i className={`bi ${icon} text-xl`}></i>
+              <button
+                onClick={() => {
+                  setSelectMenu(to);
+                }}
+                className={`btn w-full flex justify-start items-center gap-2 px-3 py-2 rounded-full text-[#333]
+                ${
+                  selectMenu === to
+                    ? "bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 border-[#333]"
+                    : "border-transparent"
+                }`}
+              >
+                <i
+                  className={`bi ${icon} text-lg flex justify-center items-center`}
+                ></i>
                 <span>{label}</span>
               </button>
             </li>
@@ -47,9 +58,13 @@ function MyProfile() {
 
       <div className="flex-1 rounded-lg border border-gray-300">
         {/* My Information */}
-        <div className={`flex flex-col gap-4 ${selectMenu === "my-info" ? "block" : "hidden"}`}>
+        <div
+          className={`flex flex-col gap-4 ${
+            selectMenu === "my-info" ? "block" : "hidden"
+          }`}
+        >
           <div className="w-ful rounded-2xl p-2 bg-white">
-            <div className="bg-blue-50 h-24 rounded-2xl"></div>
+            <div className="bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 h-24 rounded-2xl"></div>
 
             <div className="flex flex-col items-start m -mt-[70px] p-5 ">
               <div className="w-24 h-24 bg-gray-100 border-[7px] border-white rounded-full flex items-center justify-center shadow-md">
@@ -57,9 +72,9 @@ function MyProfile() {
               </div>
 
               <p className="mt-4 text-gray-700 text-lg font-semibold">
-                zerd Jursinova
+                Zerda Jursinova
               </p>
-              <button className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition">
+              <button className="mt-4 btn rounded-full bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 border-[#333] text-[#333] shadow-md  transition">
                 Ma’lumotlarni o‘zgartirish
               </button>
             </div>
@@ -78,16 +93,16 @@ function MyProfile() {
           <div className="flex justify-between p-4 bg-white rounded-2xl">
             <div className="">
               <h1 className="font-semibold mb-1.5 text-[#434D54]">
-                Porolni ozgartirish
+                Change Password
               </h1>
               <p className="text-[#7F868B]">
                 Bu yerda hisobingiz parolini oʻzgartirishingiz mumkin
               </p>
             </div>
             <div>
-              <button className="border-2 border-blue-500 rounded-xl px-2 py-2 flex">
-                <p className="text-blue-500 mr-3">Porolni ozgartirish </p>
-                <i class="bi bi-box-arrow-up-right text-blue-500 "></i>
+              <button className="btn rounded-full bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 border-[#333] text-[#333] flex justify-center items-center gap-2">
+                <p>Change Password</p>
+                <i class="bi bi-box-arrow-up-right flex justify-center items-center"></i>
               </button>
             </div>
           </div>
@@ -111,7 +126,9 @@ function MyProfile() {
         </div>
 
         {/* My experience */}
-        <div className={`${selectMenu === "my-experience" ? "block" : "hidden"}`}>
+        <div
+          className={`${selectMenu === "my-experience" ? "block" : "hidden"}`}
+        >
           <div className="w-full p-3 bg-white rounded-lg text-center mb-6">
             <div className="flex flex-col items-center justify-center p-8">
               <i class="bi bi-book-fill text-white px-2 py-1 rounded-lg text-2xl bg-[#c9c9c9] mb-8"></i>
@@ -125,7 +142,7 @@ function MyProfile() {
               </div>
 
               <button
-                className="btn bg-blue-500 px-3 py-3 rounded-xl text-white"
+                className="btn rounded-full bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 border-[#333] text-[#333]"
                 onClick={() =>
                   document.getElementById("my_modal_1").showModal()
                 }
@@ -244,7 +261,7 @@ function MyProfile() {
               </div>
 
               <button
-                className="btn bg-blue-500 px-3 py-3 rounded-xl text-white"
+                className="btn rounded-full bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 border-[#333] text-[#333]"
                 onClick={() => document.getElementById("my_modal").showModal()}
               >
                 Ish tajribasi koshish
@@ -356,7 +373,11 @@ function MyProfile() {
         </div>
 
         {/* My Certificate */}
-        <div className={`w-full p-3 bg-white rounded-lg ${selectMenu === "my-certificate" ? "block" : "hidden"}`}>
+        <div
+          className={`w-full p-3 bg-white rounded-lg ${
+            selectMenu === "my-certificate" ? "block" : "hidden"
+          }`}
+        >
           <div className="w-full p-3 bg-white rounded-lg text-center">
             <div className="flex flex-col items-center justify-center p-8">
               <i class="bi bi-award-fill text-4xl text-[#c9c9c9] px-2 py-2 rounded-lg  mb-8"></i>
@@ -370,7 +391,7 @@ function MyProfile() {
                   berilgan sertifikatlarni ko’rishingiz mumkin bo’ladi.
                 </p>
               </div>
-              <button className="bg-blue-500 px-3 py-3 rounded-xl text-white">
+              <button className="btn rounded-full bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 border-[#333] text-[#333]">
                 Kurs sotib ilish
               </button>
             </div>
@@ -378,7 +399,11 @@ function MyProfile() {
         </div>
 
         {/* Payment History */}
-        <div className={`w-full p-8 bg-white rounded-lg ${selectMenu === "my-paymenthistory" ? "block" : "hidden"}`}>
+        <div
+          className={`w-full p-8 bg-white rounded-lg ${
+            selectMenu === "my-paymenthistory" ? "block" : "hidden"
+          }`}
+        >
           <h1 className="font-semibold p-2 text-xl">Tolovlar tarixi</h1>
           <div className="overflow-x-auto">
             <table className="table mt-4 p-6">
@@ -423,7 +448,11 @@ function MyProfile() {
         </div>
 
         {/* My Devices */}
-        <div className={`w-full p-8 bg-white rounded-lg ${selectMenu === "my-devices" ? "block" : "hidden"}`}>
+        <div
+          className={`w-full p-8 bg-white rounded-lg ${
+            selectMenu === "my-devices" ? "block" : "hidden"
+          }`}
+        >
           <div>
             <h1 className="font-semibold text-xl">Faol qurilmalar</h1>
             <p className="text-[#7F868B] text-base mt-4 font-light">

@@ -1,3 +1,7 @@
 @import "tailwindcss";
 @plugin "daisyui" { themes: light --default; }
 @import "bootstrap-icons/font/bootstrap-icons.css";
+
+.btn-primary-edu {
+  @apply btn btn-sm rounded-full bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 border-[#333] text-[#333];
+}

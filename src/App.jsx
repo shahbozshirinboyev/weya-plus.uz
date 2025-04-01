@@ -2,12 +2,14 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
 // layouts
 import RootLayout from "./layouts/RootLayout.jsx"
+import EducationLayout from "./layouts/EducationLayout.jsx"
 
 // pages
 import Home from "./pages/Home.jsx"
 import MyProfile from "./pages/MyProfile.jsx"
 import Education from "./pages/Education.jsx"
 import ErrorPage from "./pages/ErrorPage.jsx"
+import SelectCourse from "./pages/SelectCourse.jsx"
 
 const routes = createBrowserRouter([
   {
@@ -21,7 +23,17 @@ const routes = createBrowserRouter([
       },
       {
         path: "education",
-        element: <Education />,
+        element: <EducationLayout />,
+        children: [
+          {
+            index: true,
+            element: <Education />,
+          },
+          {
+            path: "select-course",
+            element: <SelectCourse />,
+          }
+        ]
       },
       {
         path: "my-profile",

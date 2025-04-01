@@ -24,7 +24,9 @@ function Education() {
           <button className="btn rounded-full uppercase mt-5 bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 border-[#333] text-[#333]">get started</button>
       </div>
       {/* ------------------- */}
-      <NavLink to="select-course">Select Course</NavLink>
+      <NavLink to="select-course">
+        <button className="btn">Select Course</button>
+      </NavLink>
     </div>
   );
 }

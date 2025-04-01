@@ -81,14 +81,14 @@ function Navbar() {
                 <li>
                   <NavLink to="/my-profile">
                     <i className="bi bi-person text-[18px] w-5 h-5 flex justify-center items-center"></i>
-                    <a>My profile</a>
+                    <span>My profile</span>
                   </NavLink>
                 </li>
 
                 <li>
                   <NavLink to="education">
-                      <i className="bi bi-columns-gap text-[14px] w-5 h-5 flex justify-center items-center"></i>
-                      <a>EDU</a>
+                    <i className="bi bi-columns-gap text-[14px] w-5 h-5 flex justify-center items-center"></i>
+                    <span>EDU</span>
                   </NavLink>
                 </li>
 

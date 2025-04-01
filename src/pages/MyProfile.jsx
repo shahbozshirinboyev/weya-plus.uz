@@ -4,7 +4,7 @@ import { useState } from "react";
 function MyProfile() {
   const [selectMenu, setSelectMenu] = useState("my-info");
   return (
-    <section className="container mx-auto flex my-4 gap-4">
+    <section className="container mx-auto flex mt-4 gap-4">
       <div className="w-72 bg-white rounded-lg">
         <ul className="flex flex-col gap-3">
           {[
@@ -102,7 +102,7 @@ function MyProfile() {
             <div>
               <button className="btn rounded-full bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 border-[#333] text-[#333] flex justify-center items-center gap-2">
                 <p>Change Password</p>
-                <i class="bi bi-box-arrow-up-right flex justify-center items-center"></i>
+                <i className="bi bi-box-arrow-up-right flex justify-center items-center"></i>
               </button>
             </div>
           </div>
@@ -131,7 +131,7 @@ function MyProfile() {
         >
           <div className="w-full p-3 bg-white rounded-lg text-center mb-6">
             <div className="flex flex-col items-center justify-center p-8">
-              <i class="bi bi-book-fill text-white px-2 py-1 rounded-lg text-2xl bg-[#c9c9c9] mb-8"></i>
+              <i className="bi bi-book-fill text-white px-2 py-1 rounded-lg text-2xl bg-[#c9c9c9] mb-8"></i>
               <div>
                 <h1 className="font-semibold   mb-1.5">
                   Sizda hali ta'lim tajribasi mavjud emas
@@ -249,7 +249,7 @@ function MyProfile() {
 
           <div className="w-full p-3 bg-white rounded-lg text-center">
             <div className="flex flex-col items-center justify-center p-8">
-              <i class="bi bi-briefcase-fill text-4xl text-[#c9c9c9] px-2 py-2 rounded-lg  mb-8"></i>
+              <i className="bi bi-briefcase-fill text-4xl text-[#c9c9c9] px-2 py-2 rounded-lg  mb-8"></i>
 
               <div>
                 <h1 className="font-semibold text-[#263039] mb-1.5">
@@ -380,7 +380,7 @@ function MyProfile() {
         >
           <div className="w-full p-3 bg-white rounded-lg text-center">
             <div className="flex flex-col items-center justify-center p-8">
-              <i class="bi bi-award-fill text-4xl text-[#c9c9c9] px-2 py-2 rounded-lg  mb-8"></i>
+              <i className="bi bi-award-fill text-4xl text-[#c9c9c9] px-2 py-2 rounded-lg  mb-8"></i>
 
               <div>
                 <h1 className="font-semibold text-[#263039] mb-1.5">
@@ -411,23 +411,23 @@ function MyProfile() {
                 <tr className="text-[#3F9CFB] border-none rounded-xl ">
                   <th>
                     KURS NOMI
-                    <i class="bi bi-caret-down-fill"></i>
+                    <i className="bi bi-caret-down-fill"></i>
                   </th>
                   <th>
                     SANA
-                    <i class="bi bi-caret-down-fill"></i>
+                    <i className="bi bi-caret-down-fill"></i>
                   </th>
                   <th>
                     QIYMAT
-                    <i class="bi bi-caret-down-fill"></i>
+                    <i className="bi bi-caret-down-fill"></i>
                   </th>
                   <th>
                     TO'LOV TURI
-                    <i class="bi bi-caret-down-fill"></i>
+                    <i className="bi bi-caret-down-fill"></i>
                   </th>
                   <th>
                     STATUS
-                    <i class="bi bi-caret-down-fill"></i>
+                    <i className="bi bi-caret-down-fill"></i>
                   </th>
                 </tr>
               </thead>
@@ -463,7 +463,7 @@ function MyProfile() {
           </div>
 
           <div className="bg-[#FFFCED] px-2 py-2 rounded-xl mt-4 flex">
-            <i class="bi bi-exclamation-circle-fill text-yellow-300 mr-3"></i>
+            <i className="bi bi-exclamation-circle-fill text-yellow-300 mr-3"></i>
             <h1 className="text-[#1A202C]">
               Faqatgina 2ta qurilmadan kirishingiz mumkun{" "}
             </h1>
@@ -482,7 +482,7 @@ function MyProfile() {
               <tbody>
                 <tr>
                   <td className="flex">
-                    <i class="bi bi-laptop bg-[#3F9CFB] text-white px-2 rounded-md text-xl inline-flex items-center justify-center"></i>
+                    <i className="bi bi-laptop bg-[#3F9CFB] text-white px-2 rounded-md text-xl inline-flex items-center justify-center"></i>
                     <div className="ml-3">
                       <h1 className="font-medium">
                         {" "}
@@ -498,7 +498,7 @@ function MyProfile() {
 
                 <tr>
                   <td className="flex items-center">
-                    <i class="bi bi-phone bg-[#3F9CFB] text-white px-2 p-2 rounded-md text-xl inline-flex items-center justify-center"></i>
+                    <i className="bi bi-phone bg-[#3F9CFB] text-white px-2 p-2 rounded-md text-xl inline-flex items-center justify-center"></i>
                     <div className="ml-3">
                       <h1 className="font-medium text-center">
                         {" "}
@@ -509,7 +509,7 @@ function MyProfile() {
                   <td>13:38:34, 01.03.2025</td>
                   <td>
                     <button>
-                      <i class="bi bi-trash-fill text-red-500 hover:bg-red-200 "></i>
+                      <i className="bi bi-trash-fill text-red-500 hover:bg-red-200 "></i>
                     </button>
                   </td>
                 </tr>

@@ -22,12 +22,15 @@ function SelectCourse() {
           <button className='btn rounded-full mt-2 flex justify-between items-center'>
             <span>Buy Now</span>
 
-            <span>
-              <span>
-                <img src="./assets/payment_icon/Humo.svg" alt="logo" />
+
+              <span className='flex gap-1'>
+                <img src="/assets/payment_icon/Humo.svg" className='border w-8 h-5 p-[2px] rounded-sm border-[#ccc] border-none' alt="" />
+                <img src="/assets/payment_icon/Uzcard.svg" className='border w-8 h-5 p-[2px] rounded-sm border-[#ccc] border-none' alt="" />
+                <img src="/assets/payment_icon/Payme.svg" className='border w-8 h-5 p-[2px] rounded-sm border-[#ccc] border-none' alt="" />
               </span>
-            </span>
+
           </button>
+
         </div>
 
       </div>

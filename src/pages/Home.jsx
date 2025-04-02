@@ -1,6 +1,5 @@
 import Footer from "../components/Footer";
 import React from "react";
-import LeftDrawer from "../components/LeftDrawer";
 
 function Home() {
   return (
@@ -11,9 +10,8 @@ function Home() {
       </p>
 
 
-    <label htmlFor="my-drawer" className="btn btn-primary drawer-button">Open drawer</label>
 
-      <LeftDrawer />
+
 
       <Footer />
     </div>

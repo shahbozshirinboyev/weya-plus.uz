@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Footer from "../components/Footer";
+import LeftDrawer from "../components/LeftDrawer";
 
 function Education() {
   const courses = [
@@ -96,6 +97,10 @@ function Education() {
   const [selectedCategory, setSelectedCategory] = useState("Frontend");
   return (
     <div className="container mx-auto">
+      <LeftDrawer />
+
+      <label htmlFor="my-drawer" className="btn btn-primary drawer-button">Open drawer</label>
+
       {/* ------------------- */}
       <div className="flex flex-col justify-center items-center h-[500px]">
         <h1 className="text-6xl text-center text-[#333]">
@@ -143,16 +148,17 @@ function Education() {
           {courses
             .filter((course) => course.category === selectedCategory)
             .map((course) => (
-              <NavLink
-              to="select-course"
+              <div
                 key={course.id}
                 className="border border-[#CCCCCC] rounded-lg shadow-lg backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/30 to-[#eed9ed]/70"
               >
+                <NavLink to="select-course">
                 <img
                   src={course.image}
                   alt={course.title}
                   className="w-full h-45 object-cover rounded-t-md"
                 />
+                </NavLink>
                 <div className="p-3 mb-2">
                   <h3 className="text-xl font-semibold mb-2">{course.title}</h3>
                   <p className="font-medium">Mentor: {course.mentor}</p>
@@ -163,12 +169,13 @@ function Education() {
                     <button onClick={(e)=>{e.preventDefault();}}  className="btn w-[140px] font-medium rounded-full border border-black  bg-white/95 backdrop-sepia-0  bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/40  ">
                       TO BUY
                     </button>
-                    <button onClick={(e)=>{e.preventDefault();}} className="btn w-[140px] font-medium rounded-full border border-black  bg-white/95 backdrop-sepia-0  bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/40 ">
+                    <label htmlFor="my-drawer" className="btn w-[140px] font-medium rounded-full border border-black  bg-white/95 backdrop-sepia-0  bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/40 ">
                       READ MORE
-                    </button>
+                    </label>
+
                   </div>
                 </div>
-              </NavLink>
+              </div>
             ))}
         </div>
       </div>

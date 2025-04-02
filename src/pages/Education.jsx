@@ -177,7 +177,7 @@ function Education() {
       {/* ------------------- */}
       <div className="flex flex-col justify-center items-center mt-18">
         <h1 className="text-4xl text-center text-[#333]">
-          How does Weya+ work?
+          How does WEYA+ work?
         </h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 ">
@@ -243,31 +243,31 @@ function Education() {
           and gain experience!
         </h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <div className="rounded-2xl w-[360px] mt-5 px-3 py-3 border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 ">
-            <div className="flex flex-wrap justify-center">
-              <div className="font-semibold">Total number of students</div>
-              <div className="text-5xl font-semibold mr-1 text-[#22222280] mt-2">
+            <div className="flex flex-col justify-center items-center gap-3">
+              <p className="font-semibold">Total number of students</p>
+              <span className="text-5xl font-semibold text-[#aaa]">
                 +12,265
-              </div>
+              </span>
             </div>
           </div>
 
           <div className="rounded-2xl w-[360px] mt-5 px-3 py-3 border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 ">
-            <div className="flex flex-wrap justify-center">
-              <div className="font-semibold">Number of lessons recorded</div>
-              <div className="text-5xl font-semibold mr-1 text-[#22222280] mt-2 ">
+            <div className="flex flex-col justify-center items-center gap-3">
+              <p className="font-semibold">Number of lessons recorded</p>
+              <span className="text-5xl font-semibold text-[#aaa]">
                 +265
-              </div>
+              </span>
             </div>
           </div>
 
           <div className="rounded-2xl w-[360px] mt-5 px-3 py-3 border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 ">
-            <div className="flex flex-wrap justify-center ">
-              <div className="font-semibold">Average team experience</div>
-              <div className="text-5xl font-semibold mr-1 text-[#22222280] mt-2">
+            <div className="flex flex-col justify-center items-center gap-3">
+              <p className="font-semibold">Average team experience</p>
+              <span className="text-5xl font-semibold text-[#aaa]">
                 +7 YEARS
-              </div>
+              </span>
             </div>
           </div>
         </div>

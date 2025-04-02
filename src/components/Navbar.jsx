@@ -12,7 +12,7 @@ function Navbar() {
   return (
     <>
       <Login />
-      <div className="container mx-auto sticky top-1 my-4">
+      <div className="container mx-auto sticky top-1 my-4 z-15">
         <div className="w-full bg-white/95 backdrop-sepia-0 shadow-none border-0 bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 rounded-full px-[25px] flex justify-between items-center h-[50px]">
           <NavLink to="/">
             <img src={logo} alt="LOGO" className="w-[85px] cursor-pointer" />
@@ -62,7 +62,7 @@ function Navbar() {
 
               <ul
                 tabIndex={0}
-                className="dropdown-content menu bg-base-100 rounded-box z-10 w-62 p-2 mt-1 shadow-sm"
+                className="dropdown-content menu bg-base-100 rounded-box w-62 p-2 mt-1 shadow-sm"
               >
                 <div className="p-2 flex gap-2">
                   <img

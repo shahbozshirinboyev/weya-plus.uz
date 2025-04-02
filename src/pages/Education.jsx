@@ -139,19 +139,19 @@ function Education() {
           ))}
         </div>
 
-        <div className="justify-center items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 m-2">
+        <div className="justify-center items-center grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-8 w-full">
           {courses
             .filter((course) => course.category === selectedCategory)
             .map((course) => (
               <NavLink
               to="select-course"
                 key={course.id}
-                className="border border-[#CCCCCC] rounded-lg shadow-lg backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/30 to-[#eed9ed]/70 w-[350px]"
+                className="border border-[#CCCCCC] rounded-lg shadow-lg backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/30 to-[#eed9ed]/70"
               >
                 <img
                   src={course.image}
                   alt={course.title}
-                  className="w-full h-48 object-cover rounded-t-md "
+                  className="w-full h-45 object-cover rounded-t-md"
                 />
                 <div className="p-3 mb-2">
                   <h3 className="text-xl font-semibold mb-2">{course.title}</h3>
@@ -160,10 +160,10 @@ function Education() {
                     Number of lessons: {course.lessons}
                   </p>
                   <div className="flex justify-evenly mt-6 ">
-                    <button onClick={(e)=>{e.preventDefault();}}  className="btn btn-sm w-[140px] font-medium rounded-full border border-black  bg-white/95 backdrop-sepia-0  bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/40  ">
+                    <button onClick={(e)=>{e.preventDefault();}}  className="btn w-[140px] font-medium rounded-full border border-black  bg-white/95 backdrop-sepia-0  bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/40  ">
                       TO BUY
                     </button>
-                    <button onClick={(e)=>{e.preventDefault();}} className="btn btn-sm w-[140px] font-medium rounded-full border border-black  bg-white/95 backdrop-sepia-0  bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/40 ">
+                    <button onClick={(e)=>{e.preventDefault();}} className="btn w-[140px] font-medium rounded-full border border-black  bg-white/95 backdrop-sepia-0  bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/40 ">
                       READ MORE
                     </button>
                   </div>
@@ -177,11 +177,12 @@ function Education() {
       {/* ------------------- */}
       <div className="flex flex-col justify-center items-center mt-18">
         <h1 className="text-4xl text-center text-[#333]">
-          How does WEYA+ work?
+          How does Weya+ work?
         </h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 ">
-          <div className="rounded-2xl w-[360px] mt-5 px-3 py-3 border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-8 ">
+
+          <div className="rounded-2xl  p-5 border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 ">
             <div className="flex flex-wrap justify-between">
               <div className="font-semibold">
                 Choose the right course for you
@@ -191,14 +192,10 @@ function Education() {
               </div>
             </div>
 
-            <p className="text-sm mt-4">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s. 
-            </p>
+            <p className="text-sm mt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
           </div>
 
-          <div className="rounded-2xl w-[360px] mt-5 px-3 py-3 border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 ">
+          <div className="rounded-2xl p-5 border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 ">
             <div className="flex flex-wrap justify-between">
               <div className="font-semibold">
                 Choose the right course for you
@@ -208,14 +205,10 @@ function Education() {
               </div>
             </div>
 
-            <p className="text-sm mt-4">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s. 
-            </p>
+            <p className="text-sm mt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
           </div>
 
-          <div className="rounded-2xl w-[360px] mt-5 px-3 py-3 border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 ">
+          <div className="rounded-2xl p-5 border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 ">
             <div className="flex flex-wrap justify-between">
               <div className="font-semibold">
                 Choose the right course for you
@@ -225,54 +218,63 @@ function Education() {
               </div>
             </div>
 
-            <p className="text-sm mt-4">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s. 
-            </p>
+            <p className="text-sm mt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
           </div>
+
         </div>
+
       </div>
       {/* ------------------- */}
 
+
+
       {/* ------------------- */}
-      <div className="flex flex-col justify-center items-center mt-18">
+      <div className="flex flex-col justify-center items-center mt-18 w-full">
+
         <h1 className="text-4xl text-center text-[#333]">
           Choose a specialization, complete a masterclass,
-          <br />
-          and gain experience!
+          <br />and gain experience!
         </h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          <div className="rounded-2xl w-[360px] mt-5 px-3 py-3 border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 ">
-            <div className="flex flex-col justify-center items-center gap-3">
-              <p className="font-semibold">Total number of students</p>
-              <span className="text-5xl font-semibold text-[#aaa]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 mt-8 w-full">
+
+          <div className="rounded-2xl py-8 flex flex-col justify-center items-center border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20">
+              <p className="font-semibold">
+                Total number of students
+              </p>
+              <span className="text-5xl font-semibold text-[#22222280]">
                 +12,265
               </span>
-            </div>
           </div>
 
-          <div className="rounded-2xl w-[360px] mt-5 px-3 py-3 border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 ">
-            <div className="flex flex-col justify-center items-center gap-3">
-              <p className="font-semibold">Number of lessons recorded</p>
-              <span className="text-5xl font-semibold text-[#aaa]">
+
+          <div className="rounded-2xl py-8 flex flex-col justify-center items-center border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 ">
+              <p className="font-semibold">
+                Number of lessons recorded
+              </p>
+              <span className="text-5xl font-semibold mr-1 text-[#22222280] mt-2 ">
                 +265
               </span>
-            </div>
           </div>
 
-          <div className="rounded-2xl w-[360px] mt-5 px-3 py-3 border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 ">
-            <div className="flex flex-col justify-center items-center gap-3">
-              <p className="font-semibold">Average team experience</p>
-              <span className="text-5xl font-semibold text-[#aaa]">
+          <div className="rounded-2xl py-8 flex flex-col justify-center items-center border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 ">
+              <p className="font-semibold">
+                Average team experience
+              </p>
+              <span className="text-5xl font-semibold mr-1 text-[#22222280] mt-2">
                 +7 YEARS
               </span>
-            </div>
           </div>
+
+
+
+
         </div>
+
+
       </div>
       {/* ------------------- */}
+
 
       {/* ------------------- */}
       <div className="flex flex-col justify-center items-center mt-18">

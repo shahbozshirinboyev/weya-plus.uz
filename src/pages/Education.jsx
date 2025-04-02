@@ -10,7 +10,7 @@ function Education() {
       title: "React Basics",
       mentor: "John Doe",
       lessons: 24,
-      image: "https://picsum.photos/id/237/200/300",
+      image: "https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=640&q=75",
     },
     {
       id: 2,
@@ -18,7 +18,8 @@ function Education() {
       title: "Advanced React",
       mentor: "Alice Brown",
       lessons: 30,
-      image: "https://picsum.photos/id/237/200/300",
+      image: "https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=640&q=75",
+
     },
     {
       id: 9,
@@ -26,7 +27,8 @@ function Education() {
       title: "Advanced React",
       mentor: "Alice Brown",
       lessons: 30,
-      image: "https://picsum.photos/id/237/200/300",
+      image: "https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=640&q=75",
+
     },
     {
       id: 3,
@@ -34,7 +36,8 @@ function Education() {
       title: "Express Backend",
       mentor: "Azimjon Pulatov",
       lessons: 32,
-      image: "https://picsum.photos/id/237/200/300",
+      image: "https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=640&q=75",
+
     },
     {
       id: 4,
@@ -42,7 +45,8 @@ function Education() {
       title: "Node.js API",
       mentor: "Max Smith",
       lessons: 28,
-      image: "https://picsum.photos/id/237/200/300",
+      image: "https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=640&q=75",
+
     },
     {
       id: 5,
@@ -50,7 +54,8 @@ function Education() {
       title: "Flutter Fundamentals",
       mentor: "Jane Smith",
       lessons: 20,
-      image: "https://picsum.photos/id/237/200/300",
+      image: "https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=640&q=75",
+
     },
     {
       id: 6,
@@ -58,7 +63,8 @@ function Education() {
       title: "React Native Basics",
       mentor: "Robert Wilson",
       lessons: 18,
-      image: "https://picsum.photos/id/237/200/300",
+      image: "https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=640&q=75",
+
     },
     {
       id: 7,
@@ -66,7 +72,8 @@ function Education() {
       title: "Figma Essentials",
       mentor: "Sara Connor",
       lessons: 15,
-      image: "https://picsum.photos/id/237/200/300",
+      image: "https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=640&q=75",
+
     },
     {
       id: 8,
@@ -74,7 +81,8 @@ function Education() {
       title: "Prototyping in Figma",
       mentor: "David Lee",
       lessons: 22,
-      image: "https://picsum.photos/id/237/200/300",
+      image: "https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=640&q=75",
+
     },
   ];
   const categories = [
@@ -112,10 +120,6 @@ function Education() {
       </div>
       {/* ------------------- */}
 
-      <NavLink to="select-course">
-        <button className="btn">Select Course</button>
-      </NavLink>
-
       {/* ------------------- */}
       <div className="flex flex-col justify-center items-center ">
         <h1 className="text-4xl text-center text-[#333]">COURSES</h1>
@@ -139,32 +143,32 @@ function Education() {
           {courses
             .filter((course) => course.category === selectedCategory)
             .map((course) => (
-              <div
+              <NavLink
+              to="select-course"
                 key={course.id}
                 className="border border-[#CCCCCC] rounded-lg shadow-lg backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/30 to-[#eed9ed]/70 w-[350px]"
               >
                 <img
                   src={course.image}
                   alt={course.title}
-                  className="w-full h-40 object-cover rounded-t-md "
+                  className="w-full h-48 object-cover rounded-t-md "
                 />
                 <div className="p-3 mb-2">
                   <h3 className="text-xl font-semibold mb-2">{course.title}</h3>
                   <p className="font-medium">Mentor: {course.mentor}</p>
                   <p className="text-sm font-medium">
-                    {" "}
                     Number of lessons: {course.lessons}
                   </p>
                   <div className="flex justify-evenly mt-6 ">
-                    <button className="px-8 py-1 font-medium rounded-full border border-black  bg-white/95 backdrop-sepia-0  bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/40  ">
+                    <button onClick={(e)=>{e.preventDefault();}}  className="btn btn-sm w-[140px] font-medium rounded-full border border-black  bg-white/95 backdrop-sepia-0  bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/40  ">
                       TO BUY
                     </button>
-                    <button className="px-6 py-1 font-medium rounded-full border border-black  bg-white/95 backdrop-sepia-0  bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/40 ">
+                    <button onClick={(e)=>{e.preventDefault();}} className="btn btn-sm w-[140px] font-medium rounded-full border border-black  bg-white/95 backdrop-sepia-0  bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/40 ">
                       READ MORE
                     </button>
                   </div>
                 </div>
-              </div>
+              </NavLink>
             ))}
         </div>
       </div>

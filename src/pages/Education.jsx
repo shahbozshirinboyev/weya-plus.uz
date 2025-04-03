@@ -97,9 +97,8 @@ function Education() {
   const [selectedCategory, setSelectedCategory] = useState("Frontend");
   return (
     <div className="container mx-auto">
+      
       <LeftDrawer />
-
-      <label htmlFor="my-drawer" className="btn btn-primary drawer-button">Open drawer</label>
 
       {/* ------------------- */}
       <div className="flex flex-col justify-center items-center h-[500px]">

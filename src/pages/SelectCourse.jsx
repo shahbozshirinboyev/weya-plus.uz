@@ -106,7 +106,7 @@ function SelectCourse() {
                       <i className={lesson.locked ? 'bi bi-lock flex justify-center items-center mr-2' : 'bi bi-play border rounded-full text-sm flex justify-center items-center mr-2'}></i> {lesson.name}
                     </span>
                     {lesson.locked ? (
-                      <button onClick={(e)=>{e.preventDefault(), document.getElementById('buy_modal').showModal()}} className="btn border px-3 py-1 rounded-full text-xs  backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/70 to-[#2ec05a]/30 ">
+                      <button onClick={(e)=>{e.preventDefault(), document.getElementById('buy_modal').showModal()}} className="btn btn-sm border-gray-300 active:border-black px-3 py-1 rounded-full text-xs  backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/70 to-[#2ec05a]/30 ">
                         {lesson.price} so’m
                       </button>
                     ) : (

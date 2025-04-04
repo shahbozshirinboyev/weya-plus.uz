@@ -28,10 +28,10 @@ function BuyModal() {
                 <p className="font-semibold">Dars narxi:</p>
                 <div className="flex justify-start items-end gap-1">
                   <h1 className="text-2xl font-bold">30.000 so'm</h1>
-                  <h2 className="line-through font-bold">50.000 so'm</h2>
+                  <h2 className="line-through font-semibold text-red-400">50.000 so'm</h2>
                 </div>
                 <button className='btn rounded-full w-full mt-6 border-transparent active:border-black flex justify-between items-center backdrop-sepia-0 bg-gradient-to-r bg-white/95 from-[#eed9ed]/80 to-[#2ec05a]/40'>
-                  <span>Buy Now</span>
+                  <span>Xarid qilish</span>
                   <span className='flex gap-1'>
                     <img src="/assets/payment_icon/Humo.svg" className='w-8 h-5 p-[2px] rounded-sm border-none' alt='' />
                     <img src="/assets/payment_icon/Uzcard.svg" className='w-8 h-5 p-[2px] rounded-sm border-none' alt='' />
@@ -47,10 +47,10 @@ function BuyModal() {
                 <p className="font-semibold">Kurs narxi:</p>
                 <div className="flex justify-start items-end gap-1">
                   <h1 className="text-2xl font-bold">2 300.000 so'm</h1>
-                  <h2 className="line-through font-bold">2 500.000 so'm</h2>
+                  <h2 className="line-through font-semibold text-red-400">2 500.000 so'm</h2>
                 </div>
                 <button className='btn rounded-full w-full mt-6 border-transparent active:border-black flex justify-between items-center backdrop-sepia-0 bg-gradient-to-r bg-white/95 from-[#eed9ed]/80 to-[#2ec05a]/40'>
-                  <span>Buy Now</span>
+                  <span>Xarid qilish</span>
                   <span className='flex gap-1'>
                     <img src="/assets/payment_icon/Humo.svg" className='w-8 h-5 p-[2px] rounded-sm border-none' alt='' />
                     <img src="/assets/payment_icon/Uzcard.svg" className='w-8 h-5 p-[2px] rounded-sm border-none' alt='' />

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Footer from "../components/Footer";
-import LeftDrawer from "../components/LeftDrawer";
 
 function Education() {
   const courses = [
@@ -96,14 +95,14 @@ function Education() {
   ];
   const [selectedCategory, setSelectedCategory] = useState("Frontend");
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto px-3">
 
       {/* ------------------- */}
       <div className="flex flex-col justify-center items-center h-[500px]">
         <h1 className="text-6xl text-center text-[#333]">
           STUDY <b>ABROAD</b> IS EASY WITH US
         </h1>
-        <ul className="flex justify-center items-center gap-5 my-5">
+        <ul className="flex flex-wrap justify-center items-center gap-2 md:gap-3 xl:gap-5 my-5">
           <li className="btn-primary-edu">UI design</li>
           <li className="btn-primary-edu">Frontend</li>
           <li className="btn-primary-edu">Backend</li>
@@ -125,7 +124,7 @@ function Education() {
       {/* ------------------- */}
       <div className="flex flex-col justify-center items-center ">
         <h1 className="text-4xl text-center text-[#333]">COURSES</h1>
-        <div className="flex justify-center items-center gap-5 my-5  px-2 py-1 rounded-2xl shadow-none border-0 bg-white/95 backdrop-sepia-0  bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20  h-[50px]">
+        <div className="flex flex-wrap justify-center items-center gap-5 my-5  px-2 py-1 rounded-2xl shadow-none border-0 bg-white/95 backdrop-sepia-0  bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20">
           {categories.map((category) => (
             <button
               key={category}
@@ -147,7 +146,7 @@ function Education() {
             .map((course) => (
               <div
                 key={course.id}
-                className="border border-[#CCCCCC] rounded-lg shadow-lg backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/30 to-[#eed9ed]/70"
+                className="border border-[#ccc] rounded-lg shadow-lg backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/30 to-[#eed9ed]/70"
               >
                 <NavLink to="select-course">
                 <img
@@ -284,8 +283,8 @@ function Education() {
           and gain experience!
         </h1>
 
-        <div className="flex items-center justify-center w-[550px] sm:w-[800px] lg:w-[1130px] mt-20 mb-20">
-          <div className="relative  px-10 py-6 rounded-3xl shadow-lg text-center w-full  mt-5 border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/70 to-[#2ec05a]/30 ">
+        <div className="flex items-center justify-center w-[100%] mt-20 mb-20">
+          <div className="relative px-10 py-6 rounded-3xl shadow-lg text-center w-full  mt-5 border border-[#ccc] bg-gradient-to-r from-[#eed9ed]/70 to-[#2ec05a]/30 ">
             <div className="absolute top-0 left-0 right-0 -mt-12 flex justify-center">
               <div className="w-30 h-30 bg-white rounded-full flex items-center justify-center shadow-xl border">
                 <span className="font-semibold text-lg">Logo.</span>

@@ -12,10 +12,10 @@ function Navbar() {
   return (
     <>
       <Login />
-      <div className="container mx-auto sticky top-1 my-4 z-15">
+      <div className="container mx-auto px-3 sticky top-1 my-3 z-15">
         <div className="w-full bg-white/95 backdrop-sepia-0 shadow-none border-0 bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 rounded-full px-[25px] flex justify-between items-center h-[50px]">
           <NavLink to="/">
-            <img src={logo} alt="LOGO" className="w-[85px] cursor-pointer" />
+            <img src={logo} alt="LOGO" className="w-[70px] cursor-pointer" />
           </NavLink>
 
           <div>

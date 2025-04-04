@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import LeftDrawer from '../components/LeftDrawer';
 
 function SelectCourse() {
   const [activeLesson, setActiveLesson] = useState(null);
@@ -58,19 +59,22 @@ function SelectCourse() {
   };
 
   return (
+    <>
+     <LeftDrawer />
     <div className='container mx-auto flex items-start mt-4 gap-8'>
-      <div className='w-72 lg:w-92 rounded-lg border border-[#CCCCCC] overflow-hidden'>
+      <div className='w-72 lg:w-92 rounded-lg backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/20 to-[#eed9ed]/30 overflow-hidden'>
         <img src="https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=640&q=75" alt="Course_Title" />
-        <div className='p-3 font-semibold text-[#333] backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/20 to-[#eed9ed]/30'>
+        <div className='p-3 font-semibold text-[#333]'>
           <h1 className='text-2xl'>Express Backend</h1>
-          <span className='text-[14px] opacity-80'>Mentor: Azimjon Po'latov</span>
+          <span className='text-[14px] opacity-90 leading-[.8]'>Mentor: Azimjon Po'latov</span>
         </div>
-        <div className='px-3 py-2 border border-[#CCCCCC] rounded-lg flex flex-col backdrop-sepia-0 bg-gradient-to-r bg-white/55  from-[#eed9ed]/30 to-[#2ec05a]/20'>
-          <b className='uppercase'>Course Price:</b>
-          <span className='text-[13px] line-through font-semibold opacity-60'>1 480 000 so'm</span>
-          <p className='text-xl font-semibold'>1 200 000 so'm</p>
-          <button className='btn rounded-full mt-4 flex justify-start items-center backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/40 to-[#eed9ed]/80'>Learn More</button>
-          <button className='btn rounded-full mt-2 flex justify-between items-center backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/80 to-[#2ec05a]/40'>
+        <div className='p-4 rounded-lg flex flex-col backdrop-sepia-0 bg-gradient-to-r bg-white/55  from-[#eed9ed]/30 to-[#2ec05a]/20'>
+          {/* <b className='uppercase'>Course Price:</b> */}
+          <span className='text-[14px] line-through font-semibold opacity-60 text-red-600'>1 480 000 so'm</span>
+          <p className='text-2xl font-semibold leading-[.7]'>1 200 000 so'm</p>
+
+          <label htmlFor="my-drawer" className='btn rounded-full mt-4 border active:border-black flex justify-start items-center backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/40 to-[#eed9ed]/80'>Learn More</label>
+          <button className='btn rounded-full mt-3 border active:border-black flex justify-between items-center backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/80 to-[#2ec05a]/40'>
             <span>Buy Now</span>
             <span className='flex gap-1'>
               <img src="/assets/payment_icon/Humo.svg" className='border w-8 h-5 p-[2px] rounded-sm border-[#ccc] border-none' alt='' />
@@ -85,7 +89,7 @@ function SelectCourse() {
         {courses.map((course, index) => (
 
           <div key={index} className="border border-[#CCCCCC] rounded-lg mb-2 backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/20 to-[#eed9ed]/30">
-            <div className="collapse collapse-arrow bg-base-100 border-base-300 border ">
+            <div className="collapse collapse-arrow bg-base-100 border-base-300 border">
               <input type="checkbox" id={`course-toggle-${index}`} />
               <div className="collapse-title font-semibold backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/80 to-[#2ec05a]/30">
                 {course.title}
@@ -113,6 +117,7 @@ function SelectCourse() {
         ))}
       </div>
     </div>
+    </>
   );
 }
 

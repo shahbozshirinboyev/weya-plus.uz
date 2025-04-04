@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import LeftDrawer from '../components/LeftDrawer';
+import { NavLink } from 'react-router-dom';
+import BuyModal from '../components/BuyModal';
 
 function SelectCourse() {
   const [activeLesson, setActiveLesson] = useState(null);
@@ -61,6 +63,7 @@ function SelectCourse() {
   return (
     <>
      <LeftDrawer />
+     <BuyModal />
     <div className='container mx-auto flex items-start mt-4 gap-8'>
       <div className='w-72 lg:w-92 rounded-lg backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/20 to-[#eed9ed]/30 overflow-hidden'>
         <img src="https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=640&q=75" alt="Course_Title" />
@@ -73,8 +76,7 @@ function SelectCourse() {
           <span className='text-[14px] line-through font-semibold opacity-60 text-red-600'>1 480 000 so'm</span>
           <p className='text-2xl font-semibold leading-[.7]'>1 200 000 so'm</p>
 
-          <label htmlFor="my-drawer" className='btn rounded-full mt-4 border active:border-black flex justify-start items-center backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/40 to-[#eed9ed]/80'>Learn More</label>
-          <button className='btn rounded-full mt-3 border active:border-black flex justify-between items-center backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/80 to-[#2ec05a]/40'>
+          <button className='btn rounded-full mt-4 border active:border-black flex justify-between items-center backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/80 to-[#2ec05a]/40'>
             <span>Buy Now</span>
             <span className='flex gap-1'>
               <img src="/assets/payment_icon/Humo.svg" className='border w-8 h-5 p-[2px] rounded-sm border-[#ccc] border-none' alt='' />
@@ -82,13 +84,14 @@ function SelectCourse() {
               <img src="/assets/payment_icon/Payme.svg" className='border w-8 h-5 p-[2px] rounded-sm border-[#ccc] border-none' alt='' />
             </span>
           </button>
+          <label htmlFor="my-drawer" className='btn rounded-full mt-2 border active:border-black flex justify-start items-center backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/40 to-[#eed9ed]/80'>Learn More</label>
         </div>
       </div>
 
       <div className='flex-1'>
         {courses.map((course, index) => (
 
-          <div key={index} className="border border-[#CCCCCC] rounded-lg mb-2 backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/20 to-[#eed9ed]/30">
+          <div key={index} className="border border-[#ccc] rounded-lg mb-2 backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/20 to-[#eed9ed]/30">
             <div className="collapse collapse-arrow bg-base-100 border-base-300 border">
               <input type="checkbox" id={`course-toggle-${index}`} />
               <div className="collapse-title font-semibold backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/80 to-[#2ec05a]/30">
@@ -97,19 +100,19 @@ function SelectCourse() {
 
               <div className="collapse-content p-0 backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/20 to-[#eed9ed]/30">
                 {course.lessons.map((lesson, idx) => (
-                  <div key={idx} className={`flex items-center justify-between px-3 py-2 cursor-pointer mt-2 font-medium hover:bg-[#eed9ed]/40 ${lesson.locked ? '' : 'text-black'}
+                  <NavLink to="select-lesson" key={idx} className={`flex items-center justify-between px-3 py-2 cursor-pointer mt-2 font-medium hover:bg-[#eed9ed]/40 ${lesson.locked ? '' : 'text-black'}
                       ${activeLesson === lesson.name ? ' backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/70 to-[#2ec05a]/30' : ''}`} onClick={() => handleLessonClick(lesson.name, lesson.locked)}>
                     <span className='flex items-center'>
-                      <i className={lesson.locked ? 'bi bi-lock mr-3 ' : 'bi bi-play border rounded-full px-0.5 py-0 text-sm  mr-2'}></i> {lesson.name}
+                      <i className={lesson.locked ? 'bi bi-lock flex justify-center items-center mr-2' : 'bi bi-play border rounded-full text-sm flex justify-center items-center mr-2'}></i> {lesson.name}
                     </span>
                     {lesson.locked ? (
-                      <button className="border px-3 py-1 rounded-full text-xs  backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/70 to-[#2ec05a]/30 ">
-                        {lesson.price} so’m BUY NOW
+                      <button onClick={(e)=>{e.preventDefault(), document.getElementById('buy_modal').showModal()}} className="btn border px-3 py-1 rounded-full text-xs  backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/70 to-[#2ec05a]/30 ">
+                        {lesson.price} so’m
                       </button>
                     ) : (
                       <span className="border text-xs px-3 py-1 w-40 rounded-full text-center backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/70 to-[#2ec05a]/30">{lesson.progress}%</span>
                     )}
-                  </div>
+                  </NavLink>
                 ))}
               </div>
             </div>

@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 // layouts
 import RootLayout from "./layouts/RootLayout.jsx"
 import EducationLayout from "./layouts/EducationLayout.jsx"
+import LessonLayout from "./layouts/LessonLayout.jsx"
 
 // pages
 import Home from "./pages/Home.jsx"
@@ -10,6 +11,7 @@ import MyProfile from "./pages/MyProfile.jsx"
 import Education from "./pages/Education.jsx"
 import ErrorPage from "./pages/ErrorPage.jsx"
 import SelectCourse from "./pages/SelectCourse.jsx"
+import SelectLesson from "./pages/SelectLesson.jsx"
 
 const routes = createBrowserRouter([
   {
@@ -31,7 +33,17 @@ const routes = createBrowserRouter([
           },
           {
             path: "select-course",
-            element: <SelectCourse />,
+            element: <LessonLayout />,
+            children: [
+              {
+                index: true,
+                element: <SelectCourse />,
+              },
+              {
+                path: "select-lesson",
+                element: <SelectLesson />,
+              }
+            ]
           }
         ]
       },

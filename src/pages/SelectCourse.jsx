@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 function SelectCourse() {
   const [activeLesson, setActiveLesson] = useState(null);
-  const [openCourses, setOpenCourses] = useState({});
 
   const courses = [
     {
@@ -58,16 +57,9 @@ function SelectCourse() {
     }
   };
 
-  const toggleCourse = (index) => {
-    setOpenCourses(prevState => ({
-      ...prevState,
-      [index]: !prevState[index],
-    }));
-  };
-
   return (
-    <div className='container mx-auto flex items-start mt-4 gap-8 '>
-      <div className='w-72 lg:w-92 rounded-lg border border-[#CCCCCC] overflow-hidden '>
+    <div className='container mx-auto flex items-start mt-4 gap-8'>
+      <div className='w-72 lg:w-92 rounded-lg border border-[#CCCCCC] overflow-hidden'>
         <img src="https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=640&q=75" alt="Course_Title" />
         <div className='p-3 font-semibold text-[#333] backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/20 to-[#eed9ed]/30'>
           <h1 className='text-2xl'>Express Backend</h1>
@@ -89,18 +81,20 @@ function SelectCourse() {
         </div>
       </div>
 
-      <div className='flex-1 '>
+      <div className='flex-1'>
         {courses.map((course, index) => (
+
           <div key={index} className="border border-[#CCCCCC] rounded-lg mb-2 backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/20 to-[#eed9ed]/30">
-            <div className="flex items-center justify-between cursor-pointer p-3 bg-gradient-to-r rounded-t-lg bg-white/95  from-[#eed9ed]/70 to-[#2ec05a]/30" onClick={() => toggleCourse(index)}>
-              <span className="font-semibold text-lgbackdrop-sepia-0 ">{course.title}</span>
-              <i className={`bi ${openCourses[index] ? 'bi-chevron-up' : 'bi-chevron-down'}`} />
-            </div>
-            {openCourses[index] && (
-              <div className="">
+            <div className="collapse collapse-arrow bg-base-100 border-base-300 border ">
+              <input type="checkbox" id={`course-toggle-${index}`} />
+              <div className="collapse-title font-semibold backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/80 to-[#2ec05a]/30">
+                {course.title}
+              </div>
+
+              <div className="collapse-content p-0 backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/20 to-[#eed9ed]/30">
                 {course.lessons.map((lesson, idx) => (
                   <div key={idx} className={`flex items-center justify-between px-3 py-2 cursor-pointer mt-2 font-medium hover:bg-[#eed9ed]/40 ${lesson.locked ? '' : 'text-black'}
-                      ${activeLesson === lesson.name ? ' backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/70 to-[#2ec05a]/30' : ''}`} onClick={() => handleLessonClick(lesson.name, lesson.locked)} >
+                      ${activeLesson === lesson.name ? ' backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/70 to-[#2ec05a]/30' : ''}`} onClick={() => handleLessonClick(lesson.name, lesson.locked)}>
                     <span className='flex items-center'>
                       <i className={lesson.locked ? 'bi bi-lock mr-3 ' : 'bi bi-play border rounded-full px-0.5 py-0 text-sm  mr-2'}></i> {lesson.name}
                     </span>
@@ -114,7 +108,7 @@ function SelectCourse() {
                   </div>
                 ))}
               </div>
-            )}
+            </div>
           </div>
         ))}
       </div>

@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { AnimatePresence } from "framer-motion"
 
 // layouts
 import RootLayout from "./layouts/RootLayout.jsx"
@@ -13,6 +14,9 @@ import ErrorPage from "./pages/ErrorPage.jsx"
 import SelectCourse from "./pages/SelectCourse.jsx"
 import SelectLesson from "./pages/SelectLesson.jsx"
 
+// sahifalarni animatsiya bilan o'rash
+import PageWrapper from "./components/PageWrapper.jsx"
+
 const routes = createBrowserRouter([
   {
     path: "/",
@@ -21,7 +25,7 @@ const routes = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <PageWrapper><Home /></PageWrapper>,
       },
       {
         path: "education",
@@ -29,7 +33,7 @@ const routes = createBrowserRouter([
         children: [
           {
             index: true,
-            element: <Education />,
+            element: <PageWrapper><Education /></PageWrapper>,
           },
           {
             path: "select-course",
@@ -37,11 +41,11 @@ const routes = createBrowserRouter([
             children: [
               {
                 index: true,
-                element: <SelectCourse />,
+                element: <PageWrapper><SelectCourse /></PageWrapper>,
               },
               {
                 path: "select-lesson",
-                element: <SelectLesson />,
+                element: <PageWrapper><SelectLesson /></PageWrapper>,
               }
             ]
           }
@@ -49,14 +53,18 @@ const routes = createBrowserRouter([
       },
       {
         path: "my-profile",
-        element: <MyProfile />,
+        element: <PageWrapper><MyProfile /></PageWrapper>,
       }
     ]
   }
 ])
 
 function App() {
-  return (<RouterProvider router={routes} />)
+  return (
+    <AnimatePresence mode="wait">
+      <RouterProvider router={routes} />
+    </AnimatePresence>
+  )
 }
 
 export default App

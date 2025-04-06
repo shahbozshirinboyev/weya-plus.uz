@@ -79,7 +79,7 @@ function SelectLesson() {
               <div className="collapse-title font-semibold backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/80 to-[#2ec05a]/30">
                 {course.title}
                 <div>
-                <p className='text-sm font-medium'>12/3 | 260 min</p>
+                  <p className='text-sm font-medium'>12/3 | 260 min</p>
                 </div>
               </div>
 
@@ -110,15 +110,14 @@ function SelectLesson() {
       </div>
 
       {/* Правая часть */}
-      <div className='w-2/3 border border-[#ccc] p-3 rounded-2xl bg-white/95 backdrop-blur'>
-        <div className='flex justify-between mb-3'>
+      <div className='w-2/3 border border-[#ccc] p-4 rounded-2xl bg-white/95 backdrop-blur'>
+        <div className='flex justify-between items-center mb-4'>
+          <div>
+            <h3 className='text-xl font-semibold'>1. Express Backend</h3>
+            <p className='text-md'>12/3 | 260 min</p>
+          </div>
 
-         <div>
-          <h3>1. Express Backend</h3>
-          <p className='text-xs'>12/3 | 260 min</p>
-         </div>
-
-         <button className='btn btn-sm bg-gradient-to-r from-[#2ec05a]/20 to-[#eed9ed]/70 hover:bg-pink-100'>
+          <button className='btn bg-gradient-to-r from-[#2ec05a]/20 to-[#eed9ed]/70 hover:bg-pink-100'>
             Next lesson
           </button>
 
@@ -126,6 +125,30 @@ function SelectLesson() {
 
         <div className='w-full h-[300px] rounded-2xl border border-[#ccc] flex items-center justify-center  bg-gradient-to-r from-[#2ec05a]/20 to-[#eed9ed]/70 '>
           <i className="bi bi-camera-video text-3xl text-gray-600"></i>
+        </div>
+
+        {/* name of each tab group should be unique */}
+        <div className="tabs tabs-lift mt-4">
+          <label className="tab flex justify-center items-center gap-2">
+            <input type="radio" name="my_tabs_4" />
+            <i class="bi bi-patch-question flex justify-center items-center text-[16px]"></i>
+            <span className='text-[16px] leading-none'>Q & A</span>
+          </label>
+          <div className="tab-content bg-base-100 border-base-300 p-6">Questions and Answers</div>
+
+          <label className="tab flex justify-center items-center gap-2">
+            <input type="radio" name="my_tabs_4" defaultChecked />
+            <i class="bi bi-files flex justify-center items-center text-[16px]"></i>
+            <span className='text-[16px] leading-none'>Sources</span>
+          </label>
+          <div className="tab-content bg-base-100 border-base-300 p-6">Files...</div>
+
+          <label className="tab flex justify-center items-center gap-2">
+            <input type="radio" name="my_tabs_4" />
+            <i class="bi bi-chat-right-text flex justify-center items-center text-[16px]"></i>
+            <span className='text-[16px] leading-none'>Comments</span>
+          </label>
+          <div className="tab-content bg-base-100 border-base-300 p-6">Comments...</div>
         </div>
 
 

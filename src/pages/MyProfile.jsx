@@ -33,17 +33,17 @@ function MyProfile() {
   return (
     <section className="container mx-auto flex px-3 mt-4 gap-4">
 
-      <div className="lg:w-72 bg-white lg:rounded-lg absolute lg:static bottom-0 left-0 w-[100%] border">
-        <ul className="flex justify-between lg:flex-col gap-3 m-3 lg:p-0 border">
+      <div className="md:w-72 md:bg-white md:rounded-lg absolute md:static bottom-0 left-0 w-[100%] bg-gray-200">
+        <ul className="flex justify-between md:flex-col gap-3 mx-3 my-2 md:p-0">
           {menus.map(({ to, icon, label }) => (
             <li key={to} className="w-full">
               <button
                 onClick={() => { setSelectMenu(to); }}
-                className={`w-full flex flex-col lg:flex-row justify-start items-center gap-2 px-1 lg:px-3 py-1 lg:py-2 rounded-lg lg:rounded-full text-[#333]
+                className={`w-full cursor-pointer hover:border flex flex-col md:flex-row border justify-start items-center gap-2 px-1 md:px-3 py-1 md:py-2 rounded-lg md:rounded-full text-[#333]
                 ${ selectMenu === to ? "bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 border-[#333]" : "border-transparent" }`}
               >
                 <i className={`bi ${icon} text-lg flex justify-center items-center`} ></i>
-                <span className="text-[10px] md:text-[12px] text-nowrap">{label}</span>
+                <span className="text-[9px] md:text-[14px] text-nowrap">{label}</span>
               </button>
             </li>
           ))}

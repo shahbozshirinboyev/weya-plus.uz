@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import BuyModal from '../components/BuyModal';
 
 const courses = [
   {
@@ -59,6 +60,8 @@ function SelectLesson() {
   };
 
   return (
+    <>
+    <BuyModal />
     <div className='container mx-auto px-3 items-start flex gap-4 mt-4'>
       {/* Левая панель */}
       <div className='w-1/3 rounded-2xl p-4 bg-gradient-to-r from-[#2ec05a]/20 to-[#eed9ed]/70 hover:bg-pink-100'>
@@ -67,8 +70,8 @@ function SelectLesson() {
             <h3 className='font-medium'>Express Backend</h3>
             <p className='text-sm'>You have completed 34% of this course</p>
           </div>
-          <button>
-            <i className='bi bi-chevron-right bg-gray-300 rounded-full p-1'></i>
+          <button className='btn btn-xs bg-white border-0'>
+            <i className='bi bi-chevron-right flex justify-center items-center'></i>
           </button>
         </div>
 
@@ -79,13 +82,13 @@ function SelectLesson() {
               <div className="collapse-title font-semibold backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/80 to-[#2ec05a]/30">
                 {course.title}
                 <div>
-                  <p className='text-sm font-medium'>12/3 | 260 min</p>
+                  <p className='text-xs font-medium'>12/3 | 260 min</p>
                 </div>
               </div>
 
               <div className="collapse-content p-0 backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/20 to-[#eed9ed]/30">
                 {course.lessons.map((lesson, idx) => (
-                  <NavLink to="select-lesson" key={idx} className={`flex items-center justify-between px-3 py-2 cursor-pointer mt-2 font-medium hover:bg-[#eed9ed]/40 ${lesson.locked ? '' : 'text-black'} ${activeLesson === lesson.name ? 'backdrop-sepia-0 bg-gradient-to-r bg-white/95 from-[#eed9ed]/70 to-[#2ec05a]/30' : ''}`} onClick={() => handleLessonClick(lesson.name, lesson.locked)}    >
+                  <div key={idx} className={`flex items-center justify-between px-3 py-2 cursor-pointer mt-2 font-medium hover:bg-[#eed9ed]/40 ${lesson.locked ? '' : 'text-black'} ${activeLesson === lesson.name ? 'backdrop-sepia-0 bg-gradient-to-r bg-white/95 from-[#eed9ed]/70 to-[#2ec05a]/30' : ''}`} onClick={() => handleLessonClick(lesson.name, lesson.locked)}    >
                     <span className='flex items-center'>
                       <i className={lesson.locked ? 'bi bi-lock flex justify-center items-center mr-2' : 'bi bi-play border rounded-full text-sm flex justify-center items-center mr-2'}></i>{lesson.name}
                     </span>
@@ -99,7 +102,7 @@ function SelectLesson() {
                         {lesson.progress ?? 0}%
                       </span>
                     )}
-                  </NavLink>
+                  </div>
                 ))}
               </div>
             </div>
@@ -123,7 +126,7 @@ function SelectLesson() {
 
         </div>
 
-        <div className='w-full h-[300px] rounded-2xl border border-[#ccc] flex items-center justify-center  bg-gradient-to-r from-[#2ec05a]/20 to-[#eed9ed]/70 '>
+        <div className='w-full h-[300px] rounded-2xl border border-[#ccc] flex items-center justify-center  bg-gradient-to-r from-[#2ec05a]/20 to-[#eed9ed]/70'>
           <i className="bi bi-camera-video text-3xl text-gray-600"></i>
         </div>
 
@@ -134,26 +137,42 @@ function SelectLesson() {
             <i class="bi bi-patch-question flex justify-center items-center text-[16px]"></i>
             <span className='text-[16px] leading-none'>Q & A</span>
           </label>
-          <div className="tab-content bg-base-100 border-base-300 p-6">Questions and Answers</div>
+          <div className="tab-content bg-base-100 border-base-300 p-6">
+            <span className='text-xl font-semibold'>Questions and Answers</span>
+            <p className='mt-2'>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias fuga libero dolorem ratione inventore, totam consectetur quod alias quasi consequatur repudiandae deserunt hic sapiente. Magni quaerat qui porro soluta ipsa voluptas fuga ipsum at ea inventore laboriosam expedita assumenda deleniti quos vel quod illum eius iusto, deserunt nostrum debitis optio culpa. Deserunt aperiam doloribus quo sapiente excepturi. Placeat sequi doloremque vitae amet ducimus autem tempora quos? Totam quisquam nesciunt voluptate labore, suscipit pariatur voluptates eum obcaecati! Odio hic quasi accusamus quae dolorum sed optio consequatur possimus assumenda ullam sint veniam sunt tenetur earum, dolorem cum suscipit adipisci recusandae, sequi voluptatem?
+            </p>
+          </div>
 
           <label className="tab flex justify-center items-center gap-2">
             <input type="radio" name="my_tabs_4" defaultChecked />
             <i class="bi bi-files flex justify-center items-center text-[16px]"></i>
             <span className='text-[16px] leading-none'>Sources</span>
           </label>
-          <div className="tab-content bg-base-100 border-base-300 p-6">Files...</div>
+          <div className="tab-content bg-base-100 border-base-300 p-6">
+            <span className='text-xl font-semibold'>Files...</span>
+            <p className='mt-2'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente molestiae, fuga quod tempore dolor ut, numquam dignissimos rem nulla iure corporis, ex porro. Iure quam a tempore sunt dignissimos quasi nam natus repellat omnis quidem recusandae delectus cumque dolor, placeat sequi ipsa assumenda quaerat numquam fugiat libero! Corporis, maiores hic.
+            </p>
+          </div>
 
           <label className="tab flex justify-center items-center gap-2">
             <input type="radio" name="my_tabs_4" />
             <i class="bi bi-chat-right-text flex justify-center items-center text-[16px]"></i>
             <span className='text-[16px] leading-none'>Comments</span>
           </label>
-          <div className="tab-content bg-base-100 border-base-300 p-6">Comments...</div>
+          <div className="tab-content bg-base-100 border-base-300 p-6">
+            <span className='text-xl font-semibold'>Comments...</span>
+            <p className='mt-2'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fuga consequatur necessitatibus quam deserunt eaque dolores eum libero quae cupiditate et ipsum omnis voluptatem minus quas officia error sapiente. Fugit nulla vero necessitatibus obcaecati commodi, hic tempore sit doloremque consequuntur eaque optio, expedita veritatis vel voluptas voluptate nam laboriosam facere id. Harum accusamus illum odio nostrum adipisci, omnis atque assumenda in sunt ipsam velit quasi, temporibus error, quidem veniam modi? Accusamus itaque excepturi temporibus corrupti odit, perferendis, repellat deleniti delectus recusandae molestias earum eveniet omnis quam distinctio voluptate qui pariatur modi nihil laboriosam explicabo necessitatibus. Ducimus ipsum, perferendis suscipit accusamus, ipsam sed officiis magnam cumque dicta quis necessitatibus mollitia consequuntur fuga perspiciatis doloremque. Est sapiente asperiores, iste distinctio mollitia pariatur vitae fugiat tempore nisi eaque quaerat consequuntur saepe et exercitationem sint repellat eligendi aliquid quam ratione error odio nam perspiciatis totam! Hic labore porro eos eum quia ea modi officiis.
+            </p>
+          </div>
         </div>
 
 
       </div>
     </div>
+    </>
   );
 }
 

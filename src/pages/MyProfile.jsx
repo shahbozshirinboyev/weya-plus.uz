@@ -2,61 +2,55 @@ import { NavLink, Outlet } from "react-router-dom";
 import { useState } from "react";
 
 function MyProfile() {
+  const menus = [
+    {
+      to: "my-info",
+      icon: "bi-person-circle",
+      label: "My information",
+    },
+    {
+      to: "my-experience",
+      icon: "bi-briefcase",
+      label: "My experiences",
+    },
+    {
+      to: "my-certificate",
+      icon: "bi-patch-check",
+      label: "My certificates",
+    },
+    {
+      to: "my-paymenthistory",
+      icon: "bi-clock-history",
+      label: "Payment history",
+    },
+    {
+      to: "my-devices",
+      icon: "bi-tv",
+      label: "My devices",
+    }
+  ];
   const [selectMenu, setSelectMenu] = useState("my-info");
   return (
-    <section className="container mx-auto flex mt-4 gap-4">
-      <div className="w-72 bg-white rounded-lg">
-        <ul className="flex flex-col gap-3">
-          {[
-            {
-              to: "my-info",
-              icon: "bi-person-circle",
-              label: "My information",
-            },
-            {
-              to: "my-experience",
-              icon: "bi-briefcase",
-              label: "My experiences",
-            },
-            {
-              to: "my-certificate",
-              icon: "bi-patch-check",
-              label: "My certificates",
-            },
-            {
-              to: "my-paymenthistory",
-              icon: "bi-clock-history",
-              label: "Payment history",
-            },
-            {
-              to: "my-devices",
-              icon: "bi-tv",
-              label: "My devices",
-            },
-          ].map(({ to, icon, label }) => (
-            <li key={to}>
+    <section className="container mx-auto flex px-3 mt-4 gap-4">
+
+      <div className="lg:w-72 bg-white lg:rounded-lg absolute lg:static bottom-0 left-0 w-[100%] border">
+        <ul className="flex justify-between lg:flex-col gap-3 m-3 lg:p-0 border">
+          {menus.map(({ to, icon, label }) => (
+            <li key={to} className="w-full">
               <button
-                onClick={() => {
-                  setSelectMenu(to);
-                }}
-                className={`btn w-full flex justify-start items-center gap-2 px-3 py-2 rounded-full text-[#333]
-                ${
-                  selectMenu === to
-                    ? "bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 border-[#333]"
-                    : "border-transparent"
-                }`}
+                onClick={() => { setSelectMenu(to); }}
+                className={`w-full flex flex-col lg:flex-row justify-start items-center gap-2 px-1 lg:px-3 py-1 lg:py-2 rounded-lg lg:rounded-full text-[#333]
+                ${ selectMenu === to ? "bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 border-[#333]" : "border-transparent" }`}
               >
-                <i
-                  className={`bi ${icon} text-lg flex justify-center items-center`}
-                ></i>
-                <span>{label}</span>
+                <i className={`bi ${icon} text-lg flex justify-center items-center`} ></i>
+                <span className="text-[10px] md:text-[12px] text-nowrap">{label}</span>
               </button>
             </li>
           ))}
         </ul>
       </div>
 
-      <div className="flex-1 rounded-lg border border-gray-300">
+      <div className="flex-1 rounded-lg border border-gray-300 w-[100%]">
         {/* My Information */}
         <div
           className={`flex flex-col gap-4 ${

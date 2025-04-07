@@ -33,24 +33,24 @@ function MyProfile() {
   return (
     <section className="container mx-auto flex px-3 mt-4 gap-4">
 
-      <div className="md:w-72 md:bg-white md:rounded-lg absolute md:static bottom-0 left-0 w-[100%] bg-gray-200">
+      <div className=" md:w-52 lg:w-72 md:bg-white rounded-md md:rounded-lg absolute md:static bottom-3 left-3 right-3 bg-gray-200">
         <ul className="flex justify-between md:flex-col gap-3 mx-3 my-2 md:p-0">
           {menus.map(({ to, icon, label }) => (
             <li key={to} className="w-full">
               <button
                 onClick={() => { setSelectMenu(to); }}
-                className={`w-full cursor-pointer hover:border flex flex-col md:flex-row border justify-start items-center gap-2 px-1 md:px-3 py-1 md:py-2 rounded-lg md:rounded-full text-[#333]
-                ${ selectMenu === to ? "bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 border-[#333]" : "border-transparent" }`}
+                className={`w-full cursor-pointer hover:border flex flex-col md:flex-row border justify-start items-center gap-2 px-1 md:px-3 py-1 md:py-2 rounded-md md:rounded-full text-[#333]
+                ${selectMenu === to ? "bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 border-[#333]" : "border-transparent"}`}
               >
                 <i className={`bi ${icon} text-lg flex justify-center items-center`} ></i>
-                <span className="text-[9px] md:text-[14px] text-nowrap">{label}</span>
+                <span className="text-[8px] md:text-[14px] text-nowrap">{label}</span>
               </button>
             </li>
           ))}
         </ul>
       </div>
 
-      <div className="flex-1 rounded-lg border border-gray-300 w-[100%]">
+      <div className="rounded-lg border border-gray-300 w-full">
         {/* My Information */}
         <div
           className={`flex flex-col gap-4 ${
@@ -367,11 +367,7 @@ function MyProfile() {
         </div>
 
         {/* My Certificate */}
-        <div
-          className={`w-full p-3 bg-white rounded-lg ${
-            selectMenu === "my-certificate" ? "block" : "hidden"
-          }`}
-        >
+        <div className={`w-[100%] p-3 bg-white rounded-lg ${ selectMenu === "my-certificate" ? "block" : "hidden" }`} >
           <div className="w-full p-3 bg-white rounded-lg text-center">
             <div className="flex flex-col items-center justify-center p-8">
               <i className="bi bi-award-fill text-4xl text-[#c9c9c9] px-2 py-2 rounded-lg  mb-8"></i>
@@ -393,11 +389,7 @@ function MyProfile() {
         </div>
 
         {/* Payment History */}
-        <div
-          className={`w-full p-8 bg-white rounded-lg ${
-            selectMenu === "my-paymenthistory" ? "block" : "hidden"
-          }`}
-        >
+        <div className={`w-full p-3 bg-white rounded-lg ${ selectMenu === "my-paymenthistory" ? "block" : "hidden" }`} >
           <h1 className="font-semibold p-2 text-xl">Tolovlar tarixi</h1>
           <div className="overflow-x-auto">
             <table className="table mt-4 p-6">

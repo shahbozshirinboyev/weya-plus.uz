@@ -76,7 +76,7 @@ function SelectCourse() {
           <span className='text-[14px] line-through font-semibold opacity-60 text-red-600'>1 480 000 so'm</span>
           <p className='text-2xl font-semibold leading-[.7]'>1 200 000 so'm</p>
 
-          <button className='btn rounded-full mt-4 border active:border-black flex justify-between items-center backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/80 to-[#2ec05a]/40'>
+          <button onClick={(e)=>{e.preventDefault(), document.getElementById('buy_modal').showModal()}} className='btn rounded-full mt-4 border active:border-black flex justify-between items-center backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/80 to-[#2ec05a]/40'>
             <span>Buy Now</span>
             <span className='flex gap-1'>
               <img src="/assets/payment_icon/Humo.svg" className='border w-8 h-5 p-[2px] rounded-sm border-[#ccc] border-none' alt='' />

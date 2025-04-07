@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import logo from "../../public/assets/logo/weya_plus.png";
 import { useState } from "react";
 import Login from "../components/Login";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 function Navbar() {
   const [themeController, setThemeController] = useState(0);
@@ -132,7 +133,7 @@ function Navbar() {
                 <div className="p-1 flex gap-0 justify-between items-center mb-1">
                   <span>Theme</span>
 
-                  <div className="flex gap-2 justify-center items-center border border-gray-300 relative p-1 rounded-md">
+                  {/* <div className="flex gap-2 justify-center items-center border border-gray-300 relative p-1 rounded-md">
                     <div
                       className="absolute bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 top-0 w-[33.333%] h-full rounded-md transition-all duration-300"
                       style={{ left: `${themeController}%` }}
@@ -158,7 +159,8 @@ function Navbar() {
                     >
                       <i className="bi bi-tv flex justify-center items-center"></i>
                     </div>
-                  </div>
+                  </div> */}
+                  <ThemeSwitcher />
                 </div>
 
                 <select

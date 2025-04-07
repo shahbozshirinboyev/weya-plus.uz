@@ -3,7 +3,6 @@ import Footer from "../components/Footer";
 function Home() {
   return (
     <div className="container mx-auto px-3">
-
       <>
         <div className="rounded-3xl mt-5 h-[300px] flex flex-col justify-center items-center px-5 bg-white/95 backdrop-sepia-0  bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20">
           <h1 className="text-center text-4xl font-bold">EDU</h1>

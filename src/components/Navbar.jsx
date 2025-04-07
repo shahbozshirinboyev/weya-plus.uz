@@ -1,20 +1,17 @@
 import { NavLink } from "react-router-dom";
 import logo from "../../public/assets/logo/weya_plus.png";
-import { useState } from "react";
 import Login from "../components/Login";
 import ThemeSwitcher from "./ThemeSwitcher";
 
 function Navbar() {
-  const [themeController, setThemeController] = useState(0);
-  const changeTheme = (value) => {
-    setThemeController(value);
-  };
-
   return (
     <>
       <Login />
       <div className="container mx-auto px-3 sticky top-1 my-3 z-15">
-        <div className="w-full bg-white/95 backdrop-sepia-0 shadow-none border-0 bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 rounded-full px-[25px] flex justify-between items-center h-[50px]">
+        <div className="w-full shadow-none border-0
+        bg-base-200 bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/20 to-[#2ec05a]/20
+        rounded-full px-[25px] flex justify-between items-center h-[50px]">
+
           <NavLink to="/">
             <img src={logo} alt="LOGO" className="w-[70px] cursor-pointer" />
           </NavLink>
@@ -44,10 +41,10 @@ function Navbar() {
             </li> */}
             </ul>
           </div>
+
           <div className="flex gap-2 items-center">
-            <button
-              onClick={() => document.getElementById("login").showModal()}
-              className="btn btn-sm border-0 btn-circle w-[80px] bg-[#333] text-white flex justify-center items-center"
+            <button onClick={() => document.getElementById("login").showModal()}
+              className="btn btn-sm border-0 btn-circle w-[80px] flex justify-center items-center"
             >
               <span className="text-[13px]">Login</span>
             </button>
@@ -63,7 +60,7 @@ function Navbar() {
 
               <ul
                 tabIndex={0}
-                className="dropdown-content menu bg-base-100 rounded-box w-62 p-2 mt-1 shadow-sm"
+                className="dropdown-content menu bg-base-100 rounded-box w-62 p-2 mt-1 shadow-sm border border-base-300"
               >
                 <div className="p-2 flex gap-2">
                   <img

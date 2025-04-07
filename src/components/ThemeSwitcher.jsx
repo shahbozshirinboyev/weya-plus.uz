@@ -28,7 +28,7 @@ function ThemeSwitcher() {
     <div className="p-[2px] w-auto inline-block border border-gray-200 rounded-md">
       <div className="flex justify-between items-center w-[90px] h-[30px] relative">
       <div
-        className="absolute bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 top-0 w-[30px] h-[30px] rounded-md transition-all duration-300"
+        className="absolute bg-gradient-to-r from-[#eed9ed]/40 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 top-0 w-[30px] h-[30px] rounded-md transition-all duration-300"
         style={{ left: theme === "light" ? "0px" : theme === "night" ? "30px" : "60px", }}
       ></div>
 

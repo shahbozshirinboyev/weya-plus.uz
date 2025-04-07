@@ -31,16 +31,16 @@ function MyProfile() {
   ];
   const [selectMenu, setSelectMenu] = useState("my-info");
   return (
-    <section className="container mx-auto flex px-3 mt-4 gap-4">
+    <section className="container mx-auto px-3 mt-4 flex items-start gap-4">
 
-      <div className=" md:w-52 lg:w-72 md:bg-white rounded-md md:rounded-lg absolute md:static bottom-3 left-3 right-3 bg-gray-200">
-        <ul className="flex justify-between md:flex-col gap-3 mx-3 my-2 md:p-0">
+      <div className="md:w-72 border border-gray-200 p-1 md:p-2 bg-gradient-to-r to-[#eed9ed]/30 from-[#2ec05a]/5 rounded-md absolute md:static bottom-3 left-3 right-3">
+        <ul className="flex justify-between md:flex-col gap-2">
           {menus.map(({ to, icon, label }) => (
             <li key={to} className="w-full">
               <button
                 onClick={() => { setSelectMenu(to); }}
-                className={`w-full cursor-pointer hover:border flex flex-col md:flex-row border justify-start items-center gap-2 px-1 md:px-3 py-1 md:py-2 rounded-md md:rounded-full text-[#333]
-                ${selectMenu === to ? "bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 border-[#333]" : "border-transparent"}`}
+                className={`w-full cursor-pointer hover:border flex flex-col md:flex-row border justify-start items-center gap-2 px-1 md:px-2 py-1 md:py-2 rounded-md md:rounded-md text-gray-800
+                ${selectMenu === to ? "bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 border-gray-400" : "border-transparent"}`}
               >
                 <i className={`bi ${icon} text-lg flex justify-center items-center`} ></i>
                 <span className="text-[8px] md:text-[14px] text-nowrap">{label}</span>
@@ -50,7 +50,7 @@ function MyProfile() {
         </ul>
       </div>
 
-      <div className="rounded-lg border border-gray-300 w-full">
+      <div className="w-full border border-gray-200 p-1 md:p-2 bg-gradient-to-r to-[#eed9ed]/30 from-[#2ec05a]/5 rounded-md">
         {/* My Information */}
         <div
           className={`flex flex-col gap-4 ${

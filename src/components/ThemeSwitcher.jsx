@@ -6,7 +6,7 @@ function ThemeSwitcher() {
   useEffect(() => {
     if (theme === "system") {
       const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      document.documentElement.setAttribute("data-theme", isDark ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", isDark ? "night" : "light");
 
       if (isDark) {
         document.documentElement.classList.add("dark");
@@ -15,7 +15,7 @@ function ThemeSwitcher() {
       }
     } else {
       document.documentElement.setAttribute("data-theme", theme);
-      if (theme === "dark") {
+      if (theme === "night") {
         document.documentElement.classList.add("dark");
       } else {
         document.documentElement.classList.remove("dark");
@@ -35,7 +35,7 @@ function ThemeSwitcher() {
         <div
           className="absolute bg-gradient-to-r from-[#eed9ed]/40 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 top-0 w-[30px] h-[30px] rounded-md transition-all duration-300"
           style={{
-            left: theme === "light" ? "0px" : theme === "dark" ? "30px" : "60px",
+            left: theme === "light" ? "0px" : theme === "night" ? "30px" : "60px",
           }}
         ></div>
 
@@ -47,7 +47,7 @@ function ThemeSwitcher() {
         </div>
 
         <div
-          onClick={() => handleThemeChange("dark")}
+          onClick={() => handleThemeChange("night")}
           className="w-[30px] h-[30px] flex justify-center items-center p-2 z-10 cursor-pointer"
         >
           <i className="bi bi-moon flex justify-center items-center"></i>

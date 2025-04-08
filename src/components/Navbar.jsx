@@ -40,7 +40,7 @@ function Navbar() {
           <div className="flex gap-2 items-center">
             <button
               onClick={() => document.getElementById("login").showModal()}
-              className="btn btn-sm border-0 btn-circle w-[80px] flex justify-center items-center"
+              className="btn btn-sm border-0 btn-circle w-[80px] flex justify-center items-center bg-black text-white dark:bg-white dark:text-black"
             >
               <span className="text-[13px]">Login</span>
             </button>

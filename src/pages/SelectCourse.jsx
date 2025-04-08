@@ -64,7 +64,7 @@ function SelectCourse() {
     <>
      <LeftDrawer />
      <BuyModal />
-    <div className='container mx-auto flex items-start mt-4 gap-8'>
+    <div className='container mx-auto px-3 flex items-start mt-4 gap-8'>
       <div className='w-72 lg:w-92 rounded-lg backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/20 to-[#eed9ed]/30 overflow-hidden'>
         <img src="https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=640&q=75" alt="Course_Title" />
         <div className='p-3 font-semibold text-[#333]'>

@@ -8,19 +8,17 @@ function Navbar() {
     <>
       <Login />
       <div className="container mx-auto px-3 sticky top-1 my-3 z-15">
-        <div className="w-full shadow-none border-0
+        <div
+          className="w-full shadow-none border-0
         bg-base-200 bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/20 to-[#2ec05a]/20
-        rounded-full px-[25px] flex justify-between items-center h-[50px]">
-
+        rounded-full px-[25px] flex justify-between items-center h-[50px]"
+        >
           <NavLink to="/">
             <img src={logo} alt="LOGO" className="w-[70px] cursor-pointer" />
           </NavLink>
 
           <div>
             <ul className="gap-5 font-medium hidden md:flex text-[13px] lg:text-[16px]">
-              {/* <li className="opacity-60 cursor-pointer">
-              <i className="bi bi-lock"></i> Home
-            </li> */}
               <li className="cursor-pointer">
                 <NavLink to="education">EDU</NavLink>
               </li>
@@ -36,14 +34,12 @@ function Navbar() {
               <li className="opacity-60 cursor-pointer">
                 <i className="bi bi-lock"></i> Media
               </li>
-              {/* <li className="opacity-60 cursor-pointer">
-              <i className="bi bi-lock"></i> Contest
-            </li> */}
             </ul>
           </div>
 
           <div className="flex gap-2 items-center">
-            <button onClick={() => document.getElementById("login").showModal()}
+            <button
+              onClick={() => document.getElementById("login").showModal()}
               className="btn btn-sm border-0 btn-circle w-[80px] flex justify-center items-center"
             >
               <span className="text-[13px]">Login</span>
@@ -129,34 +125,6 @@ function Navbar() {
 
                 <div className="p-1 flex gap-0 justify-between items-center mb-1">
                   <span>Theme</span>
-
-                  {/* <div className="flex gap-2 justify-center items-center border border-gray-300 relative p-1 rounded-md">
-                    <div
-                      className="absolute bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 top-0 w-[33.333%] h-full rounded-md transition-all duration-300"
-                      style={{ left: `${themeController}%` }}
-                    ></div>
-
-                    <div
-                      onClick={() => changeTheme(0)}
-                      className="w-5 h-5 flex justify-center items-center p-2 z-10 cursor-pointer"
-                    >
-                      <i className="bi bi-sun flex justify-center items-center"></i>
-                    </div>
-
-                    <div
-                      onClick={() => changeTheme(33.333)}
-                      className="w-5 h-5 flex justify-center items-center p-2 z-10 cursor-pointer"
-                    >
-                      <i className="bi bi-moon flex justify-center items-center"></i>
-                    </div>
-
-                    <div
-                      onClick={() => changeTheme(66.666)}
-                      className="w-5 h-5 flex justify-center items-center p-2 z-10 cursor-pointer"
-                    >
-                      <i className="bi bi-tv flex justify-center items-center"></i>
-                    </div>
-                  </div> */}
                   <ThemeSwitcher />
                 </div>
 

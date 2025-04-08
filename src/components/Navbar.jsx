@@ -9,8 +9,7 @@ function Navbar() {
       <Login />
       <div className="container mx-auto px-3 sticky top-1 my-3 z-15">
         <div
-          className="w-full shadow-none border-0
-        bg-base-200 bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/20 to-[#2ec05a]/20
+          className="w-full shadow-none border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10
         rounded-full px-[25px] flex justify-between items-center h-[50px]"
         >
           <NavLink to="/">
@@ -18,21 +17,31 @@ function Navbar() {
           </NavLink>
 
           <div>
-            <ul className="gap-5 font-medium hidden md:flex text-[13px] lg:text-[16px]">
-              <li className="cursor-pointer">
-                <NavLink to="education">EDU</NavLink>
+            <ul className="font-medium hidden md:flex items-center justify-center gap-6 text-[14px] lg:text-[16px] text-gray-900 dark:text-gray-50">
+              <li>
+                <NavLink to="education">
+                  EDU
+                </NavLink>
               </li>
-              <li className="opacity-60 cursor-pointer">
-                <i className="bi bi-lock"></i> Talk
+              <li className="opacity-60">
+                <NavLink to="">
+                  Talk
+                </NavLink>
               </li>
-              <li className="opacity-60 cursor-pointer">
-                <i className="bi bi-lock"></i> Webtoon
+              <li className="opacity-60">
+                <NavLink to="">
+                  Webtoon
+                </NavLink>
               </li>
-              <li className="opacity-60 cursor-pointer">
-                <i className="bi bi-lock"></i> Game
+              <li className="opacity-60">
+                <NavLink to="">
+                  Game
+                </NavLink>
               </li>
-              <li className="opacity-60 cursor-pointer">
-                <i className="bi bi-lock"></i> Media
+              <li className="opacity-60">
+                <NavLink to="">
+                  Media
+                </NavLink>
               </li>
             </ul>
           </div>
@@ -40,23 +49,19 @@ function Navbar() {
           <div className="flex gap-2 items-center">
             <button
               onClick={() => document.getElementById("login").showModal()}
-              className="btn btn-sm border-0 btn-circle w-[80px] flex justify-center items-center bg-black text-white dark:bg-white dark:text-black"
+              className="btn btn-sm border-none btn-circle w-[80px] flex justify-center items-center bg-gray-900 text-gray-50 dark:bg-gray-50 dark:text-gray-900"
             >
               <span className="text-[13px]">Login</span>
             </button>
 
-            <div className="dropdown dropdown-end">
-              <div
-                tabIndex={0}
-                role="button"
-                className="btn btn-circle bg-transparent border-none shadow-none"
-              >
+            <div className="dropdown dropdown-end text-gray-900 dark:text-gray-50">
+              <div tabIndex={0} role="button" className="btn btn-circle bg-transparent border-none shadow-none" >
                 <i className="bi bi-list text-[24px] flex justify-center items-center"></i>
               </div>
 
               <ul
                 tabIndex={0}
-                className="dropdown-content menu bg-base-100 rounded-box w-62 p-2 mt-1 shadow-sm border border-base-300"
+                className="dropdown-content menu rounded-md w-62 p-2 mt-2 shadow-sm border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"
               >
                 <div className="p-2 flex gap-2">
                   <img
@@ -70,7 +75,7 @@ function Navbar() {
                   </div>
                 </div>
 
-                <hr className="my-1 border-gray-300" />
+                <hr className="my-1 border-gray-300 dark:border-gray-600" />
 
                 <li>
                   <NavLink to="/my-profile">
@@ -121,7 +126,7 @@ function Navbar() {
                   </span>
                 </li>
 
-                <hr className="my-1 border-gray-300" />
+                <hr className="my-1 border-gray-300 dark:border-gray-600" />
 
                 <div className="p-1 flex gap-0 justify-between items-center mb-1">
                   <span>Theme</span>

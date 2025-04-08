@@ -141,29 +141,42 @@ function Education() {
         </div>
 
         <div className="justify-center items-center grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-8 w-full">
-          {courses
+        {courses
             .filter((course) => course.category === selectedCategory)
             .map((course) => (
               <div
                 key={course.id}
-                className="border border-[#ccc] rounded-lg shadow-lg backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/30 to-[#eed9ed]/70"
+                className="border border-[#ccc] rounded-lg shadow-lg "
               >
                 <NavLink to="select-course">
-                <img
-                  src={course.image}
-                  alt={course.title}
-                  className="w-full h-45 object-cover rounded-t-md"
-                />
+                  <img
+                    src={course.image}
+                    className="w-full h-45 object-cover rounded-t-md"
+                  />
                 </NavLink>
                 <div className="p-3 mb-2">
-                  <h3 className="text-xl font-semibold mb-2">{course.title}</h3>
-                  <p className="font-medium">Mentor: {course.mentor}</p>
-                  <p className="text-sm font-medium">
-                    Number of lessons: {course.lessons}
-                  </p>
+                  <div className="flex justify-between">
+                    <div className="flex">
+                      <i class="bi bi-caret-right-fill rounded-full px-1 backdrop-sepia-0 text-white bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/40 mr-1 "></i>
+
+                     <p className="">{course.lessons} lesson</p>
+
+                      </div>
+                    <div className="flex text-[#8c8a8a]">
+                    <i class="bi bi-person-fill mr-0.5 text-[#BEBEBE]"></i>
+                     <p className="font-extralight">{course.people} people</p></div>
+                  </div>
+
+                  <div className="flex justify-between mt-5">
+                    <h3 className="text-xl font-semibold mb-2">{course.title}</h3>
+                    <h3 className="text-xl font-semibold mb-2">34$</h3>
+                  </div>
+
+                  <p className="text-[#757575]">{course.text} </p>
+
                   <div className="flex mt-6">
-                    <NavLink to="select-course"  className="btn flex-1 font-medium rounded-full border border-black  bg-white/95 backdrop-sepia-0  bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/40  ">
-                    Go to Course
+                    <NavLink to="select-course" className="btn flex-1 font-medium rounded-full border border-[#ccc]  bg-white/95 backdrop-sepia-0  bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/40  ">
+                      Go to Course
                     </NavLink>
                   </div>
                 </div>

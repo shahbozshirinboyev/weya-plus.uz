@@ -5,7 +5,7 @@ function BuyModal() {
 
   return (
     <>
-      <dialog id="buy_modal" className="modal text-gray-900 dark:text-gray-50">
+      <dialog id="buy_modal" className="modal text-gray-900 dark:text-gray-50 glass">
         <div className="modal-box">
           <form method="dialog" className='relative flex justify-between items-center'>
             <div className='flex justify-start items-center'>

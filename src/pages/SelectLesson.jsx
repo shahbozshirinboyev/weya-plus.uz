@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
 import BuyModal from '../components/BuyModal';
 
 const courses = [
@@ -62,43 +61,43 @@ function SelectLesson() {
   return (
     <>
     <BuyModal />
-    <div className='container mx-auto px-3 items-start flex gap-4 mt-4'>
+    <div className='container mx-auto px-3 items-start flex gap-4 mt-4 text-gray-900 dark:text-gray-50'>
       {/* Левая панель */}
-      <div className='w-1/3 rounded-2xl p-4 bg-gradient-to-r from-[#2ec05a]/20 to-[#eed9ed]/70 hover:bg-pink-100'>
+      <div className='w-1/3 rounded-2xl p-4 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10'>
         <div className='flex justify-between items-center mb-4'>
           <div>
             <h3 className='font-medium'>Express Backend</h3>
             <p className='text-sm'>You have completed 34% of this course</p>
           </div>
-          <button className='btn btn-xs bg-white border-0'>
+          <button className='btn btn-xs bg-white dark:bg-gray-600 border-0'>
             <i className='bi bi-chevron-right flex justify-center items-center'></i>
           </button>
         </div>
 
         {courses.map((course, index) => (
-          <div key={index} className="border border-[#ccc] rounded-lg mb-2 backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/20 to-[#eed9ed]/30">
-            <div className="collapse collapse-arrow bg-base-100 border-base-300 border">
+          <div key={index} className=" mb-2 ">
+            <div className="collapse collapse-arrow bg-base-100 border-base-300 border dark:border-gray-600">
               <input type="checkbox" id={`course-toggle-${index}`} />
-              <div className="collapse-title font-semibold backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/80 to-[#2ec05a]/30">
+              <div className="collapse-title font-semibold backdrop-sepia-0 bg-gradient-to-r  from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
                 {course.title}
                 <div>
                   <p className='text-xs font-medium'>12/3 | 260 min</p>
                 </div>
               </div>
 
-              <div className="collapse-content p-0 backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/20 to-[#eed9ed]/30">
+              <div className="collapse-content p-0 backdrop-sepia-0 bg-gradient-to-r  from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
                 {course.lessons.map((lesson, idx) => (
-                  <div key={idx} className={`flex items-center justify-between px-3 py-2 cursor-pointer mt-2 font-medium hover:bg-[#eed9ed]/40 ${lesson.locked ? '' : 'text-black'} ${activeLesson === lesson.name ? 'backdrop-sepia-0 bg-gradient-to-r bg-white/95 from-[#eed9ed]/70 to-[#2ec05a]/30' : ''}`} onClick={() => handleLessonClick(lesson.name, lesson.locked)}    >
+                  <div key={idx} className={`flex items-center justify-between px-3 py-2 cursor-pointer mt-2 font-medium hover:bg-[#eed9ed]/40 dark:hover:bg-[#eed9ed]/20 ${lesson.locked ? '' : ''} ${activeLesson === lesson.name ? 'backdrop-sepia-0 bg-gradient-to-r from-[#eed9ed]/70 to-[#2ec05a]/30' : ''}`} onClick={() => handleLessonClick(lesson.name, lesson.locked)}    >
                     <span className='flex items-center'>
-                      <i className={lesson.locked ? 'bi bi-lock flex justify-center items-center mr-2' : 'bi bi-play border rounded-full text-sm flex justify-center items-center mr-2'}></i>{lesson.name}
+                      <i className={lesson.locked ? 'bi bi-lock flex justify-center items-center mr-2' : 'bi bi-play border  rounded-full text-sm flex justify-center items-center mr-2'}></i>{lesson.name}
                     </span>
                     {lesson.locked ? (
                       <button onClick={(e) => { e.preventDefault(); document.getElementById('buy_modal')?.showModal(); }}
-                        className="btn border px-3 py-1 rounded-full text-xs backdrop-sepia-0 bg-gradient-to-r bg-white/95 from-[#eed9ed]/70 to-[#2ec05a]/30"   >
+                        className="btn border dark:border-gray-500 px-3 py-1 rounded-full text-xs backdrop-sepia-0 bg-gradient-to-r from-[#eed9ed]/70 dark:from-[#eed9ed]/20 to-[#2ec05a]/30"   >
                         {lesson.price} so’m
                       </button>
                     ) : (
-                      <span className="border text-xs px-3 py-1 w-40 rounded-full text-center backdrop-sepia-0 bg-gradient-to-r bg-white/95 from-[#eed9ed]/70 to-[#2ec05a]/30">
+                      <span className="border dark:border-gray-500  text-xs px-3 py-1 w-40 rounded-full text-center backdrop-sepia-0 from-[#eed9ed]/70 dark:from-[#eed9ed]/20 to-[#2ec05a]/30">
                         {lesson.progress ?? 0}%
                       </span>
                     )}
@@ -113,26 +112,26 @@ function SelectLesson() {
       </div>
 
       {/* Правая часть */}
-      <div className='w-2/3 border border-[#ccc] p-4 rounded-2xl bg-white/95 backdrop-blur'>
+      <div className='w-2/3 border border-[#ccc] dark:border-gray-600 p-4 rounded-2xl  backdrop-blur'>
         <div className='flex justify-between items-center mb-4'>
           <div>
             <h3 className='text-xl font-semibold'>1. Express Backend</h3>
             <p className='text-md'>12/3 | 260 min</p>
           </div>
 
-          <button className='btn bg-gradient-to-r from-[#2ec05a]/20 to-[#eed9ed]/70 hover:bg-pink-100'>
+          <button className='btn dark:border-gray-600 bg-gradient-to-r from-[#2ec05a]/20 to-[#eed9ed]/70 hover:bg-pink-100 dark:hover:bg-[#2ec05a]/10'>
             Next lesson
           </button>
 
         </div>
 
-        <div className='w-full h-[300px] rounded-2xl border border-[#ccc] flex items-center justify-center  bg-gradient-to-r from-[#2ec05a]/20 to-[#eed9ed]/70'>
-          <i className="bi bi-camera-video text-3xl text-gray-600"></i>
+        <div className='w-full h-[300px] rounded-2xl border border-[#ccc] dark:border-gray-600 flex items-center justify-center  bg-gradient-to-r from-[#2ec05a]/20 dark:to-[#eed9ed]/30 to-[#eed9ed]/70'>
+          <i className="bi bi-camera-video text-3xl text-gray-600 dark:text-gray-300"></i>
         </div>
 
         {/* name of each tab group should be unique */}
-        <div className="tabs tabs-lift mt-4">
-          <label className="tab flex justify-center items-center gap-2">
+        <div className="tabs tabs-lift mt-4 dark:border-white">
+          <label className="tab flex justify-center items-center gap-2 ">
             <input type="radio" name="my_tabs_4" />
             <i class="bi bi-patch-question flex justify-center items-center text-[16px]"></i>
             <span className='text-[16px] leading-none'>Q & A</span>
@@ -144,7 +143,7 @@ function SelectLesson() {
             </p>
           </div>
 
-          <label className="tab flex justify-center items-center gap-2">
+          <label className="tab flex justify-center items-center gap-2 ">
             <input type="radio" name="my_tabs_4" defaultChecked />
             <i class="bi bi-files flex justify-center items-center text-[16px]"></i>
             <span className='text-[16px] leading-none'>Sources</span>

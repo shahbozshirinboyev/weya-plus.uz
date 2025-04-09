@@ -31,16 +31,16 @@ function MyProfile() {
   ];
   const [selectMenu, setSelectMenu] = useState("my-info");
   return (
-    <section className="container mx-auto px-3 mt-4 flex items-start gap-4">
+    <section className="container mx-auto px-3 mt-4 flex items-start gap-4 text-gray-900 dark:text-gray-50">
 
-      <div className="md:w-72 border border-gray-200 p-1 md:p-2 bg-gradient-to-r to-[#eed9ed]/30 from-[#2ec05a]/5 rounded-md absolute md:static bottom-3 left-3 right-3">
+      <div className="md:w-72 border border-gray-200 dark:border-gray-600 p-1 md:p-2 bg-gradient-to-r to-[#eed9ed]/20 from-[#2ec05a]/5 dark:to-[#eed9ed]/10 rounded-md absolute md:static bottom-3 left-3 right-3">
         <ul className="flex justify-between md:flex-col gap-2">
           {menus.map(({ to, icon, label }) => (
             <li key={to} className="w-full">
               <button
                 onClick={() => { setSelectMenu(to); }}
-                className={`w-full cursor-pointer hover:border flex flex-col md:flex-row border justify-start items-center gap-2 px-1 md:px-2 py-1 md:py-2 rounded-md md:rounded-md text-gray-800
-                ${selectMenu === to ? "bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 border-gray-400" : "border-transparent"}`}
+                className={`w-full cursor-pointer hover:border flex flex-col md:flex-row border justify-start items-center gap-2 px-1 md:px-2 py-1 md:py-2 rounded-md md:rounded-md
+                ${selectMenu === to ? "bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20  dark:border-gray-600 dark:from-[#eed9ed]/10 border-gray-400" : "border-transparent"}`}
               >
                 <i className={`bi ${icon} text-lg flex justify-center items-center`} ></i>
                 <span className="text-[8px] md:text-[14px] text-nowrap">{label}</span>
@@ -50,43 +50,43 @@ function MyProfile() {
         </ul>
       </div>
 
-      <div className="w-full border border-gray-200 p-1 md:p-2 bg-gradient-to-r to-[#eed9ed]/30 from-[#2ec05a]/5 rounded-md">
+      <div className="w-full border border-gray-200 dark:border-gray-600 p-1 md:p-2 bg-gradient-to-r to-[#eed9ed]/40 from-[#2ec05a]/10 dark:to-[#eed9ed]/10 rounded-md">
         {/* My Information */}
         <div
           className={`flex flex-col gap-4 ${
             selectMenu === "my-info" ? "block" : "hidden"
           }`}
         >
-          <div className="w-ful rounded-2xl p-2 bg-white">
-            <div className="bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 h-24 rounded-2xl"></div>
+          <div className="w-ful rounded-2xl p-2 bg-white dark:bg-[#111728]">
+            <div className="bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 h-24 rounded-2xl"></div>
 
             <div className="flex flex-col items-start m -mt-[70px] p-5 ">
-              <div className="w-24 h-24 bg-gray-100 border-[7px] border-white rounded-full flex items-center justify-center shadow-md">
-                <span className="text-gray-700 text-2xl font-semibold">ZJ</span>
+              <div className="w-24 h-24 bg-gray-100 dark:bg-[#111728] dark:border-gray-600 border-[7px] border-white rounded-full flex items-center justify-center shadow-md">
+                <span className=" text-2xl font-semibold">ZJ</span>
               </div>
 
-              <p className="mt-4 text-gray-700 text-lg font-semibold">
+              <p className="mt-4  text-lg font-semibold">
                 Zerda Jursinova
               </p>
-              <button className="mt-4 btn rounded-full bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 border-[#333] text-[#333] shadow-md  transition">
+              <button className="mt-4 btn rounded-full bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 dark:border-gray-600 border-[#333] shadow-md  transition">
                 Ma’lumotlarni o‘zgartirish
               </button>
             </div>
           </div>
 
-          <div className="flex justify-between p-4 bg-white rounded-2xl">
+          <div className="flex justify-between p-4 bg-white rounded-2xl dark:bg-[#111728]">
             <div className="">
-              <p className="mb-1.5 text-[#434D54]">Telefon raqamingiz</p>
-              <h1 className="font-semibold text-[#434D54]">+998991449406</h1>
+              <p className="mb-1.5 ">Telefon raqamingiz</p>
+              <h1 className="font-semibold ">+998991449406</h1>
             </div>
             <div>
-              <p className="text-[#434D54]">Elektron manzilingiz</p>
+              <p className="">Elektron manzilingiz</p>
             </div>
           </div>
 
-          <div className="flex justify-between p-4 bg-white rounded-2xl">
+          <div className="flex justify-between p-4 bg-white dark:bg-[#111728] rounded-2xl">
             <div className="">
-              <h1 className="font-semibold mb-1.5 text-[#434D54]">
+              <h1 className="font-semibold mb-1.5 ">
                 Change Password
               </h1>
               <p className="text-[#7F868B]">
@@ -94,16 +94,16 @@ function MyProfile() {
               </p>
             </div>
             <div>
-              <button className="btn rounded-full bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 border-[#333] text-[#333] flex justify-center items-center gap-2">
+              <button className="btn rounded-full bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 border-[#333] dark:border-gray-600 flex justify-center items-center gap-2">
                 <p>Change Password</p>
                 <i className="bi bi-box-arrow-up-right flex justify-center items-center"></i>
               </button>
             </div>
           </div>
 
-          <div className="flex justify-between p-4 bg-white rounded-2xl">
+          <div className="flex justify-between p-4 bg-white dark:bg-[#111728] rounded-2xl">
             <div className="">
-              <h1 className="font-semibold mb-1.5 text-[#434D54]">
+              <h1 className="font-semibold mb-1.5 ">
                 Maolumatlarni Korsatish
               </h1>
               <p className="text-[#7F868B] text-sm">
@@ -113,7 +113,7 @@ function MyProfile() {
             <div>
               <input
                 type="checkbox"
-                className="toggle toggle-primary mt-4 peer checked:bg-blue-500 bg-gray-500"
+                className="toggle toggle-primary mt-4 peer checked:bg-blue-400 bg-gray-300 dark:bg-gray-500"
               />
             </div>
           </div>
@@ -123,7 +123,7 @@ function MyProfile() {
         <div
           className={`${selectMenu === "my-experience" ? "block" : "hidden"}`}
         >
-          <div className="w-full p-3 bg-white rounded-lg text-center mb-6">
+          <div className="w-full p-3 bg-white dark:bg-[#111728] rounded-lg text-center mb-6">
             <div className="flex flex-col items-center justify-center p-8">
               <i className="bi bi-book-fill text-white px-2 py-1 rounded-lg text-2xl bg-[#c9c9c9] mb-8"></i>
               <div>
@@ -136,7 +136,7 @@ function MyProfile() {
               </div>
 
               <button
-                className="btn rounded-full bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 border-[#333] text-[#333]"
+                className="btn rounded-full bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 border-[#333] dark:border-gray-600 "
                 onClick={() =>
                   document.getElementById("my_modal_1").showModal()
                 }
@@ -157,7 +157,7 @@ function MyProfile() {
                     <div className="relative w-full mt-2">
                       <input
                         type="text"
-                        className="input border border-slate-300 bg-[#F5F7FA] w-full pr-10 py-2"
+                        className="input border border-slate-300 dark:border-gray-600 bg-[#F5F7FA] w-full pr-10 py-2"
                         placeholder="Yonalishingizni yozing"
                         required
                       />
@@ -173,7 +173,7 @@ function MyProfile() {
                     <div className="relative w-full mt-2">
                       <input
                         type="text"
-                        className="input border border-slate-300 bg-[#F5F7FA] w-full pr-10 py-2"
+                        className="input border border-slate-300 dark:border-gray-600 bg-[#F5F7FA] w-full pr-10 py-2"
                         placeholder=" Oʻquv muassasasi nomini kiriting"
                         required
                       />
@@ -186,7 +186,7 @@ function MyProfile() {
                     <span className="text-red-500">*</span>
                   </legend>
 
-                  <select className="select select-bordered w-full mt-2 border border-slate-300 bg-[#F5F7FA] ">
+                  <select className="select select-bordered w-full mt-2 border dark:border-gray-600 border-slate-300 bg-[#F5F7FA] ">
                     <option className="text-gray-950">Kollej</option>
                     <option className="text-gray-500">Mactab</option>
                     <option className="text-gray-500">Universitet</option>
@@ -200,7 +200,7 @@ function MyProfile() {
                     <div className="relative w-full mt-2">
                       <input
                         type="text"
-                        className="input border border-slate-300 bg-[#F5F7FA] w-full pr-10 py-2"
+                        className="input border border-slate-300dark:border-gray-600 bg-[#F5F7FA] dark:border-gray-600 w-full pr-10 py-2"
                         placeholder="https://"
                         required
                       />
@@ -218,7 +218,7 @@ function MyProfile() {
                         <input
                           type="date"
                           id="my-experience-date"
-                          className="input border border-slate-300 bg-[#F5F7FA] w-full pr-3 text-gray-500"
+                          className="input border dark:border-gray-600 border-slate-300 bg-[#F5F7FA] w-full pr-3 text-gray-500"
                           required
                         />
                         <i className="bi bi-calendar absolute top-3 right-3 bg-gray-400 text-white px-1 rounded-lg"></i>
@@ -241,12 +241,12 @@ function MyProfile() {
             </div>
           </div>
 
-          <div className="w-full p-3 bg-white rounded-lg text-center">
+          <div className="w-full p-3 bg-white dark:bg-[#111728] rounded-lg text-center">
             <div className="flex flex-col items-center justify-center p-8">
               <i className="bi bi-briefcase-fill text-4xl text-[#c9c9c9] px-2 py-2 rounded-lg  mb-8"></i>
 
               <div>
-                <h1 className="font-semibold text-[#263039] mb-1.5">
+                <h1 className="font-semibold mb-1.5">
                   Sizda hali ish tajribasi mavjud emas
                 </h1>
                 <p className="text-[#7F868B] mb-6">
@@ -255,7 +255,7 @@ function MyProfile() {
               </div>
 
               <button
-                className="btn rounded-full bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 border-[#333] text-[#333]"
+                className="btn rounded-full bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 border-[#333] dark:border-gray-600 "
                 onClick={() => document.getElementById("my_modal").showModal()}
               >
                 Ish tajribasi koshish
@@ -275,7 +275,7 @@ function MyProfile() {
                     <div className="relative w-full mt-2">
                       <input
                         type="text"
-                        className="input border border-slate-300 bg-[#F5F7FA] w-full pr-10 py-2"
+                        className="input border border-slate-300 dark:border-gray-600 bg-[#F5F7FA] w-full pr-10 py-2"
                         placeholder="Lovozimingizni yozing"
                         required
                       />
@@ -291,7 +291,7 @@ function MyProfile() {
                     <div className="relative w-full mt-2">
                       <input
                         type="text"
-                        className="input border border-slate-300 bg-[#F5F7FA] w-full pr-10 py-2"
+                        className="input border border-slate-300 dark:border-gray-600 bg-[#F5F7FA] w-full pr-10 py-2"
                         placeholder=" Ish joigiz nomi"
                         required
                       />
@@ -307,7 +307,7 @@ function MyProfile() {
                     <div className="relative w-full mt-2">
                       <input
                         type="text"
-                        className="input border border-slate-300 bg-[#F5F7FA] w-full pr-10 py-2"
+                        className="input border border-slate-300 dark:border-gray-600 bg-[#F5F7FA] w-full pr-10 py-2"
                         placeholder="https://"
                         required
                       />
@@ -323,7 +323,7 @@ function MyProfile() {
                     <div className="relative w-full mt-2">
                       <input
                         type="text"
-                        className="input border border-slate-300 bg-[#F5F7FA] w-full pr-10 py-2"
+                        className="input border dark:border-gray-600 border-slate-300 bg-[#F5F7FA] w-full pr-10 py-2"
                         placeholder="Bilimingiz haqida yozing"
                         required
                       />
@@ -342,7 +342,7 @@ function MyProfile() {
                         <input
                           type="date"
                           id="my-experience-date"
-                          className="input border border-slate-300 bg-[#F5F7FA] w-full pr-3 text-gray-500"
+                          className="input border border-slate-300 dark:border-gray-600 bg-[#F5F7FA] w-full pr-3 text-gray-500"
                           required
                         />
                         <i className="bi bi-calendar absolute top-3 right-3 bg-gray-400 text-white px-1 rounded-lg"></i>
@@ -367,13 +367,13 @@ function MyProfile() {
         </div>
 
         {/* My Certificate */}
-        <div className={`w-[100%] p-3 bg-white rounded-lg ${ selectMenu === "my-certificate" ? "block" : "hidden" }`} >
-          <div className="w-full p-3 bg-white rounded-lg text-center">
+        <div className={`w-[100%] p-3 bg-white dark:bg-[#111728] rounded-lg ${ selectMenu === "my-certificate" ? "block" : "hidden" }`} >
+          <div className="w-full p-3 dark:bg-[#111728] bg-white rounded-lg text-center">
             <div className="flex flex-col items-center justify-center p-8">
               <i className="bi bi-award-fill text-4xl text-[#c9c9c9] px-2 py-2 rounded-lg  mb-8"></i>
 
               <div>
-                <h1 className="font-semibold text-[#263039] mb-1.5">
+                <h1 className="font-semibold mb-1.5">
                   Sizda hali sertifikatlar mavjud emas
                 </h1>
                 <p className="text-[#7F868B] mb-6">
@@ -381,7 +381,7 @@ function MyProfile() {
                   berilgan sertifikatlarni ko’rishingiz mumkin bo’ladi.
                 </p>
               </div>
-              <button className="btn rounded-full bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 border-[#333] text-[#333]">
+              <button className="btn rounded-full bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 border-[#333] dark:border-gray-600 ">
                 Kurs sotib ilish
               </button>
             </div>
@@ -389,12 +389,12 @@ function MyProfile() {
         </div>
 
         {/* Payment History */}
-        <div className={`w-full p-3 bg-white rounded-lg ${ selectMenu === "my-paymenthistory" ? "block" : "hidden" }`} >
+        <div className={`w-full p-3 dark:bg-[#111728] bg-white rounded-lg ${ selectMenu === "my-paymenthistory" ? "block" : "hidden" }`} >
           <h1 className="font-semibold p-2 text-xl">Tolovlar tarixi</h1>
           <div className="overflow-x-auto">
             <table className="table mt-4 p-6">
-              <thead className="bg-[#F5FAFF] rounded-xl boeder-none">
-                <tr className="text-[#3F9CFB] border-none rounded-xl ">
+              <thead className="bg-[#F5FAFF] dark:bg-[#2b3656] rounded-xl boeder-none">
+                <tr className="text-[#6eb4fb] border-none rounded-xl ">
                   <th>
                     KURS NOMI
                     <i className="bi bi-caret-down-fill"></i>
@@ -435,7 +435,7 @@ function MyProfile() {
 
         {/* My Devices */}
         <div
-          className={`w-full p-8 bg-white rounded-lg ${
+          className={`w-full p-8 dark:bg-[#111728] bg-white rounded-lg ${
             selectMenu === "my-devices" ? "block" : "hidden"
           }`}
         >
@@ -448,8 +448,8 @@ function MyProfile() {
             </p>
           </div>
 
-          <div className="bg-[#FFFCED] px-2 py-2 rounded-xl mt-4 flex">
-            <i className="bi bi-exclamation-circle-fill text-yellow-300 mr-3"></i>
+          <div className="bg-[#FFFCED] dark:bg-[#f8e588] px-2 py-2 rounded-xl mt-4 flex">
+            <i className="bi bi-exclamation-circle-fill text-yellow-300 dark:text-yellow-500 mr-3"></i>
             <h1 className="text-[#1A202C]">
               Faqatgina 2ta qurilmadan kirishingiz mumkun{" "}
             </h1>
@@ -457,7 +457,7 @@ function MyProfile() {
 
           <div className="overflow-x-auto mt-4">
             <table className="table table-zebra mt-4">
-              <thead className="bg-[#F5FAFF] rounded-xl ">
+              <thead className="bg-[#F5FAFF] dark:bg-[#2b3656] rounded-xl ">
                 <tr className=" text-[#3F9CFB] border-none rounded-xl">
                   <th>QURUIMA NOMI</th>
                   <th>FAILLASHTIRILGAAN SANA </th>

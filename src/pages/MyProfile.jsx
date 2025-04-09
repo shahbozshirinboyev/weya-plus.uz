@@ -33,7 +33,7 @@ function MyProfile() {
   return (
     <section className="container mx-auto px-3 mt-4 flex items-start gap-4 text-gray-900 dark:text-gray-50">
 
-      <div className="md:w-72 border border-gray-200 dark:border-gray-600 p-1 md:p-2 bg-gradient-to-r to-[#eed9ed]/20 from-[#2ec05a]/5 dark:to-[#eed9ed]/10 rounded-md absolute md:static bottom-3 left-3 right-3">
+      <div className="md:w-52 xl:w-72 border border-gray-200 dark:border-gray-600 p-1 md:p-2 bg-gradient-to-r to-[#eed9ed]/20 from-[#2ec05a]/5 dark:to-[#eed9ed]/10 rounded-md absolute md:static bottom-3 left-3 right-3">
         <ul className="flex justify-between md:flex-col gap-2">
           {menus.map(({ to, icon, label }) => (
             <li key={to} className="w-full">
@@ -50,13 +50,9 @@ function MyProfile() {
         </ul>
       </div>
 
-      <div className="w-full border border-gray-200 dark:border-gray-600 p-1 md:p-2 bg-gradient-to-r to-[#eed9ed]/40 from-[#2ec05a]/10 dark:to-[#eed9ed]/10 rounded-md">
+      <div className="w-[100%] p-4 flex-1 overflow-x-auto border border-gray-200 dark:border-gray-600 bg-gradient-to-r to-[#eed9ed]/40 from-[#2ec05a]/10 dark:to-[#eed9ed]/10 rounded-md">
         {/* My Information */}
-        <div
-          className={`flex flex-col gap-4 ${
-            selectMenu === "my-info" ? "block" : "hidden"
-          }`}
-        >
+        <div className={`flex flex-col gap-2 ${selectMenu === "my-info" ? "block" : "hidden"}`} >
           <div className="w-ful rounded-2xl p-2 bg-white dark:bg-[#111728]">
             <div className="bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 h-24 rounded-2xl"></div>
 
@@ -120,9 +116,7 @@ function MyProfile() {
         </div>
 
         {/* My experience */}
-        <div
-          className={`${selectMenu === "my-experience" ? "block" : "hidden"}`}
-        >
+        <div className={`${selectMenu === "my-experience" ? "block" : "hidden"}`} >
           <div className="w-full p-3 bg-white dark:bg-[#111728] rounded-lg text-center mb-6">
             <div className="flex flex-col items-center justify-center p-8">
               <i className="bi bi-book-fill text-white px-2 py-1 rounded-lg text-2xl bg-[#c9c9c9] mb-8"></i>
@@ -367,7 +361,7 @@ function MyProfile() {
         </div>
 
         {/* My Certificate */}
-        <div className={`w-[100%] p-3 bg-white dark:bg-[#111728] rounded-lg ${ selectMenu === "my-certificate" ? "block" : "hidden" }`} >
+        <div className={`${selectMenu === "my-certificate" ? "block" : "hidden"}`} >
           <div className="w-full p-3 dark:bg-[#111728] bg-white rounded-lg text-center">
             <div className="flex flex-col items-center justify-center p-8">
               <i className="bi bi-award-fill text-4xl text-[#c9c9c9] px-2 py-2 rounded-lg  mb-8"></i>
@@ -389,9 +383,9 @@ function MyProfile() {
         </div>
 
         {/* Payment History */}
-        <div className={`w-full p-3 dark:bg-[#111728] bg-white rounded-lg ${ selectMenu === "my-paymenthistory" ? "block" : "hidden" }`} >
+        <div className={`${selectMenu === "my-paymenthistory" ? "block" : "hidden"}`} >
           <h1 className="font-semibold p-2 text-xl">Tolovlar tarixi</h1>
-          <div className="overflow-x-auto">
+          <div className="">
             <table className="table mt-4 p-6">
               <thead className="bg-[#F5FAFF] dark:bg-[#2b3656] rounded-xl boeder-none">
                 <tr className="text-[#6eb4fb] border-none rounded-xl ">
@@ -420,12 +414,16 @@ function MyProfile() {
               <tbody>
                 <tr className="border-none">
                   <td>
-                    Professional Node.js: noldan boshlab eʼlonlar sayti <br />{" "}
-                    yaratishni oʻrganing
+                    <span className="block text-nowrap">Professional Node.JS</span>
+                    <span className="text-nowrap">Noldan boshlab eʼlonlar sayti yaratishni oʻrganing!</span>
                   </td>
-                  <td>28.11.2024</td>
-                  <td className="text-[#3F9CFB]">247,000 so'm</td>
-                  <td>Bir martalik toʻlov</td>
+                  <td>
+                    <span className="text-nowrap">28.11.2024</span>
+                  </td>
+                  <td className="text-[#3F9CFB]">
+                    <span className="text-nowrap">247,000 so'm</span>
+                  </td>
+                  <td className="text-nowrap">Bir martalik toʻlov</td>
                   <td className="text-[#FDC724]">Jarayonda</td>
                 </tr>
               </tbody>
@@ -434,33 +432,27 @@ function MyProfile() {
         </div>
 
         {/* My Devices */}
-        <div
-          className={`w-full p-8 dark:bg-[#111728] bg-white rounded-lg ${
-            selectMenu === "my-devices" ? "block" : "hidden"
-          }`}
-        >
+        <div className={`${selectMenu === "my-devices" ? "block" : "hidden"}`} >
           <div>
             <h1 className="font-semibold text-xl">Faol qurilmalar</h1>
-            <p className="text-[#7F868B] text-base mt-4 font-light">
-              Siz bir vaqtning oʻzida faqat 2ta qurilma orqali taʻlim olishingiz
-              mumkin. Ilovalarni uchinchi qurilmada <br /> faollashtirish uchun
-              avval mavjud ikkita qurilmalardan birini oʻchirishingiz kerak.
+            <p className="text-[#7F868B] mt-4 font-light text-[13px]">
+              Siz bir vaqtning oʻzida faqat 2ta qurilma orqali taʻlim olishingiz mumkin.
+              <br />
+              Ilovalarni uchinchi qurilmada faollashtirish uchun avval mavjud ikkita qurilmalardan birini oʻchirishingiz kerak.
             </p>
           </div>
 
-          <div className="bg-[#FFFCED] dark:bg-[#f8e588] px-2 py-2 rounded-xl mt-4 flex">
+          <div className="bg-[#FFFCED] dark:bg-[#f8e588] px-3 py-2 rounded-xl mt-4 flex">
             <i className="bi bi-exclamation-circle-fill text-yellow-300 dark:text-yellow-500 mr-3"></i>
-            <h1 className="text-[#1A202C]">
-              Faqatgina 2ta qurilmadan kirishingiz mumkun{" "}
-            </h1>
+            <h1 className="text-[#1A202C]">Faqatgina 2ta qurilmadan kirishingiz mumkin.</h1>
           </div>
 
-          <div className="overflow-x-auto mt-4">
+          <div className="mt-4">
             <table className="table table-zebra mt-4">
-              <thead className="bg-[#F5FAFF] dark:bg-[#2b3656] rounded-xl ">
-                <tr className=" text-[#3F9CFB] border-none rounded-xl">
+              <thead className="bg-[#F5FAFF] dark:bg-[#2b3656]">
+                <tr className="text-[#3F9CFB]">
                   <th>QURUIMA NOMI</th>
-                  <th>FAILLASHTIRILGAAN SANA </th>
+                  <th>FOALLASHTIRILGAAN SANA</th>
                   <th>HARAKARLAR</th>
                 </tr>
               </thead>
@@ -468,34 +460,31 @@ function MyProfile() {
               <tbody>
                 <tr>
                   <td className="flex">
-                    <i className="bi bi-laptop bg-[#3F9CFB] text-white px-2 rounded-md text-xl inline-flex items-center justify-center"></i>
+                    <i className="bi bi-laptop p-2 rounded-md text-xl inline-flex items-center justify-center"></i>
                     <div className="ml-3">
-                      <h1 className="font-medium">
-                        {" "}
-                        Mac OS 10.15.7, Chrome 133
-                      </h1>
+                      <h1 className="font-medium text-nowrap">Mac OS 10.15.7, Chrome 133</h1>
                       <p className="text-green-500 text-xs">Mazkur qurilma</p>
                     </div>
                   </td>
-
                   <td>11:05:01, 04.03.2025</td>
-                  <td></td>
+                  <td>
+                    <button className="btn btn-sm">
+                      <i className="bi bi-trash-fill text-red-500"></i>
+                    </button>
+                  </td>
                 </tr>
-
                 <tr>
                   <td className="flex items-center">
-                    <i className="bi bi-phone bg-[#3F9CFB] text-white px-2 p-2 rounded-md text-xl inline-flex items-center justify-center"></i>
+                    <i className="bi bi-phone p-2 rounded-md text-xl inline-flex items-center justify-center"></i>
                     <div className="ml-3">
-                      <h1 className="font-medium text-center">
-                        {" "}
-                        Mac OS 10.15.7, Chrome 133
-                      </h1>
+                      <h1 className="font-medium text-center text-nowrap">Iphone 16.15.7, Chrome 133</h1>
+                      <p className="text-xs">2 days ago</p>
                     </div>
                   </td>
                   <td>13:38:34, 01.03.2025</td>
                   <td>
-                    <button>
-                      <i className="bi bi-trash-fill text-red-500 hover:bg-red-200 "></i>
+                    <button className="btn btn-sm">
+                      <i className="bi bi-trash-fill text-red-500"></i>
                     </button>
                   </td>
                 </tr>

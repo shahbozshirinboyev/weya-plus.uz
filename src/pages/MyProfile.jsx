@@ -1,4 +1,3 @@
-import { NavLink, Outlet } from "react-router-dom";
 import { useState } from "react";
 
 function MyProfile() {
@@ -119,12 +118,12 @@ function MyProfile() {
         <div className={`${selectMenu === "my-experience" ? "block" : "hidden"}`} >
           <div className="w-full p-3 bg-white dark:bg-[#111728] rounded-lg text-center mb-6">
             <div className="flex flex-col items-center justify-center p-8">
-              <i className="bi bi-book-fill text-white px-2 py-1 rounded-lg text-2xl bg-[#c9c9c9] mb-8"></i>
+              <i className="bi bi-book-fill px-2 py-1 rounded-lg text-2xl mb-8"></i>
               <div>
                 <h1 className="font-semibold   mb-1.5">
-                  Sizda hali ta'lim tajribasi mavjud emas
+                  Sizda hali ta'lim tajribasi mavjud emas.
                 </h1>
-                <p className="text-[#7F868B] mb-6">
+                <p className="mb-6 opacity-50">
                   Bu yerda sizning ta'lim tajribalaringiz ko’rinib turadi.
                 </p>
               </div>
@@ -237,13 +236,13 @@ function MyProfile() {
 
           <div className="w-full p-3 bg-white dark:bg-[#111728] rounded-lg text-center">
             <div className="flex flex-col items-center justify-center p-8">
-              <i className="bi bi-briefcase-fill text-4xl text-[#c9c9c9] px-2 py-2 rounded-lg  mb-8"></i>
+              <i className="bi bi-briefcase-fill text-4xl px-2 py-2 rounded-lg  mb-8"></i>
 
               <div>
                 <h1 className="font-semibold mb-1.5">
                   Sizda hali ish tajribasi mavjud emas
                 </h1>
-                <p className="text-[#7F868B] mb-6">
+                <p className="mb-6 opacity-50">
                   Bu yerda sizning ta'lim tajribalaringiz ko’rinib turadi.
                 </p>
               </div>
@@ -421,7 +420,7 @@ function MyProfile() {
                     <span className="text-nowrap">28.11.2024</span>
                   </td>
                   <td className="text-[#3F9CFB]">
-                    <span className="text-nowrap">247,000 so'm</span>
+                    <span className="text-nowrap">247.000 so'm</span>
                   </td>
                   <td className="text-nowrap">Bir martalik toʻlov</td>
                   <td className="text-[#FDC724]">Jarayonda</td>

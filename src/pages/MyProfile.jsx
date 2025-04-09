@@ -69,28 +69,25 @@ function MyProfile() {
             </div>
           </div>
 
-          <div className="flex justify-between p-4 bg-white rounded-2xl dark:bg-[#111728]">
-            <div className="">
-              <p className="mb-1.5 ">Telefon raqamingiz</p>
-              <h1 className="font-semibold ">+998991449406</h1>
+          <div className="flex flex-col md:flex-row gap-4 md:gap-2 p-4 bg-white rounded-2xl dark:bg-[#111728]">
+            <div className="flex-1">
+              <p className="text-sm font-light opacity-80">Telefon raqamingiz:</p>
+              <span className="font-semibold text-md">+998991449406</span>
             </div>
-            <div>
-              <p className="">Elektron manzilingiz</p>
+            <div className="flex-1">
+              <p className="text-sm font-light opacity-80">Elektron manzilingiz:</p>
+              <span className="font-semibold text-md">zerdajursinova@gmail.com</span>
             </div>
           </div>
 
           <div className="flex justify-between p-4 bg-white dark:bg-[#111728] rounded-2xl">
             <div className="">
-              <h1 className="font-semibold mb-1.5 ">
-                Change Password
-              </h1>
-              <p className="text-[#7F868B]">
-                Bu yerda hisobingiz parolini oʻzgartirishingiz mumkin
-              </p>
+              <h1 className="text-sm font-light opacity-80"> Change Password</h1>
+              <p className="font-semibold text-md"> Bu yerda hisobingiz parolini oʻzgartirishingiz mumkin. </p>
             </div>
             <div>
-              <button className="btn rounded-full bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 border-[#333] dark:border-gray-600 flex justify-center items-center gap-2">
-                <p>Change Password</p>
+              <button className="btn btn-sm rounded-full bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 border-[#333] dark:border-gray-600 flex justify-center items-center gap-2">
+                <p className="text-nowrap">Change Password</p>
                 <i className="bi bi-box-arrow-up-right flex justify-center items-center"></i>
               </button>
             </div>
@@ -98,18 +95,19 @@ function MyProfile() {
 
           <div className="flex justify-between p-4 bg-white dark:bg-[#111728] rounded-2xl">
             <div className="">
-              <h1 className="font-semibold mb-1.5 ">
-                Maolumatlarni Korsatish
+              <h1 className="text-sm font-light opacity-80">
+                Ma'lumotlarni ko'rsatish
               </h1>
-              <p className="text-[#7F868B] text-sm">
-                Bu yerda hisobingiz parolini oʻzgartirishingiz mumkin
+              <p className="font-semibold text-md">
+                Maʻlumotlaringizni saytda rezyume sifatida koʻrsatishingiz mumkin.
               </p>
             </div>
             <div>
-              <input
-                type="checkbox"
-                className="toggle toggle-primary mt-4 peer checked:bg-blue-400 bg-gray-300 dark:bg-gray-500"
-              />
+              <label className="toggle text-base-content bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 border-[#333] dark:border-gray-600">
+                <input type="checkbox" />
+                <svg aria-label="enabled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
+                <svg aria-label="disabled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g strokeLinejoin="round" strokeLinecap="round" strokeWidth="4" fill="none" stroke="currentColor"><path d="M20 6 9 17l-5-5"></path></g></svg>
+              </label>
             </div>
           </div>
         </div>

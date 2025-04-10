@@ -152,7 +152,7 @@ function Education() {
             .map((course) => (
               <div
                 key={course.id}
-                className="border border-gray-300 hover:border-gray-400 dark:border-gray-600 rounded-lg overflow-hidden
+                className="border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden
                 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10 transition-all duration-300
                 "
               >
@@ -177,7 +177,7 @@ function Education() {
 
                   <p className="text-xs">{course.text}</p>
 
-                  <div className="flex mt-5">
+                  <div className="flex mt-5 mb-2">
                     <NavLink to="select-course" className="uppercase bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10
                     btn w-full rounded-full border border-gray-300 hover:border-gray-400 dark:border-gray-600
                     ">

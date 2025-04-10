@@ -359,7 +359,7 @@ function MyProfile() {
                     </td>
                     <td>11:05:01, 04.03.2025</td>
                     <td>
-                      <button className="btn btn-sm flex justify-center items-center border border-gray-300 dark:border-gray-600" onClick={() => document.getElementById("delete_device").showModal()} >
+                      <button className="btn btn-sm flex justify-center items-center border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600" onClick={() => document.getElementById("delete_device").showModal()} >
                         <i className="bi bi-trash-fill flex justify-center items-center text-red-500"></i>
                         <span>Delete</span>
                       </button>
@@ -377,7 +377,7 @@ function MyProfile() {
                     </td>
                     <td>13:38:34, 01.03.2025</td>
                     <td>
-                      <button className="btn btn-sm flex justify-center items-center border border-gray-300 dark:border-gray-600" onClick={() => document.getElementById("delete_device").showModal()} >
+                      <button className="btn btn-sm flex justify-center items-center border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600" onClick={() => document.getElementById("delete_device").showModal()} >
                         <i className="bi bi-trash-fill flex justify-center items-center text-red-500"></i>
                         <span>Delete</span>
                       </button>

@@ -46,7 +46,7 @@ function MyProfile() {
               <li key={to} className="w-full">
                 <button
                   onClick={() => { setSelectMenu(to); }}
-                  className={`w-full cursor-pointer hover:border flex flex-col md:flex-row border justify-start items-center gap-2 px-1 md:px-2 py-1 md:py-2 rounded-md md:rounded-md
+                  className={`w-full cursor-pointer hover:border flex flex-col md:flex-row border justify-start items-center gap-2 px-1 md:px-3 py-1 md:py-2 rounded-md md:rounded-full
                 ${selectMenu === to ? "bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20  dark:border-gray-600 dark:from-[#eed9ed]/10 border-gray-400" : "border-transparent"}`}
                 >
                   <i className={`bi ${icon} text-lg flex justify-center items-center`} ></i>

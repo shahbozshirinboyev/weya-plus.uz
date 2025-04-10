@@ -47,12 +47,10 @@ function AddEducation() {
 
           <div className="w-full rounded-md   bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10 ">
             <select className="select w-full bg-transparent rounded-md  border border-gray-300 dark:border-gray-600">
-              <option disabled selected className="bg-gray-900">
-                Pick a color
-              </option>
-              <option className="bg-gray-900">Crimson</option>
-              <option className="bg-gray-900">Amber</option>
-              <option className="bg-gray-900">Velvet</option>
+            <option disabled selected className="bg-gray-900"> Pick a color </option>
+                  <option className="bg-gray-900 text-gray-50">Crimson</option>
+                  <option className="bg-gray-900 text-gray-50">Amber</option>
+                  <option className="bg-gray-900 text-gray-50">Velvet</option>
             </select>
           </div>
 

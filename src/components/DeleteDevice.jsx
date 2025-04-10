@@ -12,7 +12,7 @@ function DeleteDevice() {
             <span>Qurilmani o’chirmoqchimisiz?</span>
           </h3>
 
-          <div className="flex items-center border border-gray-200 dark:border-gray-700 my-5 p-2 rounded-md">
+          <div className="flex items-center border border-gray-200 dark:border-gray-700 my-5 p-2 rounded-md bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
             <i className="bi bi-phone p-2 rounded-md text-xl inline-flex items-center justify-center"></i>
             <div className="ml-3">
               <h1 className="font-medium text-center text-nowrap">

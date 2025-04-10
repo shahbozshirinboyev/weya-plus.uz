@@ -2,6 +2,7 @@ import { useState } from "react";
 import MyProfileInfoUpdate from "../components/MyProfileInfoUpdate";
 import AddEducation from "../components/AddEducation";
 import AddWorkExperience from "../components/AddWorkExperience";
+import DeleteDevice from "../components/DeleteDevice";
 
 function MyProfile() {
   const menus = [
@@ -37,6 +38,7 @@ function MyProfile() {
       <MyProfileInfoUpdate />
       <AddEducation />
       <AddWorkExperience />
+      <DeleteDevice />
 
       <section className="container mx-auto px-3 mt-4 flex items-start gap-4 text-gray-900 dark:text-gray-50">
         <div className="md:w-52 xl:w-72 border border-gray-200 dark:border-gray-600 p-1 md:p-2 bg-gradient-to-r to-[#eed9ed]/20 from-[#2ec05a]/5 dark:to-[#eed9ed]/10 rounded-md absolute md:static bottom-3 left-3 right-3">
@@ -357,8 +359,9 @@ function MyProfile() {
                     </td>
                     <td>11:05:01, 04.03.2025</td>
                     <td>
-                      <button className="btn btn-sm">
-                        <i className="bi bi-trash-fill text-red-500"></i>
+                      <button className="btn btn-sm flex justify-center items-center border border-gray-300 dark:border-gray-600" onClick={() => document.getElementById("delete_device").showModal()} >
+                        <i className="bi bi-trash-fill flex justify-center items-center text-red-500"></i>
+                        <span>Delete</span>
                       </button>
                     </td>
                   </tr>
@@ -374,8 +377,9 @@ function MyProfile() {
                     </td>
                     <td>13:38:34, 01.03.2025</td>
                     <td>
-                      <button className="btn btn-sm">
-                        <i className="bi bi-trash-fill text-red-500"></i>
+                      <button className="btn btn-sm flex justify-center items-center border border-gray-300 dark:border-gray-600" onClick={() => document.getElementById("delete_device").showModal()} >
+                        <i className="bi bi-trash-fill flex justify-center items-center text-red-500"></i>
+                        <span>Delete</span>
                       </button>
                     </td>
                   </tr>

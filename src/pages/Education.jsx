@@ -101,11 +101,11 @@ function Education() {
     <div className="container mx-auto px-3 text-gray-900 dark:text-gray-50">
 
       {/* ------------------- */}
-      <div className="flex flex-col justify-center items-center my-12">
+      <div className="flex flex-col justify-center items-center my-12 border">
         <h1 className="flex flex-col gap-1 text-4xl md:text-6xl lg:text-8xl text-center font-extrabold uppercase">
           <span>Kasb o‘rganish</span><span>biz bilan</span><span className="dark:bg-gray-50 text-gray-50 bg-gray-900 dark:text-gray-900 leading-snug">yanada oson!</span>
         </h1>
-        <ul className="flex flex-wrap justify-center items-center gap-2 md:gap-3 xl:gap-5 my-5">
+        <ul className="flex flex-wrap justify-center items-center gap-2 md:gap-3 xl:gap-5 mt-5">
           <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full shadow-none  bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">UI design</li>
           <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full shadow-none  bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">Frontend</li>
           <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full shadow-none  bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">Backend</li>
@@ -113,21 +113,17 @@ function Education() {
           <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full shadow-none  bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">Graphic design</li>
           <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full shadow-none  bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">UX design</li>
         </ul>
-        <p className="text-center text-sm">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s.
+        <p className="text-center text-sm font-semibold opacity-50 my-5">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa iure iusto quisquam totam tempora dignissimos recusandae, fuga velit possimus vitae praesentium quia eligendi distinctio inventore alias fugiat provident. In dicta consequuntur, iure laudantium suscipit voluptatem.
         </p>
-        <button className="mt-4 uppercase btn rounded-full shadow-none border border-gray-300 hover:border-gray-600 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
+        <button className="uppercase btn btn-lg rounded-full dark:hover:bg-white font-bold dark:hover:text-gray-900 shadow-none border border-gray-300 hover:border-gray-600 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
           get started
         </button>
       </div>
       {/* ------------------- */}
 
       {/* ------------------- */}
-      <div className="flex flex-col justify-center items-center ">
+      <div className="flex flex-col justify-center items-center border">
         <h1 className="text-2xl text-center font-semibold">COURSES</h1>
         <div className="my-6 flex flex-wrap justify-center items-center gap-2 px-2 py-2 rounded-full bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
           {categories.map((category) => (
@@ -188,12 +184,12 @@ function Education() {
       {/* ------------------- */}
 
       {/* ------------------- */}
-      <div className="flex flex-col justify-center items-center mt-18">
+      <div className="flex flex-col justify-center items-center mt-18 border">
         <h1 className="text-4xl text-center uppercase font-semibold">
           How does Weya+ work?
         </h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-8 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
 
           <div className="rounded-2xl p-5 transition-all duration-300 border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
             <div className="flex flex-wrap justify-between">
@@ -242,7 +238,7 @@ function Education() {
 
 
       {/* ------------------- */}
-      <div className="flex flex-col justify-center items-center mt-18 w-full">
+      <div className="flex flex-col justify-center items-center mt-18 w-full border">
 
         <h1 className="text-4xl text-center">
           Choose a specialization, complete a masterclass,
@@ -285,12 +281,12 @@ function Education() {
 
 
       {/* ------------------- */}
-      <div className="flex flex-col justify-center items-center mt-18">
+      <div className="flex flex-col justify-center items-center my-18 border">
         <h1 className="text-4xl text-center">
           Choose a specialization, complete a masterclass, and gain experience!
         </h1>
 
-        <div className="flex items-center justify-center w-[100%] mt-20 mb-20">
+        <div className="flex items-center justify-center w-[100%] mt-20">
           <div className="relative px-10 py-6 rounded-3xl shadow-lg text-center w-full  mt-5 border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
             <div className="absolute top-0 left-0 right-0 -mt-12 flex justify-center">
               <div className="w-30 h-30 dark:bg-gray-900 rounded-full flex items-center justify-center shadow-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">

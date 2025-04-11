@@ -11,7 +11,14 @@ function LeftDrawer() {
           className="drawer-overlay"
         ></label>
         <div className="min-h-full md:w-10/12 lg:w-8/12  xl:w-5/12 p-8 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
-          <div className="border border-gray-300 dark:border-gray-600 rounded-md p-8 mb-3">
+          <div className="flex justify-end items-center border border-gray-300 dark:border-gray-600 rounded-md py-4 px-4 lg:px-8 mb-3">
+            <label htmlFor="my-drawer" className="btn btn-sm btn-error">
+              <i className="bi bi-x-lg flex justify-center items-center"></i>
+              <span>Yopish</span>
+            </label>
+          </div>
+
+          <div className="border border-gray-300 dark:border-gray-600 rounded-md p-4 lg:p-8 mb-3">
             <h1 className="text-2xl font-semibold text-start">
               Data sayns va Sunʼiy intellekt
             </h1>
@@ -38,12 +45,12 @@ function LeftDrawer() {
             </div>
           </div>
 
-          <div className="border border-gray-300 dark:border-gray-600 rounded-md p-8 mb-3">
+          <div className="border border-gray-300 dark:border-gray-600 rounded-md p-4 lg:p-8 mb-3">
             <h1 className="text-2xl font-semibold text-start">
               Kursdan nimani kutishingiz mumkin?
             </h1>
 
-            <div className="grid grid-cols-2 gap-4 mt-4">
+            <div className="grid grid-cols-2 gap-4 mt-8">
               <div className="">
                 <div className="inline-block p-4 rounded-full bg-sky-200">
                   <i className="bi bi-book-fill flex justify-center items-center text-sky-500"></i>
@@ -95,7 +102,7 @@ function LeftDrawer() {
             </div>
           </div>
 
-          <div className="border border-gray-300 dark:border-gray-600 rounded-md p-8 mb-3">
+          <div className="border border-gray-300 dark:border-gray-600 rounded-md p-4 lg:p-8 mb-3">
             <h1 className="text-2xl font-semibold text-start">
               Data sayns nima?
             </h1>
@@ -118,12 +125,12 @@ function LeftDrawer() {
             </div>
           </div>
 
-          <div className="border border-gray-300 dark:border-gray-600 rounded-md p-8">
+          <div className="border border-gray-300 dark:border-gray-600 rounded-md p-4 lg:p-8">
             <h1 className="text-2xl font-semibold text-start">
               Kurs qay tartibda oʻtiladi?
             </h1>
 
-            <div className="flex flex-col gap-4 mt-4">
+            <div className="flex flex-col gap-4 mt-8">
               <div className="flex gap-4 items-start">
                 <div className="inline-block p-4 rounded-full bg-purple-200 mt-3">
                   <i className="bi bi-people-fill flex justify-center items-center text-purple-500"></i>

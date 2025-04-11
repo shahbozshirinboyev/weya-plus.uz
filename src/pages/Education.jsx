@@ -102,18 +102,16 @@ function Education() {
 
       {/* ------------------- */}
       <div className="flex flex-col justify-center items-center my-12">
-        <h1 className="text-4xl md:text-6xl lg:text-8xl text-center font-semibold">
-          STUDY<br />
-          <span className="font-bold">ABROAD</span> IS EASY<br />
-          WITH US
+        <h1 className="text-4xl md:text-6xl lg:text-8xl text-center font-bold uppercase">
+          Kasb o‘rganish<br />biz bilan<br />yanada oson!
         </h1>
         <ul className="flex flex-wrap justify-center items-center gap-2 md:gap-3 xl:gap-5 my-5">
-          <li className="px-3 py-1 text-[12px] font-semibold rounded-full shadow-none border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">UI design</li>
-          <li className="px-3 py-1 text-[12px] font-semibold rounded-full shadow-none border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">Frontend</li>
-          <li className="px-3 py-1 text-[12px] font-semibold rounded-full shadow-none border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">Backend</li>
-          <li className="px-3 py-1 text-[12px] font-semibold rounded-full shadow-none border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">Mobile developer</li>
-          <li className="px-3 py-1 text-[12px] font-semibold rounded-full shadow-none border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">Graphic design</li>
-          <li className="px-3 py-1 text-[12px] font-semibold rounded-full shadow-none border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">UX design</li>
+          <li className="px-4 py-2 text-[12px] font-semibold rounded-full shadow-none  bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">UI design</li>
+          <li className="px-4 py-2 text-[12px] font-semibold rounded-full shadow-none  bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">Frontend</li>
+          <li className="px-4 py-2 text-[12px] font-semibold rounded-full shadow-none  bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">Backend</li>
+          <li className="px-4 py-2 text-[12px] font-semibold rounded-full shadow-none  bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">Mobile developer</li>
+          <li className="px-4 py-2 text-[12px] font-semibold rounded-full shadow-none  bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">Graphic design</li>
+          <li className="px-4 py-2 text-[12px] font-semibold rounded-full shadow-none  bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">UX design</li>
         </ul>
         <p className="text-center text-sm">
           Lorem Ipsum is simply dummy text of the printing and typesetting

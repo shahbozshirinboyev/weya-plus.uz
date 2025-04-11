@@ -397,7 +397,7 @@ function Education() {
 
             <div className="p-5 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
               <div className="flex gap-3 items-center">
-                <i className="bi bi-person-workspace text-xl"></i>
+                <i className="bi bi-mortarboard  text-xl"></i>
 
                 <div>
                   <h1 className="text-md font-normal ">Professional Dev.</h1>

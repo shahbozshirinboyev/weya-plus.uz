@@ -64,8 +64,8 @@ function SelectCourse() {
     <>
      <LeftDrawer />
      <BuyModal />
-    <div className='container mx-auto px-3 flex items-start mt-4 gap-8 text-gray-900 dark:text-gray-50'>
-      <div className='w-72 lg:w-92 rounded-lg border border-gray-200 dark:border-gray-800 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10 overflow-hidden'>
+    <div className='container mx-auto px-3 flex flex-col md:flex-row items-start mt-4 gap-4 md:gap-8 text-gray-900 dark:text-gray-50'>
+      <div className='w-full md:w-72 lg:w-92 rounded-lg border border-gray-200 dark:border-gray-800 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10 overflow-hidden'>
         <img src="https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=640&q=75" alt="Course_Title" />
         <div className='p-3 font-semibold '>
           <h1 className='text-2xl'>Express Backend</h1>
@@ -88,7 +88,7 @@ function SelectCourse() {
         </div>
       </div>
 
-      <div className='flex-1'>
+      <div className='w-full md:flex-1'>
         {courses.map((course, index) => (
 
           <div key={index} className="mb-2">

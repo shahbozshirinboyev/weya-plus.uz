@@ -10,7 +10,7 @@ function LeftDrawer() {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <div className="min-h-full w-5/12 p-8 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
+        <div className="min-h-full md:w-10/12 lg:w-8/12  xl:w-5/12 p-8 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
           <div className="border border-gray-300 dark:border-gray-600 rounded-md p-8 mb-3">
             <h1 className="text-2xl font-semibold text-start">
               Data sayns va Sunʼiy intellekt

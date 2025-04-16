@@ -6,7 +6,6 @@ import ThemeSwitcher from "./ThemeSwitcher";
 function Navbar() {
   return (
     <>
-      <Login />
       <div className="container mx-auto px-3 sticky top-1 my-3 z-15">
         <div
           className="w-full shadow-none border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10
@@ -47,12 +46,9 @@ function Navbar() {
           </div>
 
           <div className="flex gap-2 items-center">
-            <button
-              onClick={() => document.getElementById("login").showModal()}
-              className="btn btn-sm border-none btn-circle w-[80px] flex justify-center items-center bg-gray-900 text-gray-50 dark:bg-gray-50 dark:text-gray-900"
-            >
+            <NavLink to="login" className="btn btn-sm border-none btn-circle w-[80px] flex justify-center items-center bg-gray-900 text-gray-50 dark:bg-gray-50 dark:text-gray-900" >
               <span className="text-[13px]">Login</span>
-            </button>
+            </NavLink>
 
             <div className="dropdown dropdown-end text-gray-900 dark:text-gray-50">
               <div tabIndex={0} role="button" className="btn btn-circle bg-transparent border-none shadow-none" >

@@ -16,6 +16,7 @@ import SelectLesson from "./pages/SelectLesson.jsx"
 
 // sahifalarni animatsiya bilan o'rash
 import PageWrapper from "./components/PageWrapper.jsx"
+import Login from "./components/Login.jsx"
 
 const routes = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const routes = createBrowserRouter([
       {
         index: true,
         element: <PageWrapper><Home /></PageWrapper>,
+      },
+      {
+        path: "login",
+        element: <PageWrapper><Login /></PageWrapper>,
       },
       {
         path: "education",

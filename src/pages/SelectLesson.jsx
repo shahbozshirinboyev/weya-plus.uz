@@ -77,7 +77,7 @@ function SelectLesson() {
           {courses.map((course, index) => (
             <div key={index} className=" mb-2 ">
               <div className="collapse collapse-arrow bg-base-100 border-base-300 border dark:border-gray-600">
-                <input type="checkbox" id={`course-toggle-${index}`} />
+                <input type="checkbox" id={`course-toggle-${index}`} defaultChecked={index === 0 || index === 1} />
                 <div className="collapse-title font-semibold backdrop-sepia-0 bg-gradient-to-r  from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
                   {course.title}
                   <div>
@@ -89,26 +89,23 @@ function SelectLesson() {
                   {course.lessons.map((lesson, idx) => (
                     <div
                       key={idx}
-                      className={`flex items-center justify-between px-3 py-2 cursor-pointer mt-2 font-medium hover:bg-[#eed9ed]/40 dark:hover:bg-[#eed9ed]/20 ${
-                        lesson.locked ? "" : ""
-                      } ${
-                        activeLesson === lesson.name
+                      className={`flex items-center justify-between px-3 py-2 cursor-pointer mt-2 font-medium hover:bg-[#eed9ed]/40 dark:hover:bg-[#eed9ed]/20 ${lesson.locked ? "" : ""
+                        } ${activeLesson === lesson.name
                           ? "backdrop-sepia-0 bg-gradient-to-r from-[#eed9ed]/70 to-[#2ec05a]/30"
                           : ""
-                      }`}
+                        }`}
                       onClick={() =>
                         handleLessonClick(lesson.name, lesson.locked)
                       }
                     >
-                      <span className="flex items-center">
-                        <i
-                          className={
-                            lesson.locked
-                              ? "bi bi-lock flex justify-center items-center mr-2"
-                              : "bi bi-play border  rounded-full text-sm flex justify-center items-center mr-2"
-                          }
-                        ></i>
-                        {lesson.name}
+                      <span className='flex items-center'>
+                        {/* <i className={lesson.locked ? 'bi bi-lock flex justify-center items-center mr-2' : 'bi bi-play border rounded-full text-sm flex justify-center items-center mr-2'}></i> */}
+                        {lesson.locked ?
+                          <svg width="20" height="20" viewBox="0 0 512 512" className='' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--fxemoji" preserveAspectRatio="xMidYMid meet"><path fill="#B1B4B5" d="M376.749 349.097c-13.531 0-24.5-10.969-24.5-24.5V181.932c0-48.083-39.119-87.203-87.203-87.203c-48.083 0-87.203 39.119-87.203 87.203v82.977c0 13.531-10.969 24.5-24.5 24.5s-24.5-10.969-24.5-24.5v-82.977c0-75.103 61.1-136.203 136.203-136.203s136.203 61.1 136.203 136.203v142.665c0 13.531-10.969 24.5-24.5 24.5z"></path><path fill="#FFB636" d="M414.115 497.459H115.977c-27.835 0-50.4-22.565-50.4-50.4V274.691c0-27.835 22.565-50.4 50.4-50.4h298.138c27.835 0 50.4 22.565 50.4 50.4v172.367c0 27.836-22.565 50.401-50.4 50.401z"></path><path fill="#FFD469" d="M109.311 456.841h-2.525c-7.953 0-14.4-6.447-14.4-14.4V279.309c0-7.953 6.447-14.4 14.4-14.4h2.525c7.953 0 14.4 6.447 14.4 14.4v163.132c0 7.953-6.447 14.4-14.4 14.4z"></path></svg>
+                          :
+                          <i className="bi bi-play-circle flex justify-center items-center"></i>
+                        }
+                        <span className='ml-2'>{lesson.name}</span>
                       </span>
                       {lesson.locked ? (
                         <button

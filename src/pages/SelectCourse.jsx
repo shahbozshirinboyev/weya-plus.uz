@@ -69,7 +69,8 @@ function SelectCourse() {
         <img src="https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=640&q=75" alt="Course_Title" />
         <div className='p-3 font-semibold '>
           <h1 className='text-2xl'>Express Backend</h1>
-          <span className='text-[14px] opacity-90 leading-[.8]'>Mentor: Azimjon Po'latov</span>
+          <p className='text-[14px] opacity-90'>Mentor: Azimjon Po'latov</p>
+          <span className='text-[14px] opacity-90 dark:bg-gray-50 text-gray-50 bg-gray-900 dark:text-gray-900 leading-snug px-2'>8 / 56 / 876 min</span>
         </div>
         <div className='p-4 rounded-lg flex flex-col border border-gray-200 dark:border-gray-800 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10'>
           {/* <b className='uppercase'>Course Price:</b> */}

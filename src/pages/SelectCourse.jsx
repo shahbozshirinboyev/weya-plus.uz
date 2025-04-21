@@ -95,7 +95,7 @@ function SelectCourse() {
           <div key={index} className="mb-2">
             <div className="collapse collapse-arrow">
 
-              <input type="checkbox" id={`course-toggle-${index}`} />
+              <input type="checkbox" id={`course-toggle-${index}`} defaultChecked={index === 0 || index === 1} />
               <div className="collapse-title font-semibold bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
                 {course.title}
               </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import GoogleIcon from '/assets/logo/google_icon.png'
 import { NavLink } from 'react-router-dom';
+import ThemeSwitcher from './ThemeSwitcher';
 
 function Login() {
 
@@ -13,7 +14,11 @@ function Login() {
 
   return (
     <>
-      <div className="bg-[url('/assets/bg.png')] bg-no-repeat w-full  flex justify-center items-center bg-cover bg-center h-screen bg-base-100 text-gray-900 dark:text-gray-50">
+      <div className="w-full flex justify-center items-center h-screen text-gray-900 dark:text-gray-50">
+
+        <div className='absolute top-5 right-5'>
+          <ThemeSwitcher />
+        </div>
 
         <div className=' border border-black/12 bg-white rounded-2xl px-10 py-12 shadow sm:w-[450px]  '>
           <div className='text-center mb-4'>

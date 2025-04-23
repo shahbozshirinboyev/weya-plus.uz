@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import GoogleIcon from '/assets/logo/google_icon.png'
+import { NavLink } from 'react-router-dom';
 
 function Login() {
 
@@ -12,7 +13,7 @@ function Login() {
 
   return (
     <>
-      <div className="bg-[url('/assets/bg.png')] bg-no-repeat w-full  flex justify-center items-center bg-cover bg-center h-screen absolute top-0 right-0 left-0 bottom-0 bg-base-100 z-20">
+      <div className="bg-[url('/assets/bg.png')] bg-no-repeat w-full  flex justify-center items-center bg-cover bg-center h-screen bg-base-100 text-gray-900 dark:text-gray-50">
 
         <div className=' border border-black/12 bg-white rounded-2xl px-10 py-12 shadow sm:w-[450px]  '>
           <div className='text-center mb-4'>
@@ -22,7 +23,9 @@ function Login() {
 
           <div className=' mb-3'>
             <button className='btn border-none bg-white w-full shadow'>
-              <img src={GoogleIcon} className='w-4' alt="" />Google</button>
+              <img src={GoogleIcon} className='w-4' alt="" />
+              Google
+            </button>
           </div>
 
           <div className="flex items-center gap-4 mb-4">
@@ -67,7 +70,7 @@ function Login() {
 
           <div className='flex justify-between gap-10 mt-3'>
             <p className='text-xs text-[#686868]'>Sizning hisobingiz yo’qmi?</p>
-            <p className='text-xs font-medium bg-gradient-to-r from-[#8360C3] to-[#2EBF91] bg-clip-text text-transparent'>Ro’yxatdan o’tish</p>
+            <NavLink to="/registration" className='text-xs font-medium bg-gradient-to-r from-[#8360C3] to-[#2EBF91] bg-clip-text text-transparent'>Ro’yxatdan o’tish</NavLink>
           </div>
         </div>
       </div>

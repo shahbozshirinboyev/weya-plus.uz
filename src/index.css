@@ -4,13 +4,13 @@
 @plugin "daisyui" { themes: all; }
 
  html.dark {
-  /* background-color: #000318; */
+  background-color: oklch(13% 0.028 261.692);
   /* background-attachment: fixed; */
   /* background-repeat: repeat; */
 }
 
 html:not(.dark) {
-  /* background-color: #fcfcfc; */
+  background-color: oklch(98.5% 0.002 247.839);
   /* background-attachment: fixed; */
   /* background-repeat: repeat; */
 }

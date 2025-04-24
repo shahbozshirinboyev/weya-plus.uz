@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import logo from "../../public/assets/logo/weya_plus.png";
-import Login from "../components/Login";
 import ThemeSwitcher from "./ThemeSwitcher";
 
 function Navbar() {
@@ -8,7 +7,7 @@ function Navbar() {
     <>
       <div className="container mx-auto px-3 sticky top-1 my-3 z-15">
 
-        <div className="w-full rounded-full px-[25px] flex justify-between items-center h-[50px] border">
+        <div className="w-full rounded-full px-[25px] flex justify-between items-center h-[50px] bg-gray-300/20 backdrop-blur-md">
 
           <NavLink to="/">
             <img src={logo} alt="LOGO" className="w-[70px] cursor-pointer" />

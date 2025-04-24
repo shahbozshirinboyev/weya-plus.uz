@@ -18,7 +18,7 @@ export default function ErrorPage() {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
-        className="mockup-code w-full max-w-xl z-10 rounded-md"
+        className="mockup-code w-full max-w-xl z-10 rounded-md bg-gray-900"
       >
         <pre data-prefix="$">
           <code className="text-xs lg:text-sm">yo‘ldan adashdik</code>

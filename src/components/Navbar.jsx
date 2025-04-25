@@ -85,21 +85,21 @@ function Navbar() {
                   </NavLink>
                 </li>
 
-                <li className="tooltip tooltip-left" data-tip="Block">
+                <li className="tooltip tooltip-left opacity-50" data-tip="Block">
                   <span>
                     <i className="bi bi-chat-quote text-[18px] flex justify-center items-center"></i>
                     <a>Talk</a>
                   </span>
                 </li>
 
-                <li className="tooltip tooltip-left" data-tip="Block">
+                <li className="tooltip tooltip-left opacity-50" data-tip="Block">
                   <span>
                     <i className="bi bi-people text-[18px] flex justify-center items-center"></i>
                     <a>Webtoon</a>
                   </span>
                 </li>
 
-                <li className="tooltip tooltip-left" data-tip="Block">
+                <li className="tooltip tooltip-left opacity-50" data-tip="Block">
                   <span>
                     <i className="bi bi-controller text-[18px] flex justify-center items-center"></i>
                     <a>Game</a>
@@ -107,7 +107,7 @@ function Navbar() {
                 </li>
 
                 <li>
-                  <span className="tooltip tooltip-left" data-tip="Block">
+                  <span className="tooltip tooltip-left opacity-50" data-tip="Block">
                     <i className="bi bi-cast text-[18px] flex justify-center items-center"></i>
                     <a>Media</a>
                   </span>

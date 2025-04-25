@@ -127,22 +127,22 @@ function Education() {
             </span>
           </h1>
           <ul className="flex flex-wrap justify-center items-center gap-2 md:gap-3 xl:gap-5 mt-5">
-            <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full shadow-none  bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
+            <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full bg-gray-200">
               UI design
             </li>
-            <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full shadow-none  bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
+            <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full bg-gray-200">
               Frontend
             </li>
-            <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full shadow-none  bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
+            <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full bg-gray-200">
               Backend
             </li>
-            <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full shadow-none  bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
+            <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full bg-gray-200">
               Mobile developer
             </li>
-            <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full shadow-none  bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
+            <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full bg-gray-200">
               Graphic design
             </li>
-            <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full shadow-none  bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
+            <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full bg-gray-200">
               UX design
             </li>
           </ul>

@@ -7,7 +7,6 @@ function Logo() {
   const [theme, setTheme] = useState(localStorage.getItem("theme"));
   const navigate = useNavigate();
 
-  // localStorage'dan theme qiymatini olib boshlang‘ich holatda saqlaymiz
   useEffect(() => {
     const handleStorageChange = (event) => {
       if (event.key === "theme") {

@@ -7,6 +7,7 @@ function Logo() {
   const [theme, setTheme] = useState(localStorage.getItem("theme"));
   const navigate = useNavigate();
 
+  // localStorage'dan theme qiymatini olib boshlang‘ich holatda saqlaymiz
   useEffect(() => {
     const handleStorageChange = (event) => {
       if (event.key === "theme") {
@@ -23,19 +24,23 @@ function Logo() {
       if (currentTheme !== theme) {
         setTheme(currentTheme);
       }
-    }, 500);
+    }, 50);
     return () => clearInterval(interval);
   }, [theme]);
 
-  useEffect(() => {
-    console.log("Theme:", theme);
-  }, [theme]);
-
+  const getActualTheme = (theme) => {
+    if (theme === "system") {
+      return window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "night"
+        : "light";
+    }
+    return theme;
+  };
   return (
     <img
       alt="LOGO"
       onClick={() => navigate("/")}
-      src={theme === "night" ? logoGray50 : logoGray900}
+      src={getActualTheme(theme) === "night" ? logoGray50 : logoGray900}
       className="w-[70px] cursor-pointer"
     />
   );

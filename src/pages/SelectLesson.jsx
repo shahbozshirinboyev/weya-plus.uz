@@ -200,7 +200,7 @@ function SelectLesson() {
             <div className="flex gap-1">
             <button className="flex justify-center items-center gap-2 btn bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10 rounded-full border border-gray-300 hover:border-gray-400 dark:border-gray-600 lg:hidden" onClick={() => setView("left")} >
                 <i class="bi bi-list-nested flex justify-center items-center text-xs"></i>
-                <span className="text-xs">Mavzular ro'yxati</span>
+                <span className="text-xs hidden md:block">Mavzular ro'yxati</span>
               </button>
               <button className="flex justify-center items-center gap-2 btn bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10 rounded-full border border-gray-300 hover:border-gray-400 dark:border-gray-600 ">
                 <span className="text-xs">Next lesson</span>

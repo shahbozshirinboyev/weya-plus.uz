@@ -86,9 +86,26 @@ function SelectLesson() {
           }`}
         >
           <div className="flex justify-between items-center mb-4">
-            <div>
-              <h3 className="font-medium">Express Backend</h3>
-              <p className="text-sm">You have completed 34% of this course</p>
+            <div className="flex gap-2">
+              <div>
+                <div
+                  className="radial-progress border border-gray-600"
+                  style={{
+                    "--value": "25",
+                    "--size": "3rem",
+                    "--thickness": "2px",
+                  }}
+                  aria-valuenow={70}
+                  role="progressbar"
+                >
+                  <span className="text-sm">25%</span>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="font-medium">Express Backend</h3>
+                <p className="text-sm">You have completed 34% of this course</p>
+              </div>
             </div>
 
             <button
@@ -198,16 +215,19 @@ function SelectLesson() {
             </div>
 
             <div className="flex gap-1">
-            <button className="flex justify-center items-center gap-2 btn bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10 rounded-full border border-gray-300 hover:border-gray-400 dark:border-gray-600 lg:hidden" onClick={() => setView("left")} >
+              <button
+                className="flex justify-center items-center gap-2 btn bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10 rounded-full border border-gray-300 hover:border-gray-400 dark:border-gray-600 lg:hidden"
+                onClick={() => setView("left")}
+              >
                 <i class="bi bi-list-nested flex justify-center items-center text-xs"></i>
-                <span className="text-xs hidden md:block">Mavzular ro'yxati</span>
+                <span className="text-xs hidden md:block">
+                  Mavzular ro'yxati
+                </span>
               </button>
               <button className="flex justify-center items-center gap-2 btn bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10 rounded-full border border-gray-300 hover:border-gray-400 dark:border-gray-600 ">
                 <span className="text-xs">Next lesson</span>
                 <i className="bi bi-chevron-right flex justify-center items-center text-xs"></i>
               </button>
-
-
             </div>
           </div>
 

@@ -45,8 +45,6 @@ function Registration() {
                 Hisobingizga kiring!
               </h1>
               <p className="text-md font-light">
-                Xush kelibsiz!
-                <br />
                 Quyidagilar orqali hisobingizga kiring.
               </p>
             </div>

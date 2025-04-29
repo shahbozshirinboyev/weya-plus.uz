@@ -139,22 +139,22 @@ function Education() {
             </span>
           </h1>
           <ul className="flex flex-wrap justify-center items-center gap-2 md:gap-3 xl:gap-5 mt-5">
-            <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full bg-gray-200">
+            <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full bg-base-200 border border-base-300">
               UI design
             </li>
-            <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full bg-gray-200">
+            <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full bg-base-200 border border-base-300">
               Frontend
             </li>
-            <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full bg-gray-200">
+            <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full bg-base-200 border border-base-300">
               Backend
             </li>
-            <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full bg-gray-200">
+            <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full bg-base-200 border border-base-300">
               Mobile developer
             </li>
-            <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full bg-gray-200">
+            <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full bg-base-200 border border-base-300">
               Graphic design
             </li>
-            <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full bg-gray-200">
+            <li className="px-4 py-2 xl:px-6 xl:py-3 text-[14px] font-semibold rounded-full bg-base-200 border border-base-300">
               UX design
             </li>
           </ul>
@@ -312,22 +312,22 @@ function Education() {
         </div>
         {/* POPULAR DESTINATIONS ------------------- END */}
 
-        {/* ------------------- */}
+        {/* HOW DOES IT WORK? ------------------- START */}
         <div className="flex flex-col justify-center items-center my-12">
           <h1 className="flex gap-1 text-2xl text-center font-bold uppercase">
-            <span className="dark:bg-gray-50 text-gray-50 bg-gray-900 dark:text-gray-900 leading-snug px-2">
+            <span className="dark:bg-gray-50 text-gray-50 bg-gray-900 dark:text-gray-900 leading-snug px-2 ">
               WeYa+
             </span>
             <span>qanday ishlaydi?</span>
           </h1>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
-            <div className="rounded-2xl p-5 transition-all duration-300 border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-8 ">
+            <div className="rounded-2xl p-5  bg-base-100 hover:bg-base-200 border border-base-300 ">
               <div className="flex flex-wrap justify-between relative">
                 <p className="font-semibold w-[80%] h-15">
                   O'zingizga mos masterklassni tanlaysiz.
                 </p>
-                <div className="text-5xl font-semibold mr-1 absolute right-0 top-0 opacity-50">
+                <div className="text-5xl font-bold mr-1 absolute right-0 top-0 opacity-50">
                   01
                 </div>
               </div>
@@ -338,9 +338,9 @@ function Education() {
               </p>
             </div>
 
-            <div className="rounded-2xl p-5 transition-all duration-300 border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
+            <div className="rounded-2xl p-5  bg-base-100 hover:bg-base-200 border border-base-300">
               <div className="flex flex-wrap justify-between relative">
-                <p className="font-semibold w-[80%] h-15">
+                <p className="font-bold w-[80%] h-15">
                   Berilgan darslarni o'rganib, vazifalarni bajarasiz.
                 </p>
                 <div className="text-5xl font-semibold mr-1 absolute right-0 top-0 opacity-50">
@@ -354,9 +354,9 @@ function Education() {
               </p>
             </div>
 
-            <div className="rounded-2xl p-5 transition-all duration-300 border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
+            <div className="rounded-2xl p-5  bg-base-100 hover:bg-base-200 border border-base-300">
               <div className="flex flex-wrap justify-between relative">
-                <p className="font-semibold w-[80%] h-15">
+                <p className="font-bold w-[80%] h-15">
                   Amaliy mashg'ulotlarda qatnashing, sertifikatga ega bo'ling.
                 </p>
                 <div className="text-5xl font-semibold mr-1 absolute right-0 top-0 opacity-50">
@@ -371,7 +371,7 @@ function Education() {
             </div>
           </div>
         </div>
-        {/* ------------------- */}
+        {/* HOW DOES IT WORK? ------------------- END */}
 
         {/* ------------------- */}
         <div className="flex flex-col justify-center items-center w-full">
@@ -383,17 +383,17 @@ function Education() {
           </h1>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 w-full">
-            <div className="rounded-2xl py-8 flex flex-col justify-center items-center border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10 transition-all duration-300">
+            <div className="rounded-2xl py-8 flex flex-col justify-center items-center  bg-base-100 hover:bg-base-200 border border-base-300">
               <p className="font-bold text-xl">Umumiy o'quvchilar soni</p>
               <span className="text-4xl font-extrabold mt-2">+12,265</span>
             </div>
 
-            <div className="rounded-2xl py-8 flex flex-col justify-center items-center border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10 transition-all duration-300">
+            <div className="rounded-2xl py-8 flex flex-col justify-center items-center  bg-base-100 hover:bg-base-200 border border-base-300">
               <p className="font-bold text-xl">Yozilgan darslar soni</p>
               <span className="text-4xl font-extrabold mt-2">+265</span>
             </div>
 
-            <div className="rounded-2xl py-8 flex flex-col justify-center items-center border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10 transition-all duration-300">
+            <div className="rounded-2xl py-8 flex flex-col justify-center items-center bg-base-100 hover:bg-base-200 border border-base-300 ">
               <p className="font-bold text-xl">O'rtacha jamoaviy tajribaa</p>
               <span className="text-4xl font-extrabold mt-2">+7 yil</span>
             </div>

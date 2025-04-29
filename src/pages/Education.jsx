@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Footer from "../components/Footer";
+import { p } from "framer-motion/client";
 
 function Education() {
   const courses = [
@@ -113,6 +114,17 @@ function Education() {
     "Backend",
     "UX design",
   ];
+  const popular_des = [
+    { icon: "bi bi-palette", name: "Design" },
+    { icon: "bi bi-code-slash", name: "Development" },
+    { icon: "bi bi-mortarboard", name: "Professional Dev." },
+    { icon: "bi bi-camera", name: "Photography" },
+    { icon: "bi bi-database", name: "Data Science" },
+    { icon: "bi bi-briefcase", name: "Business" },
+    { icon: "bi bi-megaphone", name: "Marketing" },
+    { icon: "bi bi-music-note-beamed", name: "Music" },
+  ];
+
   const [selectedCategory, setSelectedCategory] = useState("Frontend");
   return (
     <>
@@ -235,7 +247,7 @@ function Education() {
         </div>
         {/* ------------------- */}
 
-        {/* ------------------- */}
+        {/* LEADING TEACHERS ------------------- START */}
         <div className="flex flex-col justify-center items-center my-12">
           <h1 className="flex gap-1 text-2xl text-center font-bold uppercase">
             <span>Yetakchi</span>
@@ -245,119 +257,33 @@ function Education() {
           </h1>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 w-full">
-            <div className="p-6 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
-              <div className="flex gap-3 items-center">
-                <div className="avatar ">
-                  <div className="w-14 rounded-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+            {[...Array(6).keys()].map((i) => (
+              <div className="p-6 flex justify-between items-center rounded-xl bg-base-100 hover:bg-base-200 border border-base-300">
+                <div className="flex gap-3 items-center">
+                  <div className="avatar ">
+                    <div className="w-14 rounded-full">
+                      <img
+                        src={`https://randomuser.me/api/portraits/men/${i}.jpg`}
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <h1 className="text-lg font-semibold">Zerda Jursinova</h1>
+                    <p className="text-xs opacity-50">Frontend Dev.</p>
                   </div>
                 </div>
 
-                <div>
-                  <h1 className="text-lg font-semibold">Zerda jursinova</h1>
-                  <p className="text-xs opacity-50">Frontend developer</p>
+                <div className="btn btn-circle p-2 border border-base-300 hover:bg-sky-500 group">
+                  <i className="bi bi-arrow-up-right flex justify-center items-center text-gray-900 dark:text-gray-50 group-hover:text-gray-50"></i>
                 </div>
               </div>
-
-              <div>
-                <i className="bi bi-arrow-up-right flex justify-center items-center btn border border-gray-300 dark:border-gray-600 bg-base-200 hover:bg-gray-200 dark:hover:bg-gray-800 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
-              </div>
-            </div>
-            <div className="p-6 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
-              <div className="flex gap-3 items-center">
-                <div className="avatar ">
-                  <div className="w-14 rounded-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-                  </div>
-                </div>
-
-                <div>
-                  <h1 className="text-lg font-semibold">Zerda jursinova</h1>
-                  <p className="text-xs opacity-50">Frontend developer</p>
-                </div>
-              </div>
-
-              <div>
-                <i className="bi bi-arrow-up-right flex justify-center items-center btn border border-gray-300 dark:border-gray-600 bg-base-200 hover:bg-gray-200 dark:hover:bg-gray-800 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
-              </div>
-            </div>
-            <div className="p-6 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
-              <div className="flex gap-3 items-center">
-                <div className="avatar ">
-                  <div className="w-14 rounded-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-                  </div>
-                </div>
-
-                <div>
-                  <h1 className="text-lg font-semibold">Zerda jursinova</h1>
-                  <p className="text-xs opacity-50">Frontend developer</p>
-                </div>
-              </div>
-
-              <div>
-                <i className="bi bi-arrow-up-right flex justify-center items-center btn border border-gray-300 dark:border-gray-600 bg-base-200 hover:bg-gray-200 dark:hover:bg-gray-800 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
-              </div>
-            </div>
-            <div className="p-6 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
-              <div className="flex gap-3 items-center">
-                <div className="avatar ">
-                  <div className="w-14 rounded-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-                  </div>
-                </div>
-
-                <div>
-                  <h1 className="text-lg font-semibold">Zerda jursinova</h1>
-                  <p className="text-xs opacity-50">Frontend developer</p>
-                </div>
-              </div>
-
-              <div>
-                <i className="bi bi-arrow-up-right flex justify-center items-center btn border border-gray-300 dark:border-gray-600 bg-base-200 hover:bg-gray-200 dark:hover:bg-gray-800 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
-              </div>
-            </div>
-            <div className="p-6 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
-              <div className="flex gap-3 items-center">
-                <div className="avatar ">
-                  <div className="w-14 rounded-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-                  </div>
-                </div>
-
-                <div>
-                  <h1 className="text-lg font-semibold">Zerda jursinova</h1>
-                  <p className="text-xs opacity-50">Frontend developer</p>
-                </div>
-              </div>
-
-              <div>
-                <i className="bi bi-arrow-up-right flex justify-center items-center btn border border-gray-300 dark:border-gray-600 bg-base-200 hover:bg-gray-200 dark:hover:bg-gray-800 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
-              </div>
-            </div>
-            <div className="p-6 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
-              <div className="flex gap-3 items-center">
-                <div className="avatar ">
-                  <div className="w-14 rounded-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-                  </div>
-                </div>
-
-                <div>
-                  <h1 className="text-lg font-semibold">Zerda jursinova</h1>
-                  <p className="text-xs opacity-50">Frontend developer</p>
-                </div>
-              </div>
-
-              <div>
-                <i className="bi bi-arrow-up-right flex justify-center items-center btn border border-gray-300 dark:border-gray-600 bg-base-200 hover:bg-gray-200 dark:hover:bg-gray-800 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-        {/* ------------------- */}
+        {/* LEADING TEACHERS ------------------- END */}
 
-        {/* ------------------- */}
+        {/* POPULAR DESTINATIONS ------------------- START */}
         <div className="flex flex-col justify-center items-center">
           <h1 className="flex gap-1 text-2xl text-center font-bold uppercase">
             <span>Eng Ommabop</span>
@@ -367,120 +293,24 @@ function Education() {
           </h1>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 w-full">
-            <div className="p-5 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
-              <div className="flex gap-3 items-center">
-                <i className="bi bi-palette text-xl"></i>
+            {popular_des.map((item) => (
+              <div className="p-5 flex justify-between items-center rounded-xl bg-base-100 hover:bg-base-200 border border-base-300">
+                <div className="flex gap-3 items-center">
+                  <i className={`${item.icon} text-xl flex justify-center items-center`}></i>
 
-                <div>
-                  <h1 className="text-md font-normal ">Desing</h1>
+                  <div>
+                    <h1 className="text-md font-normal ">{item.name}</h1>
+                  </div>
+                </div>
+
+                <div className="btn btn-circle p-2 border border-base-300 hover:bg-sky-500 group">
+                  <i className="bi bi-arrow-up-right flex justify-center items-center text-gray-900 dark:text-gray-50 group-hover:text-gray-50"></i>
                 </div>
               </div>
-
-              <div>
-                <i className="bi bi-arrow-up-right flex justify-center items-center btn border border-gray-300 dark:border-gray-600 bg-base-200 hover:bg-gray-200 dark:hover:bg-gray-800 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
-              </div>
-            </div>
-
-            <div className="p-5 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
-              <div className="flex gap-3 items-center">
-                <i className="bi bi-code-slash text-xl"></i>
-
-                <div>
-                  <h1 className="text-md font-normal ">Development</h1>
-                </div>
-              </div>
-
-              <div>
-                <i className="bi bi-arrow-up-right flex justify-center items-center btn border border-gray-300 dark:border-gray-600 bg-base-200 hover:bg-gray-200 dark:hover:bg-gray-800 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
-              </div>
-            </div>
-
-            <div className="p-5 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
-              <div className="flex gap-3 items-center">
-                <i className="bi bi-mortarboard  text-xl"></i>
-
-                <div>
-                  <h1 className="text-md font-normal ">Professional Dev.</h1>
-                </div>
-              </div>
-
-              <div>
-                <i className="bi bi-arrow-up-right flex justify-center items-center btn border border-gray-300 dark:border-gray-600 bg-base-200 hover:bg-gray-200 dark:hover:bg-gray-800 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
-              </div>
-            </div>
-
-            <div className="p-5 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
-              <div className="flex gap-3 items-center">
-                <i className="bi bi-camera text-xl"></i>
-
-                <div>
-                  <h1 className="text-md font-normal ">Photography</h1>
-                </div>
-              </div>
-
-              <div>
-                <i className="bi bi-arrow-up-right flex justify-center items-center btn border border-gray-300 dark:border-gray-600 bg-base-200 hover:bg-gray-200 dark:hover:bg-gray-800 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
-              </div>
-            </div>
-
-            <div className="p-5 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
-              <div className="flex gap-3 items-center">
-                <i className="bi bi-database text-xl"></i>
-
-                <div>
-                  <h1 className="text-md font-normal ">Data Science</h1>
-                </div>
-              </div>
-
-              <div>
-                <i className="bi bi-arrow-up-right flex justify-center items-center btn border border-gray-300 dark:border-gray-600 bg-base-200 hover:bg-gray-200 dark:hover:bg-gray-800 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
-              </div>
-            </div>
-
-            <div className="p-5 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
-              <div className="flex gap-3 items-center">
-                <i className="bi bi-briefcase  text-xl"></i>
-
-                <div>
-                  <h1 className="text-md font-normal ">Business</h1>
-                </div>
-              </div>
-
-              <div>
-                <i className="bi bi-arrow-up-right flex justify-center items-center btn border border-gray-300 dark:border-gray-600 bg-base-200 hover:bg-gray-200 dark:hover:bg-gray-800 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
-              </div>
-            </div>
-
-            <div className="p-5 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
-              <div className="flex gap-3 items-center">
-                <i className="bi bi-megaphone text-xl"></i>
-
-                <div>
-                  <h1 className="text-md font-normal ">Marketing</h1>
-                </div>
-              </div>
-
-              <div>
-                <i className="bi bi-arrow-up-right flex justify-center items-center btn border border-gray-300 dark:border-gray-600 bg-base-200 hover:bg-gray-200 dark:hover:bg-gray-800 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
-              </div>
-            </div>
-
-            <div className="p-5 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
-              <div className="flex gap-3 items-center">
-                <i className="bi bi-music-note-beamed text-xl"></i>
-
-                <div>
-                  <h1 className="text-md font-normal ">Music</h1>
-                </div>
-              </div>
-
-              <div>
-                <i className="bi bi-arrow-up-right flex justify-center items-center btn border border-gray-300 dark:border-gray-600 bg-base-200 hover:bg-gray-200 dark:hover:bg-gray-800 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-        {/* ------------------- */}
+        {/* POPULAR DESTINATIONS ------------------- END */}
 
         {/* ------------------- */}
         <div className="flex flex-col justify-center items-center my-12">

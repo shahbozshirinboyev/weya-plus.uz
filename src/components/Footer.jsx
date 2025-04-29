@@ -12,9 +12,9 @@ function Footer(){
           <a href="#">Contact Us</a>
         </nav>
         <div className="text-xs space-y-1">
-          <p>KOREA : Weaya Co., LTD CEO 이성혁 등록번호 482-88-02872</p>
-          <p>UZBEKISTAN : Weaya LLC CEO 리야드 등록번호 311-176-835</p>
-          <p>Copyright© 2024, WeaVas. All rights reserved.</p>
+          <p>KOREA : WeYa Co., LTD CEO 이성혁 등록번호 482-88-02872</p>
+          <p>UZBEKISTAN : WeYa LLC CEO 리야드 등록번호 311-176-835</p>
+          <p>Copyright© 2024, WeYa. All rights reserved.</p>
         </div>
       </div>
     </footer>

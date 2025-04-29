@@ -343,7 +343,7 @@ function Education() {
                 <p className="font-bold w-[80%] h-15">
                   Berilgan darslarni o'rganib, vazifalarni bajarasiz.
                 </p>
-                <div className="text-5xl font-semibold mr-1 absolute right-0 top-0 opacity-50">
+                <div className="text-5xl font-bold mr-1 absolute right-0 top-0 opacity-50">
                   02
                 </div>
               </div>
@@ -359,7 +359,7 @@ function Education() {
                 <p className="font-bold w-[80%] h-15">
                   Amaliy mashg'ulotlarda qatnashing, sertifikatga ega bo'ling.
                 </p>
-                <div className="text-5xl font-semibold mr-1 absolute right-0 top-0 opacity-50">
+                <div className="text-5xl font-bold mr-1 absolute right-0 top-0 opacity-50">
                   03
                 </div>
               </div>

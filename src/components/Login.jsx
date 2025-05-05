@@ -1,5 +1,5 @@
 import { useState } from "react";
-import GoogleIcon from "/assets/logo/google_icon.png";
+import GoogleIcon from "@/assets/icons/google.png";
 import { NavLink } from "react-router-dom";
 import ThemeSwitcher from "./ThemeSwitcher";
 

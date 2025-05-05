@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import ThemeSwitcher from "./ThemeSwitcher";
-import GoogleIcon from "/assets/logo/google_icon.png";
+import GoogleIcon from "@/assets/icons/google.png";
 import { NavLink } from "react-router-dom";
 
 function Registration() {

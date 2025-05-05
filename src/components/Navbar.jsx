@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import logo from "/assets/logo/logo-gray-900.png";
+// import logo from "/assets/logo/logo-gray-900.png";
 import ThemeSwitcher from "./ThemeSwitcher";
 import Logo from "./Logo";
 

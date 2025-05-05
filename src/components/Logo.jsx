@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import logoGray900 from "/assets/logo/logo-gray-900.png";
-import logoGray50 from "/assets/logo/logo-gray-50.png";
+import logoGray900 from "@/assets/images/logos/logo-gray-900.png";
+import logoGray50 from "@/assets/images/logos/logo-gray-50.png";
 
 function Logo() {
   const [theme, setTheme] = useState(localStorage.getItem("theme"));

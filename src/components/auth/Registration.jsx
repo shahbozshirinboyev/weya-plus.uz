@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ThemeSwitcher from "./ThemeSwitcher";
+import ThemeSwitcher from "../ui/ThemeSwitcher";
 import GoogleIcon from "@/assets/icons/google.png";
 import { NavLink } from "react-router-dom";
 

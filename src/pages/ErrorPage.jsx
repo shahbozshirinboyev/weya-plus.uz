@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
-import ThemeSwitcher from "../components/ThemeSwitcher";
+import ThemeSwitcher from "../components/ui/ThemeSwitcher";
 
 export default function ErrorPage() {
   const videoRef = useRef();

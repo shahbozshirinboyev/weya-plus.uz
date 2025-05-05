@@ -1,7 +1,7 @@
 import { useState } from "react";
 import GoogleIcon from "@/assets/icons/google.png";
 import { NavLink } from "react-router-dom";
-import ThemeSwitcher from "./ThemeSwitcher";
+import ThemeSwitcher from "../ui/ThemeSwitcher";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);

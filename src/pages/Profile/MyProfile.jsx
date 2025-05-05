@@ -1,8 +1,8 @@
 import { useState } from "react";
-import MyProfileInfoUpdate from "../components/MyProfileInfoUpdate";
-import AddEducation from "../components/AddEducation";
-import AddWorkExperience from "../components/AddWorkExperience";
-import DeleteDevice from "../components/DeleteDevice";
+import MyProfileInfoUpdate from "../../components/modals/MyProfileInfoUpdate";
+import AddEducation from "../../components/modals/AddEducation";
+import AddWorkExperience from "../../components/modals/AddWorkExperience";
+import DeleteDevice from "../../components/modals/DeleteDevice";
 
 function MyProfile() {
   const menus = [

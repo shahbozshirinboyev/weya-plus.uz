@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import BuyModal from "../components/BuyModal";
+import BuyModal from "../../components/modals/BuyModal"
 
 const courses = [
   {

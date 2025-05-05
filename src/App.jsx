@@ -7,17 +7,17 @@ import EducationLayout from "./layouts/EducationLayout.jsx"
 import LessonLayout from "./layouts/LessonLayout.jsx"
 
 // pages
-import Home from "./pages/Home.jsx"
-import MyProfile from "./pages/MyProfile.jsx"
-import Education from "./pages/Education.jsx"
+import Home from "./pages/Home/Home.jsx"
+import MyProfile from "./pages/Profile/MyProfile.jsx"
+import Education from "./pages/Education/Education.jsx"
+import SelectCourse from "./pages/Education/SelectCourse.jsx"
+import SelectLesson from "./pages/Education/SelectLesson.jsx"
 import ErrorPage from "./pages/ErrorPage.jsx"
-import SelectCourse from "./pages/SelectCourse.jsx"
-import SelectLesson from "./pages/SelectLesson.jsx"
 
 // sahifalarni animatsiya bilan o'rash
-import PageWrapper from "./components/PageWrapper.jsx"
-import Login from "./components/Login.jsx"
-import Registration from "./components/Registration.jsx"
+import PageWrapper from "./components/ui/PageWrapper.jsx"
+import Login from "./components/auth/Login.jsx"
+import Registration from "./components/auth/Registration.jsx"
 
 const routes = createBrowserRouter([
   {

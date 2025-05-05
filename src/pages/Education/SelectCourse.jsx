@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import LeftDrawer from '../components/LeftDrawer';
+import LeftDrawer from "../../components/layout/LeftDrawer";
 import { NavLink } from 'react-router-dom';
-import BuyModal from '../components/BuyModal';
+import BuyModal from '../../components/modals/BuyModal';
 import { span } from 'framer-motion/client';
 
 function SelectCourse() {

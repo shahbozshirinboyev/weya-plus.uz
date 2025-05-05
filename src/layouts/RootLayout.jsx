@@ -1,5 +1,5 @@
-import Navbar from "../components/Navbar";
 import { Outlet, useLocation } from "react-router-dom";
+import Navbar from "../components/layout/Navbar";
 
 function RootLayout() {
   const location = useLocation();
@@ -9,7 +9,7 @@ function RootLayout() {
 
   return (
     <>
-      {!shouldHideNavbar && <Navbar />}
+      {!shouldHideNavbar && <Navbar /> }
       <Outlet />
     </>
   );

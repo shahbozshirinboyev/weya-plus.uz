@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import Footer from "../components/Footer";
+import Footer from "../../components/layout/Footer";
 import { p } from "framer-motion/client";
 
 function Education() {

@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 // import logo from "/assets/logo/logo-gray-900.png";
-import ThemeSwitcher from "./ThemeSwitcher";
-import Logo from "./Logo";
+import ThemeSwitcher from "../ui/ThemeSwitcher";
+import Logo from "../ui/Logo";
 
 function Navbar() {
   return (

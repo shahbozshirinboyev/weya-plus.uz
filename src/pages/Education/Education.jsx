@@ -196,7 +196,7 @@ function Education() {
               .filter((course) => course.category === selectedCategory)
               .map((course) => (
                 <div key={course.id}
-                    className="border border-gray-200 dark:border-gray-400 rounded-lg overflow-hidden bg-base-200 dark:bg-[#1E293B] relative"  >
+                    className="rounded-lg overflow-hidden bg-white dark:bg-gray-900 shadow shadow-gray-300 dark:shadow-gray-950 relative"  >
                       <div className="absolute bg-sky-500 px-1 py-2 w-[120px] rounded-br-xl flex justify-center items-center text-white font-semibold">
                         <span className="uppercase text-xs">Yangi</span>
                       </div>

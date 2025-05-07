@@ -2,8 +2,8 @@ import Logo from "@/assets/images/logos/weya_plus.png";
 
 function Footer() {
   return (
-    <footer className="relative w-full p-8 bg-[#0F172A] rounded-t-3xl text-gray-50">
-      <div className="absolute top-8 left-1/2 -translate-x-1/2 md:left-8 md:translate-x-0">
+    <footer className="relative w-full p-8 bg-gray-900 shadow shadow-gray-950 rounded-t-3xl text-gray-50">
+      <div className="absolute top-8 left-1/2 -translate-x-1/2 sm:left-8 sm:translate-x-0">
         <img src={Logo} alt="Logo" className="w-20" />
       </div>
 

@@ -1,4 +1,7 @@
 import { useState } from "react"
+import Humo from "@/assets/icons/Humo.svg";
+import Payme from "@/assets/icons/Payme.svg";
+import Uzcard from "@/assets/icons/Uzcard.svg";
 
 function BuyModal() {
   const [buttonPosition, setButtonPosition] = useState('left')
@@ -33,9 +36,9 @@ function BuyModal() {
                 <button className='btn rounded-full w-full mt-6 flex justify-between items-center border border-gray-300 hover:border-gray-600 dark:hover:border-gray-400 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10'>
                   <span>Xarid qilish</span>
                   <span className='flex gap-1'>
-                    <img src="/assets/payment_icon/Humo.svg" className='w-8 h-5 p-[2px] rounded-sm border-none' alt='' />
-                    <img src="/assets/payment_icon/Uzcard.svg" className='w-8 h-5 p-[2px] rounded-sm border-none' alt='' />
-                    <img src="/assets/payment_icon/Payme.svg" className='w-8 h-5 p-[2px] rounded-sm border-none' alt='' />
+                    <img src={Humo} className='w-8 h-5 p-[2px] rounded-sm border-none' alt='' />
+                    <img src={Uzcard} className='w-8 h-5 p-[2px] rounded-sm border-none' alt='' />
+                    <img src={Payme} className='w-8 h-5 p-[2px] rounded-sm border-none' alt='' />
                   </span>
                 </button>
               </div>
@@ -52,9 +55,9 @@ function BuyModal() {
                 <button className='btn rounded-full w-full mt-6 flex justify-between items-center border border-gray-300 hover:border-gray-600 dark:hover:border-gray-400 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10'>
                   <span>Xarid qilish</span>
                   <span className='flex gap-1'>
-                    <img src="/assets/payment_icon/Humo.svg" className='w-8 h-5 p-[2px] rounded-sm border-none' alt='' />
-                    <img src="/assets/payment_icon/Uzcard.svg" className='w-8 h-5 p-[2px] rounded-sm border-none' alt='' />
-                    <img src="/assets/payment_icon/Payme.svg" className='w-8 h-5 p-[2px] rounded-sm border-none' alt='' />
+                    <img src={Humo} className='w-8 h-5 p-[2px] rounded-sm border-none' alt='' />
+                    <img src={Uzcard} className='w-8 h-5 p-[2px] rounded-sm border-none' alt='' />
+                    <img src={Payme} className='w-8 h-5 p-[2px] rounded-sm border-none' alt='' />
                   </span>
                 </button>
               </div>

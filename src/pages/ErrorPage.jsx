@@ -30,7 +30,7 @@ export default function ErrorPage() {
           data-prefix=">"
           className="bg-warning text-warning-content font-bold"
         >
-          <code className="text-xs lg:text-sm">404 xato: Bunday sahifa mavjud emas</code>
+          <code className="text-xs lg:text-sm"><span className="text-red-500">404 xato: </span>Bunday sahifa mavjud emas</code>
         </pre>
         <pre data-prefix=">" className="">
           <code className="text-xs lg:text-sm">Yangi yo‘l bosh sahifadan boshlanadi</code>

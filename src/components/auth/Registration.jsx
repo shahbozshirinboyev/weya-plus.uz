@@ -4,6 +4,7 @@ import GoogleIcon from "@/assets/icons/google.png";
 import { NavLink } from "react-router-dom";
 
 function Registration() {
+  const [step, setStep] = useState(1);
   const [showInfo, setShowInfo] = useState();
 
   useEffect(() => {
@@ -38,20 +39,14 @@ function Registration() {
           <ThemeSwitcher />
         </div>
 
-
-
-
         {registrationType === "" && (
-          <div className="  flex items-center justify-center w-full h-screen">
-
-            <div className=" border-none bg-white dark:bg-gray-800 rounded-2xl px-10 py-12 shadow sm:w-[450px]">
+          <div className="flex items-center justify-center w-full h-screen">
+            <div className=" border-none bg-white dark:bg-gray-900 rounded-2xl px-10 py-12 sm:w-[450px] shadow">
               <div className="text-center mb-12">
-                <h1 className="font-medium text-3xl mb-2">
-                  Hisobingizga kiring!
+                <h1 className="font-medium text-3xl mb-2 uppercase">
+                  Hisobingizga kiring
                 </h1>
                 <p className="text-md font-light">
-                  Xush kelibsiz!
-                  <br />
                   Quyidagilar orqali hisobingizga kiring.
                 </p>
               </div>
@@ -78,7 +73,6 @@ function Registration() {
               </div>
             </div>
           </div>
-
         )}
 
         {registrationType === "personal" && (
@@ -91,7 +85,11 @@ function Registration() {
               <div className="mb-3">
                 <p className="text-xs font-medium mb-1">Ism familya</p>
                 <label className="input w-full border-none dark:bg-[#020617]  bg-[#F7F8F9] shadow">
-                  <input type="text" className="placeholder:text-black/50 dark:placeholder:text-gray-50" placeholder="Yozing" />
+                  <input
+                    type="text"
+                    className="placeholder:text-black/50 dark:placeholder:text-gray-50"
+                    placeholder="Yozing"
+                  />
                 </label>
               </div>
 
@@ -101,7 +99,11 @@ function Registration() {
                 </p>
                 <label className="input w-full  bg-[#F7F8F9] border-none dark:bg-[#020617] shadow">
                   <i className="bi bi-envelope text-black/50 dark:text-gray-50"></i>
-                  <input type="text" className="placeholder:text-black/50 dark:placeholder:text-gray-50" placeholder="Email" />
+                  <input
+                    type="text"
+                    className="placeholder:text-black/50 dark:placeholder:text-gray-50"
+                    placeholder="Email"
+                  />
                 </label>
               </div>
 
@@ -109,9 +111,21 @@ function Registration() {
                 <p className="text-xs font-medium mb-1">Parol o’ylab toping</p>
                 <label className="input w-full bg-[#F7F8F9] border-none flex items-center gap-2 px-3 py-2 rounded dark:bg-[#020617] shadow">
                   <i className="bi bi-lock text-black/50 dark:text-gray-50"></i>
-                  <input type={showPassword ? "text" : "password"} className="placeholder:text-black/50 dark:placeholder:text-gray-50" placeholder="Parol" />
-                  <button type="button" onClick={togglePassword} className="focus:outline-none">
-                    <i className={`bi ${showPassword ? "bi-eye" : "bi-eye-slash"} text-black/50 dark:text-gray-50`} ></i>
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    className="placeholder:text-black/50 dark:placeholder:text-gray-50"
+                    placeholder="Parol"
+                  />
+                  <button
+                    type="button"
+                    onClick={togglePassword}
+                    className="focus:outline-none"
+                  >
+                    <i
+                      className={`bi ${
+                        showPassword ? "bi-eye" : "bi-eye-slash"
+                      } text-black/50 dark:text-gray-50`}
+                    ></i>
                   </button>
                 </label>
               </div>
@@ -120,16 +134,30 @@ function Registration() {
                 <p className="text-xs font-medium mb-1">Parolni tasdiqlang</p>
                 <label className="input w-full  bg-[#F7F8F9] flex items-center gap-2 px-3 py-2 rounded border-none dark:bg-[#020617] shadow ">
                   <i className="bi bi-lock text-black/50 dark:text-gray-50"></i>
-                  <input type={showPassword ? "text" : "password"} className="placeholder:text-black/50 dark:placeholder:text-gray-50" placeholder="Parol" />
-                  <button type="button" onClick={togglePassword} className="focus:outline-none" >
-                    <i className={`bi ${showPassword ? "bi-eye" : "bi-eye-slash"} text-black/50 dark:text-gray-50`}></i>
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    className="placeholder:text-black/50 dark:placeholder:text-gray-50"
+                    placeholder="Parol"
+                  />
+                  <button
+                    type="button"
+                    onClick={togglePassword}
+                    className="focus:outline-none"
+                  >
+                    <i
+                      className={`bi ${
+                        showPassword ? "bi-eye" : "bi-eye-slash"
+                      } text-black/50 dark:text-gray-50`}
+                    ></i>
                   </button>
                 </label>
               </div>
 
               <div className="flex items-center gap-4 mb-4">
                 <hr className="flex-grow border-[#F5F5F5]" />
-                <p className="text-black/50 dark:text-gray-50 text-center text-xs">Yoki</p>
+                <p className="text-black/50 dark:text-gray-50 text-center text-xs">
+                  Yoki
+                </p>
                 <hr className="flex-grow border-[#F5F5F5]" />
               </div>
 
@@ -161,40 +189,68 @@ function Registration() {
 
         {registrationType === "company" && (
           <div className=" h-screen w-full flex items-center justify-center ">
-
             <div className="max-w-md mx-auto p-4 bg-white dark:bg-gray-800 rounded-lg shadow">
-              <h2 className="text-2xl font-medium text-center mb-6">Ro’yxatdan o’tish</h2>
+              <h2 className="text-2xl font-medium text-center mb-6">
+                Ro’yxatdan o’tish
+              </h2>
 
               <ul className="steps w-full ">
-                <li onClick={() => setStep(1)} className={`step cursor-pointer ${step >= 1 ? 'step-primary before:!bg-sky-500 after:!bg-sky-500 before:!border-none after:!border-none !border-none before:!text-white after:!text-white' : ''}`} >
+                <li
+                  onClick={() => setStep(1)}
+                  className={`step cursor-pointer ${
+                    step >= 1
+                      ? "step-primary before:!bg-sky-500 after:!bg-sky-500 before:!border-none after:!border-none !border-none before:!text-white after:!text-white"
+                      : ""
+                  }`}
+                >
                   Kontakt ma’lumotlari
                 </li>
-                <li onClick={() => setStep(2)} className={`step cursor-pointer ${step >= 2 ? 'step-primary before:!bg-sky-500  after:!bg-sky-500 before:!border-none after:!border-none !border-none  before:!text-white after:!text-white' : ''}`}>
+                <li
+                  onClick={() => setStep(2)}
+                  className={`step cursor-pointer ${
+                    step >= 2
+                      ? "step-primary before:!bg-sky-500  after:!bg-sky-500 before:!border-none after:!border-none !border-none  before:!text-white after:!text-white"
+                      : ""
+                  }`}
+                >
                   Kompaniya ma’lumotlari
                 </li>
               </ul>
-
 
               {step === 1 && (
                 <div>
                   <div className="mt-3">
                     <p className="text-xs font-medium mb-1">Kompaniya nomi</p>
                     <label className="input w-full border-none bg-[#F7F8F9] dark:bg-[#020617] shadow">
-                      <input type="text" className="placeholder:text-black/50 dark:placeholder:text-gray-50" placeholder="Example" />
+                      <input
+                        type="text"
+                        className="placeholder:text-black/50 dark:placeholder:text-gray-50"
+                        placeholder="Example"
+                      />
                     </label>
                   </div>
 
                   <div className="mt-3">
-                    <p className="text-xs font-medium mb-1">Kompaniya manzili</p>
+                    <p className="text-xs font-medium mb-1">
+                      Kompaniya manzili
+                    </p>
                     <label className="input w-full border-none bg-[#F7F8F9] dark:bg-[#020617] shadow">
-                      <input type="text" className="placeholder:text-black/50 dark:placeholder:text-gray-50" placeholder="Example" />
+                      <input
+                        type="text"
+                        className="placeholder:text-black/50 dark:placeholder:text-gray-50"
+                        placeholder="Example"
+                      />
                     </label>
                   </div>
 
                   <div className="mt-3">
                     <p className="text-xs font-medium mb-1">Biznes raqami</p>
                     <label className="input w-full border-none bg-[#F7F8F9] dark:bg-[#020617] shadow">
-                      <input type="text" className="placeholder:text-black/50 dark:placeholder:text-gray-50" placeholder="Yozing" />
+                      <input
+                        type="text"
+                        className="placeholder:text-black/50 dark:placeholder:text-gray-50"
+                        placeholder="Yozing"
+                      />
                     </label>
                   </div>
 
@@ -203,7 +259,11 @@ function Registration() {
                       Ma’sul shaxsning ismi
                     </p>
                     <label className="input w-full border-none bg-[#F7F8F9] dark:bg-[#020617] shadow">
-                      <input type="text" className="placeholder:text-black/50 dark:placeholder:text-gray-50" placeholder="Yozing" />
+                      <input
+                        type="text"
+                        className="placeholder:text-black/50 dark:placeholder:text-gray-50"
+                        placeholder="Yozing"
+                      />
                     </label>
                   </div>
 
@@ -228,8 +288,6 @@ function Registration() {
                       />
                     </label>
                   </div>
-
-
                 </div>
               )}
 
@@ -261,7 +319,9 @@ function Registration() {
                   </div>
 
                   <div className="mt-3 ">
-                    <p className="text-xs font-medium mb-1">Sertificat raqami</p>
+                    <p className="text-xs font-medium mb-1">
+                      Sertificat raqami
+                    </p>
                     <label className="input w-full border-none bg-[#F7F8F9] dark:bg-[#020617] shadow">
                       <input
                         type="text"
@@ -296,12 +356,19 @@ function Registration() {
                         className="placeholder:text-black/50 dark:placeholder:text-gray-50 bg-transparent outline-none"
                         placeholder="Parol"
                       />
-                      <button type="button" onClick={togglePassword} className="focus:outline-none"  >
-                        <i className={`bi ${showPassword ? "bi-eye" : "bi-eye-slash"} text-black/50 dark:text-gray-50`}  ></i>
+                      <button
+                        type="button"
+                        onClick={togglePassword}
+                        className="focus:outline-none"
+                      >
+                        <i
+                          className={`bi ${
+                            showPassword ? "bi-eye" : "bi-eye-slash"
+                          } text-black/50 dark:text-gray-50`}
+                        ></i>
                       </button>
                     </label>
                   </div>
-
 
                   <div className="mt-3">
                     <p className="text-xs font-medium mb-1">
@@ -314,19 +381,28 @@ function Registration() {
                         className="placeholder:text-black/50 dark:placeholder:text-gray-50"
                         placeholder="Parol"
                       />
-                      <button type="button" onClick={togglePassword} className="focus:outline-none">
-                        <i className={`bi ${showPassword ? "bi-eye" : "bi-eye-slash"} text-black/50 dark:text-gray-50`}  ></i>
+                      <button
+                        type="button"
+                        onClick={togglePassword}
+                        className="focus:outline-none"
+                      >
+                        <i
+                          className={`bi ${
+                            showPassword ? "bi-eye" : "bi-eye-slash"
+                          } text-black/50 dark:text-gray-50`}
+                        ></i>
                       </button>
                     </label>
                   </div>
-
                 </div>
               )}
 
               <div className={`${showInfo === true ? "hidden" : ""}`}>
                 <div className="flex items-center gap-4 mb-4 mt-3">
                   <hr className="flex-grow border-[#F5F5F5]" />
-                  <p className="text-black/50 dark:text-gray-50 text-center text-xs">Yoki</p>
+                  <p className="text-black/50 dark:text-gray-50 text-center text-xs">
+                    Yoki
+                  </p>
                   <hr className="flex-grow border-[#F5F5F5]" />
                 </div>
 
@@ -338,30 +414,39 @@ function Registration() {
                 </div>
               </div>
               <div className="w-full flex gap-2 mt-4">
-
-                <button onClick={() => setStep(step === 1 ? 2 : 1)}
-                  className={`w-full py-2 rounded ${step === 1
-                    ? 'bg-[#0EA5E9] text-white'
-                    : 'bg-[#E0F2FE] text-[#0EA5E9]'
-                    }`}>
-                  {step === 1 ? 'Keyingisi' : 'Orqaga'}
+                <button
+                  onClick={() => setStep(step === 1 ? 2 : 1)}
+                  className={`w-full py-2 rounded ${
+                    step === 1
+                      ? "bg-[#0EA5E9] text-white"
+                      : "bg-[#E0F2FE] text-[#0EA5E9]"
+                  }`}
+                >
+                  {step === 1 ? "Keyingisi" : "Orqaga"}
                 </button>
 
-
                 {step === 2 && (
-                  <button onClick={() => { }} className="w-full bg-[#0EA5E9] text-white py-2 rounded" >
+                  <button
+                    onClick={() => {}}
+                    className="w-full bg-[#0EA5E9] text-white py-2 rounded"
+                  >
                     Davom etish
                   </button>
                 )}
-
-
               </div>
 
-              <div className={`flex justify-between gap-30 mt-3  ${showInfo === true ? "hidden" : ""}`}  >
+              <div
+                className={`flex justify-between gap-30 mt-3  ${
+                  showInfo === true ? "hidden" : ""
+                }`}
+              >
                 <p className="text-xs text-black/50 dark:text-gray-50">
                   Sizning hisobingiz mavjudmi?
                 </p>
-                <NavLink to="/login" className="text-xs font-medium text-[#0EA5E9]"  >
+                <NavLink
+                  to="/login"
+                  className="text-xs font-medium text-[#0EA5E9]"
+                >
                   Hisobga kirish
                 </NavLink>
               </div>

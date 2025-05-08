@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import BuyModal from "../../components/modals/BuyModal"
+import BuyModal from "../../components/modals/BuyModal";
 
 const courses = [
   {
@@ -72,7 +72,6 @@ function SelectLesson() {
     return () => window.removeEventListener("resize", updateView);
   }, []);
 
-
   const [activeLesson, setActiveLesson] = useState(null);
 
   const handleLessonClick = (lessonName, locked) => {
@@ -84,20 +83,25 @@ function SelectLesson() {
   return (
     <>
       <BuyModal />
-      <div className="container mx-auto px-3 items-start flex gap-4 mt-4 text-gray-900 dark:text-gray-50 bg-[#F8FAFC]">
+      <div className="container mx-auto px-3 items-start flex gap-4 mt-4 text-gray-900 dark:text-gray-50">
         {/* Левая панель */}
-        <div className={`w-3/3 lg:w-1/3 rounded-2xl p-4 shadow ${view === "right" ? "hidden" : "block"}`}>
+        <div
+          className={`w-3/3 lg:w-1/3 rounded-2xl p-4 shadow ${
+            view === "right" ? "hidden" : "block"
+          }`}
+        >
           <div className="flex justify-between items-center mb-4">
             <div className="flex gap-3">
-
               <div className="flex items-center justify-center relative h-[50px] w-[50px]">
-                <div className="radial-progress text-gray-200 h-[50px] w-[50px] absolute [--thickness:3px] noround"
-                  style={{ "--value": 100, }}>
-                </div>
+                <div
+                  className="radial-progress text-gray-200 h-[50px] w-[50px] absolute [--thickness:3px] noround"
+                  style={{ "--value": 100 }}
+                ></div>
 
                 <div
                   className="radial-progress text-sky-500 h-[50px] w-[50px] absolute [--thickness:4px] noround"
-                  style={{ "--value": 20, }}>
+                  style={{ "--value": 20 }}
+                >
                   20%
                 </div>
               </div>
@@ -108,25 +112,33 @@ function SelectLesson() {
               </div>
             </div>
 
-            <button className="btn btn-xs bg-white dark:bg-gray-600 border-0 block lg:hidden" onClick={() => setView("right")} >
+            <button
+              className="btn btn-xs bg-base-200 border-0 block lg:hidden"
+              onClick={() => setView("right")}
+            >
               <i className="bi bi-x-lg"></i>
             </button>
-
           </div>
 
           {courses.map((course, index) => (
             <div key={index} className=" mb-2 ">
-              <div className="collapse collapse-arrow bg-slate-100 ">
-                <input type="checkbox" id={`course-toggle-${index}`} defaultChecked={index === 0 || index === 1} />
+              <div className="collapse collapse-arrow bg-base-200">
+                <input
+                  type="checkbox"
+                  id={`course-toggle-${index}`}
+                  defaultChecked={index === 0 || index === 1}
+                />
                 <div className="collapse-title  flex gap-2 ">
                   <div className="flex items-center justify-center relative h-[50px] w-[50px]">
-                    <div className="radial-progress text-gray-100 h-[50px] w-[50px] absolute [--thickness:3px] noround"
-                      style={{ "--value": 100, }}>
-                    </div>
+                    <div
+                      className="radial-progress h-[50px] w-[50px] absolute [--thickness:3px] noround"
+                      style={{ "--value": 100 }}
+                    ></div>
 
                     <div
                       className="radial-progress text-sky-500 h-[50px] w-[50px] absolute [--thickness:4px] noround"
-                      style={{ "--value": course.progress }}>
+                      style={{ "--value": course.progress }}
+                    >
                       {course.progress}%
                     </div>
                   </div>
@@ -140,12 +152,15 @@ function SelectLesson() {
 
                 <div className="collapse-content px-3 space-y-1.5  ">
                   {course.lessons.map((lesson, idx) => (
-                    <div className="flex items-center justify-between border-l-4 border-sky-500 rounded-xs  bg-white px-1 py-2 cursor-pointer  font-medium hover:bg-sky-50 dark:hover:bg-[#eed9ed]/20"
-                      onClick={() => handleLessonClick(lesson.name, lesson.locked)}>
-
-                      <span className='flex items-center'>
+                    <div
+                      className="flex items-center justify-between border-l-4 border-sky-500 rounded-xs  bg-base-100 px-1 py-2 cursor-pointer  font-medium hover:bg-sky-50 dark:hover:bg-sky-50/20"
+                      onClick={() =>
+                        handleLessonClick(lesson.name, lesson.locked)
+                      }
+                    >
+                      <span className="flex items-center">
                         <i className="bi bi-check2-circle px-1.5 text-sky-500"></i>
-                        <span className='ml-2 font-normal'>{lesson.name}</span>
+                        <span className="ml-2 font-normal">{lesson.name}</span>
                       </span>
                     </div>
                   ))}
@@ -156,7 +171,11 @@ function SelectLesson() {
         </div>
 
         {/* Правая часть */}
-        <div className={`w-3/3 lg:w-2/3 shadow p-4 rounded-2xl backdrop-blur ${view === "left" ? "hidden" : "block"}`}>
+        <div
+          className={`w-3/3 lg:w-2/3 shadow p-4 rounded-2xl backdrop-blur ${
+            view === "left" ? "hidden" : "block"
+          }`}
+        >
           <div className="flex justify-between items-center mb-4">
             <div>
               <h3 className="text-xl font-semibold"> Express Backend</h3>
@@ -167,12 +186,13 @@ function SelectLesson() {
                 <span>Next lesson</span>
                 <i className="bi bi-chevron-right flex justify-center items-center text-xs"></i>
               </button>
-              <button className="btn border-none bg-sky-500 rounded-full block lg:hidden"
-                onClick={() => setView("left")} >
+              <button
+                className="btn border-none bg-sky-500 rounded-full block lg:hidden"
+                onClick={() => setView("left")}
+              >
                 <i class="bi bi-list-nested text-white"></i>
               </button>
             </div>
-
           </div>
 
           <div className="w-full h-[300px] rounded-2xl border border-[#ccc] dark:border-gray-600 flex items-center justify-center  bg-gradient-to-r from-[#2ec05a]/20 dark:to-[#eed9ed]/30 to-[#eed9ed]/70">
@@ -187,9 +207,7 @@ function SelectLesson() {
             </label>
             <div className="tab-content bg-base-100 border-base-300 p-6">
               <div>
-              <span className="text-xl font-semibold">
-                Savol va javoblar
-              </span>
+                <span className="text-xl font-semibold">Savol va javoblar</span>
               </div>
 
               <p className="mt-2">

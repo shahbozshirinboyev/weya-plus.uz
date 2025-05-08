@@ -20,3 +20,7 @@ html:not(.dark) {
 html {
   transition: background-color .7s ease-in-out, color .7s ease-in-out;
 }
+
+.radial-progress::after {
+  display: none;
+}

@@ -17,13 +17,7 @@ function Login() {
           <ThemeSwitcher />
         </div>
 
-
-
-
-
         <div className="flex items-center justify-center w-full">
-
-
           <div className="border-none bg-white dark:bg-gray-800 rounded-2xl px-10 py-12 shadow sm:w-[450px]">
             <div className="text-center mb-12">
               <h1 className="font-medium text-3xl mb-2">Hisobingizga kiring</h1>
@@ -43,7 +37,9 @@ function Login() {
 
             <div className="flex items-center gap-4 mb-4">
               <hr className="flex-grow border-gray-300 dark:border-gray-600 " />
-              <p className="text-center text-xs text-black/50 dark:text-gray-50">Yoki</p>
+              <p className="text-center text-xs text-black/50 dark:text-gray-50">
+                Yoki
+              </p>
               <hr className="flex-grow border-gray-300 dark:border-gray-600" />
             </div>
 
@@ -51,7 +47,11 @@ function Login() {
               <p className="text-xs font-medium mb-1">Emailingizni kiriting</p>
               <label className="input w-full border-none  bg-gray-50 dark:bg-[#020617] shadow">
                 <i className="bi bi-envelope text-black/50 dark:text-gray-50"></i>
-                <input type="text" className="placeholder:text-black/50 dark:placeholder:text-gray-50" placeholder="Email" />
+                <input
+                  type="text"
+                  className="placeholder:text-black/50 dark:placeholder:text-gray-50"
+                  placeholder="Email"
+                />
               </label>
             </div>
 
@@ -68,16 +68,27 @@ function Login() {
                 <button
                   type="button"
                   onClick={togglePassword}
-                  className="focus:outline-none">
-                  <i className={`bi ${showPassword ? "bi-eye" : "bi-eye-slash"} text-black/50 dark:text-gray-50 `} ></i>
+                  className="focus:outline-none"
+                >
+                  <i
+                    className={`bi ${
+                      showPassword ? "bi-eye" : "bi-eye-slash"
+                    } text-black/50 dark:text-gray-50 `}
+                  ></i>
                 </button>
               </label>
             </div>
 
             <div className=" flex justify-between mt-4 ">
               <div className="flex ">
-                <input type="checkbox" defaultChecked className="checkbox text-black/50 dark:text-gray-50 border-none  w-4.5 h-4.5 mr-1.5 rounded-sm shadow" />
-                <p className="text-xs text-black/50 dark:text-gray-50">Eslab qolish</p>
+                <input
+                  type="checkbox"
+                  defaultChecked
+                  className="checkbox text-black/50 dark:text-gray-50 border-none  w-4.5 h-4.5 mr-1.5 rounded-sm shadow"
+                />
+                <p className="text-xs text-black/50 dark:text-gray-50">
+                  Eslab qolish
+                </p>
               </div>
               <p className="text-xs font-medium text-[#0EA5E9]">
                 Parolni unitdingizmi?
@@ -86,7 +97,10 @@ function Login() {
 
             <div className="flex justify-between gap-2">
               <button className="btn border-none bg-[#E0F2FE] dark:bg-[#0C4A6E] mt-4 rounded-lg px-2 sm:px-6">
-                <h1 className="text-[#0EA5E9] dark:text-gray-50 "> Bosh sahifaga qaytish</h1>
+                <h1 className="text-[#0EA5E9] dark:text-gray-50 ">
+                  {" "}
+                  Bosh sahifaga qaytish
+                </h1>
               </button>
               <button className="btn border-none bg-[#0EA5E9] text-white mt-4 px-9 sm:px-16 rounded-lg">
                 Kirish
@@ -94,18 +108,18 @@ function Login() {
             </div>
 
             <div className="flex justify-between  mt-3">
-              <p className="text-xs text-black/50 dark:text-gray-50 ">Sizning hisobingiz yo’qmi?</p>
-              <NavLink to="/registration" className="text-xs font-medium text-[#0EA5E9]"  >
+              <p className="text-xs text-black/50 dark:text-gray-50 ">
+                Sizning hisobingiz yo’qmi?
+              </p>
+              <NavLink
+                to="/registration"
+                className="text-xs font-medium text-[#0EA5E9]"
+              >
                 Ro’yxatdan o’tish
               </NavLink>
             </div>
           </div>
         </div>
-
-
-
-
-
       </div>
     </>
   );

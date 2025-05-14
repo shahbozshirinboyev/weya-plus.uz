@@ -1,10 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import LeftDrawer from "../../components/layout/LeftDrawer";
 import { NavLink } from "react-router-dom";
 import BuyModal from "../../components/modals/BuyModal";
-import Humo from "@/assets/icons/Humo.svg";
-import Payme from "@/assets/icons/Payme.svg";
-import Uzcard from "@/assets/icons/Uzcard.svg";
+import { div } from "framer-motion/client";
 
 function SelectCourse() {
   const [activeLesson, setActiveLesson] = useState(null);
@@ -12,6 +10,7 @@ function SelectCourse() {
   const courses = [
     {
       title: "1. Access to the Backend",
+
       lessons: [
         { name: "Lesson 1", progress: 0, locked: false },
         { name: "Lesson 2", price: "30 000", locked: true },
@@ -21,6 +20,7 @@ function SelectCourse() {
     },
     {
       title: "2. Access to the Backend",
+      progress: 20,
       lessons: [
         { name: "Lesson 5", price: "30 000", locked: true },
         { name: "Lesson 6", price: "30 000", locked: true },
@@ -67,8 +67,8 @@ function SelectCourse() {
     <>
       <LeftDrawer />
       <BuyModal />
-      <div className="container mx-auto px-3 flex flex-col md:flex-row items-start mt-4 gap-4 md:gap-8 text-gray-900 dark:text-gray-50">
-        <div className="w-full md:w-72 lg:w-92 rounded-lg border border-gray-200 dark:border-gray-800 bg-base-200 overflow-hidden">
+      <div className="p-6 rounded-xl container mx-auto px-3 flex flex-col md:flex-row items-start mt-4 gap-4 md:gap-8 text-gray-900 dark:text-gray-50 bg-white dark:bg-slate-800">
+        <div className="w-full  dark:bg-slate-950 md:w-72 lg:w-92 rounded-lg border dark:border-slate-100 border-slate-200 overflow-hidden">
           <img
             src="https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=640&q=75"
             alt="Course_Title"
@@ -97,110 +97,98 @@ function SelectCourse() {
               </span>
             </div>
 
-            <div className="flex flex-col gap-1 mt-3">
-              <span className="text-xs line-through font-semibold opacity-60 text-red-500">
-                1 480 000 so'm
-              </span>
-              <p className="text-2xl font-semibold leading-[.7]">
-                1 200 000 so'm
+            <div className="flex mt-3">
+              <p className="text-sm font-semibold  text-green-500">
+                1 200 000{" "}
+                <span className="text-slate-500 dark:text-slate-100"> / </span>
               </p>
+              <span className="text-xs line-through flex items-center font-semibold text-red-500 ml-2">
+                1 480 000
+              </span>
             </div>
 
-            <button
-              onClick={(e) => {
-                e.preventDefault(),
-                  document.getElementById("buy_modal").showModal();
-              }}
-              className="border-none mt-4 flex justify-between items-center w-full p-3 rounded-md bg-white shadow shadow-gray-300 dark:shadow-gray-950"
-            >
-              <span className="bg-sky-500 rounded-lg px-6 text-sm py-1.5 text-white">
-                Sotib olish
-              </span>
-              <span className="flex gap-1">
-                <img
-                  src={Humo}
-                  className="border w-9 h-8 p-[2px] rounded-sm border-[#ccc] border-none"
-                  alt=""
-                />
-                <img
-                  src={Uzcard}
-                  className="border w-9 h-8 p-[2px] rounded-sm border-[#ccc] border-none"
-                  alt=""
-                />
-                <img
-                  src={Payme}
-                  className="border w-9 h-8 p-[2px] rounded-sm border-[#ccc] border-none"
-                  alt=""
-                />
-              </span>
-            </button>
+            <div className=" dark:bg-white rounded-lg dark:p-3 mt-4">
+              <button
+                onClick={(e) => {
+                  e.preventDefault(),
+                    document.getElementById("buy_modal").showModal();
+                }}
+                className=" border-none  flex justify-between items-center w-full "
+              >
+                <span className="bg-sky-500 rounded-lg px-6 text-sm py-1.5 text-white">
+                  Buy Now
+                </span>
+                <span className="flex gap-1">
+                  <img
+                    src="/src/assets/payment_icon/Humo.svg"
+                    className="border w-8 h-5 p-[2px] rounded-sm border-[#ccc] border-none"
+                    alt=""
+                  />
+                  <img
+                    src="/src/assets/payment_icon/Uzcard.svg"
+                    className="border w-8 h-5 p-[2px] rounded-sm border-[#ccc] border-none"
+                    alt=""
+                  />
+                  <img
+                    src="/src/assets/payment_icon/Payme.svg"
+                    className="border w-8 h-5 p-[2px] rounded-sm border-[#ccc] border-none"
+                    alt=""
+                  />
+                </span>
+              </button>
+            </div>
             {/* <label htmlFor="my-drawer" className='btn rounded-full mt-2 border border-gray-300 hover:border-gray-400 dark:hover:border-gray-600 dark:border-gray-700 flex justify-start items-center bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10'>Learn More</label> */}
           </div>
         </div>
 
         <div className="w-full md:flex-1">
           {courses.map((course, index) => (
-            <div key={index} className="mb-2">
+            <div key={index} className="mb-4">
               <div className="collapse collapse-arrow">
                 <input
                   type="checkbox"
                   id={`course-toggle-${index}`}
                   defaultChecked={index === 0 || index === 1}
                 />
-                <div className="collapse-title font-semibold bg-base-200">
+                <div className="collapse-title font-semibold bg-slate-50 dark:bg-slate-950 ">
                   {course.title}
                 </div>
 
-                <div className="collapse-content p-0 bg-base-200">
+                <div className="collapse-content p-0 bg-slate-50 dark:bg-slate-950">
                   {course.lessons.map((lesson, idx) => (
                     <NavLink
                       to="select-lesson"
                       key={idx}
-                      className={`flex items-center justify-between px-3 py-2 cursor-pointer mt-2 font-medium hover:bg-sky-50 dark:hover:bg-sky-50/20 ${
+                      className={`flex items-center justify-between px-3 py-2 cursor-pointer mt-2 font-medium hover:bg-slate-200 dark:hover:bg-slate-700 ${
                         lesson.locked ? "" : ""
                       }
-                      ${
-                        activeLesson === lesson.name
-                          ? " backdrop-sepia-0 bg-gradient-to-r bg-base-200"
-                          : ""
-                      }`}
+                      ${activeLesson === lesson.name ? "" : ""}`}
                       onClick={() =>
                         handleLessonClick(lesson.name, lesson.locked)
                       }
                     >
                       <span className="flex items-center">
-                        {/* <i className={lesson.locked ? 'bi bi-lock flex justify-center items-center mr-2' : 'bi bi-play border rounded-full text-sm flex justify-center items-center mr-2'}></i> */}
                         {lesson.locked ? (
-                          <svg
-                            width="20"
-                            height="20"
-                            viewBox="0 0 512 512"
-                            className=""
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            aria-hidden="true"
-                            role="img"
-                            class="iconify iconify--fxemoji"
-                            preserveAspectRatio="xMidYMid meet"
-                          >
-                            <path
-                              fill="#B1B4B5"
-                              d="M376.749 349.097c-13.531 0-24.5-10.969-24.5-24.5V181.932c0-48.083-39.119-87.203-87.203-87.203c-48.083 0-87.203 39.119-87.203 87.203v82.977c0 13.531-10.969 24.5-24.5 24.5s-24.5-10.969-24.5-24.5v-82.977c0-75.103 61.1-136.203 136.203-136.203s136.203 61.1 136.203 136.203v142.665c0 13.531-10.969 24.5-24.5 24.5z"
-                            ></path>
-                            <path
-                              fill="#FFB636"
-                              d="M414.115 497.459H115.977c-27.835 0-50.4-22.565-50.4-50.4V274.691c0-27.835 22.565-50.4 50.4-50.4h298.138c27.835 0 50.4 22.565 50.4 50.4v172.367c0 27.836-22.565 50.401-50.4 50.401z"
-                            ></path>
-                            <path
-                              fill="#FFD469"
-                              d="M109.311 456.841h-2.525c-7.953 0-14.4-6.447-14.4-14.4V279.309c0-7.953 6.447-14.4 14.4-14.4h2.525c7.953 0 14.4 6.447 14.4 14.4v163.132c0 7.953-6.447 14.4-14.4 14.4z"
-                            ></path>
-                          </svg>
+                          <i className="bi bi-lock text-sky-500 bg-white dark:bg-slate-800 p-2 rounded-lg flex justify-center items-center"></i>
                         ) : (
-                          <i className="bi bi-play-circle flex justify-center items-center"></i>
+                          <i className="bi bi-play-fill flex justify-center items-center bg-white dark:bg-slate-800 p-2 rounded-lg"></i>
                         )}
                         <span className="ml-2">{lesson.name}</span>
                       </span>
+
+                      <div className="flex items-center justify-center relative h-[35px] w-[35px]">
+                        <div
+                          className="radial-progress text-gray-100 h-[35px] w-[35px] absolute [--thickness:3px] noround"
+                          style={{ "--value": 100 }}
+                        ></div>
+
+                        <div
+                          className="radial-progress text-xs text-sky-500 h-[36px] w-[35px] absolute [--thickness:4px] noround"
+                          style={{ "--value": course.progress }}
+                        >
+                          {course.progress}%
+                        </div>
+                      </div>
                     </NavLink>
                   ))}
                 </div>

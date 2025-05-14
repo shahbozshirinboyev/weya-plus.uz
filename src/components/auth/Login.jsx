@@ -5,10 +5,7 @@ import ThemeSwitcher from "../ui/ThemeSwitcher";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
-
-  const togglePassword = () => {
-    setShowPassword(!showPassword);
-  };
+  const togglePassword = () => { setShowPassword(!showPassword); };
 
   return (
     <>
@@ -18,29 +15,23 @@ function Login() {
         </div>
 
         <div className="flex items-center justify-center w-full">
-          <div className="border-none bg-white dark:bg-gray-800 rounded-2xl px-10 py-12 shadow sm:w-[450px]">
+          <div className="bg-base-100 shadow rounded-2xl px-10 py-12 sm:w-[450px]">
             <div className="text-center mb-12">
-              <h1 className="font-medium text-3xl mb-2">Hisobingizga kiring</h1>
-              <p className="text-md font-light">
-                Xush kelibsiz!
-                <br />
-                Quyidagilar orqali hisobingizga kiring
-              </p>
+              <h1 className="font-medium text-3xl mb-2">Xush kelibsiz!</h1>
+              <p className="text-md font-light">Quyidagilar orqali hisobingizga kiring.</p>
             </div>
 
             <div className="mb-3">
-              <button className="btn border-none  bg-gray-50 dark:bg-[#020617] w-full shadow">
+              <button className="btn w-full bg-base-300">
                 <img src={GoogleIcon} className="w-4" alt="google_logo" />
                 <span>Google</span>
               </button>
             </div>
 
             <div className="flex items-center gap-4 mb-4">
-              <hr className="flex-grow border-gray-300 dark:border-gray-600 " />
-              <p className="text-center text-xs text-black/50 dark:text-gray-50">
-                Yoki
-              </p>
-              <hr className="flex-grow border-gray-300 dark:border-gray-600" />
+              <hr className="flex-grow border-gray-200 dark:border-gray-700" />
+              <p className="text-center text-xs opacity-50">yoki</p>
+              <hr className="flex-grow border-gray-200 dark:border-gray-700" />
             </div>
 
             <div className="mb-3">

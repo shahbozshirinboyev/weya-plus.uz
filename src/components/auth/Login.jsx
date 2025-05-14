@@ -5,7 +5,9 @@ import ThemeSwitcher from "../ui/ThemeSwitcher";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
-  const togglePassword = () => { setShowPassword(!showPassword); };
+  const togglePassword = () => {
+    setShowPassword(!showPassword);
+  };
 
   return (
     <>
@@ -18,7 +20,9 @@ function Login() {
           <div className="bg-base-100 shadow rounded-2xl px-10 py-12 sm:w-[450px]">
             <div className="text-center mb-12">
               <h1 className="font-medium text-3xl mb-2">Xush kelibsiz!</h1>
-              <p className="text-md font-light">Quyidagilar orqali hisobingizga kiring.</p>
+              <p className="text-md font-light">
+                Quyidagilar orqali hisobingizga kiring.
+              </p>
             </div>
 
             <div className="mb-3">

@@ -3,6 +3,9 @@ import LeftDrawer from "../../components/layout/LeftDrawer";
 import { NavLink } from "react-router-dom";
 import BuyModal from "../../components/modals/BuyModal";
 import { div } from "framer-motion/client";
+import Humo from "@/assets/icons/Humo.svg";
+import Payme from "@/assets/icons/Payme.svg";
+import Uzcard from "@/assets/icons/Uzcard.svg";
 
 function SelectCourse() {
   const [activeLesson, setActiveLesson] = useState(null);
@@ -120,17 +123,17 @@ function SelectCourse() {
                 </span>
                 <span className="flex gap-1">
                   <img
-                    src="/src/assets/payment_icon/Humo.svg"
+                    src={Humo}
                     className="border w-8 h-5 p-[2px] rounded-sm border-[#ccc] border-none"
                     alt=""
                   />
                   <img
-                    src="/src/assets/payment_icon/Uzcard.svg"
+                    src={Uzcard}
                     className="border w-8 h-5 p-[2px] rounded-sm border-[#ccc] border-none"
                     alt=""
                   />
                   <img
-                    src="/src/assets/payment_icon/Payme.svg"
+                    src={Payme}
                     className="border w-8 h-5 p-[2px] rounded-sm border-[#ccc] border-none"
                     alt=""
                   />

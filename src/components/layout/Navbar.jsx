@@ -48,7 +48,7 @@ function Navbar() {
 
               <ul
                 tabIndex={0}
-                className="dropdown-content menu rounded-md w-72 p-2 mt-2 -mr-6 bg-white dark:bg-gray-900 shadow shadow-gray-300 dark:shadow-gray-950"
+                className="dropdown-content menu rounded-md w-72 p-2 mt-2 -mr-6 bg-white dark:bg-base-100 border border-base-300"
               >
                 <div className="p-2 flex gap-2">
                   <img

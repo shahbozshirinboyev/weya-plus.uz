@@ -87,7 +87,7 @@ function MyProfile() {
       <DeleteDevice />
 
       <section className="container mx-auto px-3 mt-4 flex items-start gap-4 text-gray-900 dark:text-gray-50">
-        <div className="md:w-52 xl:w-72 bg-white dark:bg-slate-800 shadow-xs p-1 md:p-2 rounded-md absolute md:static bottom-3 left-3 right-3">
+        <div className="md:w-52 xl:w-72 p-1 md:p-2 rounded-md absolute md:static bottom-3 left-3 right-3 bg-white dark:bg-base-100 border border-base-300">
           <ul className="flex justify-between md:flex-col gap-2">
             {menus.map(({ to, icon, label }) => (
               <li key={to} className="w-full">
@@ -95,12 +95,12 @@ function MyProfile() {
                   onClick={() => {
                     setSelectMenu(to);
                   }}
-                  className={`w-full cursor-pointer hover:border flex flex-col md:flex-row border justify-start items-center gap-2 px-1 md:px-3 py-1 md:py-2 rounded-lg
+                  className={`w-full cursor-pointer flex flex-col md:flex-row border justify-start items-center gap-2 px-1 md:px-3 py-1 md:py-2 rounded-lg
                 ${
                   selectMenu === to
-                    ? " bg-sky-100 dark:bg-slate-950 text-sky-500 font-semibold border-none"
-                    : "border-transparent text-slate-600 dark:text-slate-100"
-                }`}
+                    ? "bg-sky-100 border-sky-300 text-sky-500 dark:border-sky-300/10 dark:bg-sky-400/10"
+                    : "text-slate-600 dark:text-slate-100 border-transparent"
+                } hover:bg-sky-100 hover:dark:bg-sky-400/10 hover:text-sky-500 transition-all duration-200`}
                 >
                   <i
                     className={`bi ${icon} text-lg flex justify-center items-center`}
@@ -121,8 +121,8 @@ function MyProfile() {
               selectMenu === "my-info" ? "block" : "hidden"
             }`}
           >
-            <div className="w-ful rounded-2xl p-3 bg-white dark:bg-slate-800">
-              <div className=" bg-sky-100 dark:bg-slate-950 rounded-2xl p-4 flex justify-between">
+            <div className="w-ful rounded-2xl p-3 bg-white dark:bg-base-100 border border-base-300">
+              <div className="flex justify-between items-center">
                 <div className="flex gap-4">
                   <div className="avatar">
                     <div className="w-15 rounded-full">
@@ -138,7 +138,7 @@ function MyProfile() {
                       .getElementById("my_profile_info_update")
                       .showModal()
                   }
-                  className="mt-4 btn rounded-md shadow-md bg-[#0EA5E9] text-white transition border border-none"
+                  className="btn rounded-md shadow-md bg-[#0EA5E9] text-white transition border border-none"
                 >
                   Ma’lumotlarni o‘zgartirish
                 </button>

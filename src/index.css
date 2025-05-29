@@ -4,17 +4,17 @@
 @plugin "daisyui" { themes: all; }
 
  html.dark {
-  /* color-gray-950 */
-  background-color: oklch(13% 0.028 261.692);
-  /* background-attachment: fixed; */
-  /* background-repeat: repeat; */
+  /* color-slate-950 */
+  background-color: oklch(12.9% 0.042 264.695);
+  background-attachment: fixed;
+  background-repeat: repeat;
 }
 
 html:not(.dark) {
-  /* color-gray-50 */
-  background-color: oklch(98.5% 0.002 247.839);
-  /* background-attachment: fixed; */
-  /* background-repeat: repeat; */
+  /* color-slate-50 */
+  background-color: oklch(98.4% 0.003 247.858);
+  background-attachment: fixed;
+  background-repeat: repeat;
 }
 
 html {

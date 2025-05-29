@@ -6,9 +6,10 @@ function Navbar() {
   return (
     <>
       <div className="container mx-auto px-3 sticky top-1 my-3 z-15 text-gray-900 dark:text-gray-50">
-        <div className="w-full rounded-full px-[25px] flex justify-between items-center h-[50px] bg-white dark:bg-gray-900 shadow shadow-gray-300 dark:shadow-gray-900">
+        <div className="w-full rounded-full px-[25px] flex justify-between items-center h-[50px] bg-white dark:bg-base-100 border border-base-300">
           <div>
-            <Logo />
+            {/* <Logo /> */}
+            <p className="font-semibold">Logo.</p>
           </div>
 
           <div>
@@ -32,10 +33,7 @@ function Navbar() {
           </div>
 
           <div className="flex gap-2 items-center">
-            <NavLink
-              to="login"
-              className="btn btn-sm border-none btn-circle w-[80px] flex justify-center items-center bg-sky-500 text-gray-50"
-            >
+            <NavLink to="login" className="btn btn-sm border-none btn-circle w-[80px] flex justify-center items-center bg-sky-500 text-gray-50">
               <span className="text-[13px]">Login</span>
             </NavLink>
 

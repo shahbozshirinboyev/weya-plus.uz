@@ -121,7 +121,7 @@ function MyProfile() {
               selectMenu === "my-info" ? "block" : "hidden"
             }`}
           >
-            <div className="w-ful rounded-2xl p-3 bg-white dark:bg-base-100 border border-base-300">
+            <div className="w-ful rounded-2xl p-4 bg-white dark:bg-base-100 border border-base-300">
               <div className="flex justify-between items-center">
                 <div className="flex gap-4">
                   <div className="avatar">
@@ -145,7 +145,7 @@ function MyProfile() {
               </div>
             </div>
 
-            <div className="flex flex-col md:flex-row dark:bg-slate-800 gap-4 md:gap-2 bg-white p-4 rounded-xl">
+            <div className="flex flex-col md:flex-row bg-white dark:bg-base-100 border border-base-300 gap-4 md:gap-2 p-4 rounded-xl">
               <div className="flex-1">
                 <p className="text-sm font-light opacity-80">
                   Telefon raqamingiz:
@@ -162,7 +162,7 @@ function MyProfile() {
               </div>
             </div>
 
-            <div className=" p-4 bg-white  dark:bg-slate-800 rounded-2xl flex justify-between items-center ">
+            <div className="p-4 bg-white dark:bg-base-100 border border-base-300 rounded-2xl flex justify-between items-center">
               <div>
                 <h1 className="text-sm font-light opacity-80">
                   {" "}
@@ -181,7 +181,7 @@ function MyProfile() {
               </div>
             </div>
 
-            <div className=" p-4 bg-white dark:bg-slate-800 rounded-2xl flex justify-between items-center">
+            <div className=" p-4 bg-white dark:bg-base-100 border border-base-300 rounded-2xl flex justify-between items-center">
               <div className="">
                 <h1 className="text-sm font-light opacity-80">
                   Ma'lumotlarni ko'rsatish
@@ -229,7 +229,7 @@ function MyProfile() {
           <div
             className={`${selectMenu === "my-experience" ? "block" : "hidden"}`}
           >
-            <div className="w-full p-3 bg-white dark:bg-slate-800 rounded-lg text-center mb-6">
+            <div className="w-full p-4 bg-white dark:bg-base-100 border border-base-300 rounded-lg text-center mb-6">
               <div className="flex flex-col items-center justify-center p-8">
                 <i className="bi bi-book-fill px-2 py-1 rounded-lg text-[#0EA5E9] text-2xl mb-8"></i>
                 <div>
@@ -252,7 +252,7 @@ function MyProfile() {
               </div>
             </div>
 
-            <div className="w-full p-3 bg-white dark:bg-slate-800 rounded-lg text-center">
+            <div className="w-full p-4 bg-white dark:bg-base-100 border border-base-300 rounded-lg text-center">
               <div className="flex flex-col items-center justify-center p-8">
                 <i className="bi bi-briefcase-fill text-4xl  text-[#0EA5E9]  px-2 py-2 rounded-lg  mb-8"></i>
                 <div>
@@ -282,7 +282,7 @@ function MyProfile() {
               selectMenu === "my-certificate" ? "block" : "hidden"
             }`}
           >
-            <div className="w-full p-3 dark:bg-slate-800 bg-white rounded-lg text-center">
+            <div className="w-full p-4 bg-white dark:bg-base-100 border border-base-300 rounded-lg text-center">
               <div className="flex flex-col items-center justify-center p-8">
                 <i className="bi bi-award-fill text-4xl  text-[#0EA5E9] px-2 py-2 rounded-lg  mb-8"></i>
                 <div>
@@ -305,11 +305,11 @@ function MyProfile() {
           <div
             className={`${selectMenu === "my-courses" ? "block" : "hidden"}`}
           >
-            <div className="card bg-base-100 dark:bg-slate-800 w-66 shadow-sm">
+            <div className="card bg-white dark:bg-base-100 border border-base-300 w-66 shadow-sm">
               <figure>
                 <img
                   src="https://img.daisyui.com/images/profile/demo/batperson@192.webp"
-                  className="w-full h-35"
+                  className="w-full h-35 object-cover"
                 />
               </figure>
               <div className="card-body p-4 space-y-2">
@@ -320,9 +320,9 @@ function MyProfile() {
                     value="70"
                     max="100"
                   >
-                    {" "}
+                    {""}
                   </progress>
-                  <p className="text-sky-500 font-semibold"> 20%</p>
+                  <p className="text-sky-500 font-semibold">70%</p>
                 </div>
 
                 <button className="btn btn-primary w-full rounded-lg bg-sky-500 border-none shadow-none text-white font-normal">
@@ -337,7 +337,7 @@ function MyProfile() {
             className={`${selectMenu === "my-activity" ? "block" : "hidden"}`}
           >
             <div className=" space-y-4 ">
-              <div className="bg-white dark:bg-slate-800 py-3 px-5 flex justify-between rounded-xl items-center shadow">
+              <div className="bg-white dark:bg-base-100 border border-base-300 py-3 px-5 flex justify-between rounded-xl items-center shadow">
                 <div className="flex gap-3 items-center ">
                   <div className="avatar">
                     <div className="w-12 rounded-full">
@@ -351,7 +351,7 @@ function MyProfile() {
                 </div>
                 <span>1</span>
               </div>
-              <div className="bg-white dark:bg-slate-800 py-3 px-5  flex justify-between rounded-xl  items-center shadow">
+              <div className="bg-white dark:bg-base-100 border border-base-300 py-3 px-5  flex justify-between rounded-xl  items-center shadow">
                 <div className="flex gap-3 items-center ">
                   <div className="avatar">
                     <div className="w-12 rounded-full">
@@ -365,7 +365,7 @@ function MyProfile() {
                 </div>
                 <span>2</span>
               </div>
-              <div className="bg-white dark:bg-slate-800 py-3 px-5  flex justify-between rounded-xl  items-center shadow">
+              <div className="bg-white dark:bg-base-100 border border-base-300 py-3 px-5  flex justify-between rounded-xl  items-center shadow">
                 <div className="flex gap-3 items-center ">
                   <div className="avatar">
                     <div className="w-12 rounded-full">
@@ -388,7 +388,7 @@ function MyProfile() {
               selectMenu === "my-year-activity" ? "block" : "hidden"
             }`}
           >
-            <div className="p-4 bg-white dark:bg-slate-800">
+            <div className="p-4 bg-white dark:bg-base-100 border border-base-300">
               <div className="flex">
                 <div className="flex flex-col space-y-0.5 lg:space-y-0.5 xl:space-y-2 2xl:space-y-3.5 justify-end mr-2 text-slate-800 dark:text-white">
                   {uzbekDays.map((day, index) => (
@@ -456,7 +456,7 @@ function MyProfile() {
               selectMenu === "my-paymenthistory" ? "block" : "hidden"
             }`}
           >
-            <div className="bg-white dark:bg-slate-800 p-4 rounded-xl">
+            <div className="bg-white dark:bg-base-100 border border-base-300 p-4 rounded-xl">
               <h1 className="font-semibold text-xl mb-4">To'lovlar tarixi</h1>
               <div className="grid grid-cols-1  md:table w-full">
                 <div className="hidden md:table-header-group  bg-[#F5FAFF] dark:bg-[#2b3656] text-[#6eb4fb] rounded-2xl font-semibold">
@@ -521,7 +521,7 @@ function MyProfile() {
           <div
             className={`${selectMenu === "my-devices" ? "block" : "hidden"}`}
           >
-            <div className="bg-white dark:bg-slate-800 p-3 rounded-xl ">
+            <div className="bg-white dark:bg-base-100 border border-base-300 p-4 rounded-xl ">
               <div>
                 <h1 className="font-semibold text-xl">Faol qurilmalar</h1>
                 <p className=" mt-4 font-light text-[13px]">
@@ -533,11 +533,9 @@ function MyProfile() {
                 </p>
               </div>
 
-              <div className="bg-[#FFFCED] dark:bg-[#f8e588] px-3 py-2 rounded-xl mt-4 flex">
-                <i className="bi bi-exclamation-circle-fill text-yellow-300 dark:text-yellow-500 mr-3"></i>
-                <h1 className="text-[#1A202C]">
-                  Faqatgina 2ta qurilmadan kirishingiz mumkin.
-                </h1>
+              <div role="alert" className="alert alert-warning mt-4">
+                <i className="bi bi-exclamation-circle-fill mr-3"></i>
+                <span>Faqatgina 2ta qurilmadan kirishingiz mumkin.</span>
               </div>
 
               <div className="mt-4">
@@ -552,7 +550,7 @@ function MyProfile() {
 
                   <tbody className=" space-y-2">
                     <tr className="flex flex-col md:table-row">
-                      <td className="flex flex-col md:flex-row md:items-center md:table-cell p-3">
+                      <td className="flex flex-col md:flex-row md:items-center md:table-cell p-4">
                         <div className="flex items-start">
                           <i className="bi bi-laptop p-2 rounded-md text-xl inline-flex items-center justify-center bg-sky-500"></i>
                           <div className="ml-3 w-full">
@@ -591,7 +589,7 @@ function MyProfile() {
                     </tr>
 
                     <tr className="flex flex-col md:table-row  ">
-                      <td className="flex flex-col md:flex-row md:items-center md:table-cell p-3">
+                      <td className="flex flex-col md:flex-row md:items-center md:table-cell p-4">
                         <div className="flex items-start">
                           <i className="bi bi-phone p-2 rounded-md text-xl inline-flex items-center justify-center bg-sky-500"></i>
                           <div className="ml-3 w-full">
@@ -616,7 +614,7 @@ function MyProfile() {
                       <td className="">
                         <div className="mt-3 md:mt-0 flex md:justify-start justify-end">
                           <button
-                            className="btn w-full p-3  flex justify-center items-center border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600"
+                            className="btn w-full p-4  flex justify-center items-center border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600"
                             onClick={() =>
                               document
                                 .getElementById("delete_device")

@@ -123,13 +123,18 @@ function MyProfile() {
           >
             <div className="w-ful rounded-2xl p-4 bg-white dark:bg-base-100 border border-base-300">
               <div className="flex justify-between items-center">
-                <div className="flex gap-4">
+                <div className="flex gap-4 justify-center items-center">
                   <div className="avatar">
-                    <div className="w-15 rounded-full">
+                    <div className="w-17 h-17 rounded-full">
                       <img src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
                     </div>
                   </div>
-                  <p className="mt-4  text-lg font-semibold">Zerda Jursinova</p>
+                  <div className="flex flex-col justify-center">
+                    <p className="text-lg font-semibold">Zerda Jursinova</p>
+                    <span className="text-xs leading-snug opacity-80">
+                      Biz bilan 3 oy
+                    </span>
+                  </div>
                 </div>
 
                 <button
@@ -192,35 +197,16 @@ function MyProfile() {
                 </p>
               </div>
 
-              <label className="toggle text-base-content  border-none  bg-gradient-to-r from-[#0EA5E9]  to-[#0EA5E9]">
+              <label className="toggle text-base-content  border-none bg-gradient-to-r from-[#0EA5E9]  to-[#0EA5E9]">
                 <input type="checkbox" />
-                <svg
+                <i
                   aria-label="enabled"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M18 6 6 18" /> <path d="m6 6 12 12" />
-                </svg>
-                <svg
+                  className="bi bi-x w-5 h-5 flex justify-center items-center"
+                ></i>
+                <i
                   aria-label="disabled"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                >
-                  <g
-                    strokeLinejoin="round"
-                    strokeLinecap="round"
-                    strokeWidth="4"
-                    fill="none"
-                    stroke="currentColor"
-                  >
-                    <path d="M20 6 9 17l-5-5"></path>
-                  </g>
-                </svg>
+                  className="bi bi-check w-5 h-5 flex justify-center items-center"
+                ></i>
               </label>
             </div>
           </div>

@@ -88,9 +88,9 @@ function MyProfile() {
 
       <section className="container mx-auto px-3 mt-4 flex items-start gap-4 text-gray-900 dark:text-gray-50">
         <div className="md:w-52 xl:w-72 p-1 md:p-2 rounded-md absolute md:static bottom-3 left-3 right-3 bg-white dark:bg-base-100 border border-base-300">
-          <ul className="flex justify-between md:flex-col gap-2">
+          <ul className="flex justify-between md:flex-col gap-2 overflow-x-auto">
             {menus.map(({ to, icon, label }) => (
-              <li key={to} className="w-full">
+              <li key={to} className="w-full min-w-[70px]">
                 <button
                   onClick={() => {
                     setSelectMenu(to);
@@ -102,9 +102,7 @@ function MyProfile() {
                     : "text-slate-600 dark:text-slate-100 border-transparent"
                 } hover:bg-sky-100 hover:dark:bg-sky-400/10 hover:text-sky-500 transition-all duration-200`}
                 >
-                  <i
-                    className={`bi ${icon} text-lg flex justify-center items-center`}
-                  ></i>
+                  <i className={`bi ${icon} text-lg flex justify-center items-center`}></i>
                   <span className="text-[8px] md:text-[14px] text-nowrap">
                     {label}
                   </span>
@@ -143,7 +141,7 @@ function MyProfile() {
                       .getElementById("my_profile_info_update")
                       .showModal()
                   }
-                  className="btn rounded-md shadow-md bg-[#0EA5E9] text-white transition border border-none"
+                  className="btn rounded-md shadow-md bg-sky-500 text-white transition border border-none"
                 >
                   Ma’lumotlarni o‘zgartirish
                 </button>
@@ -170,12 +168,10 @@ function MyProfile() {
             <div className="p-4 bg-white dark:bg-base-100 border border-base-300 rounded-2xl flex justify-between items-center">
               <div>
                 <h1 className="text-sm font-light opacity-80">
-                  {" "}
                   Change Password
                 </h1>
                 <p className="font-semibold text-md">
-                  {" "}
-                  Bu yerda hisobingiz parolini oʻzgartirishingiz mumkin.{" "}
+                  Bu yerda hisobingiz parolini oʻzgartirishingiz mumkin.
                 </p>
               </div>
               <div>
@@ -217,7 +213,7 @@ function MyProfile() {
           >
             <div className="w-full p-4 bg-white dark:bg-base-100 border border-base-300 rounded-lg text-center mb-6">
               <div className="flex flex-col items-center justify-center p-8">
-                <i className="bi bi-book-fill px-2 py-1 rounded-lg text-[#0EA5E9] text-2xl mb-8"></i>
+                <i className="bi bi-book-fill px-2 py-1 rounded-lg text-sky-500 text-2xl mb-8"></i>
                 <div>
                   <h1 className="font-semibold   mb-1.5">
                     Sizda hali ta'lim tajribasi mavjud emas.
@@ -228,7 +224,7 @@ function MyProfile() {
                 </div>
 
                 <button
-                  className="btn rounded-full border-none bg-[#0EA5E9] text-white "
+                  className="btn rounded-full border-none bg-sky-500 text-white "
                   onClick={() =>
                     document.getElementById("add_education").showModal()
                   }
@@ -240,7 +236,7 @@ function MyProfile() {
 
             <div className="w-full p-4 bg-white dark:bg-base-100 border border-base-300 rounded-lg text-center">
               <div className="flex flex-col items-center justify-center p-8">
-                <i className="bi bi-briefcase-fill text-4xl  text-[#0EA5E9]  px-2 py-2 rounded-lg  mb-8"></i>
+                <i className="bi bi-briefcase-fill text-4xl  text-sky-500  px-2 py-2 rounded-lg  mb-8"></i>
                 <div>
                   <h1 className="font-semibold mb-1.5">
                     Sizda hali ish tajribasi mavjud emas
@@ -251,7 +247,7 @@ function MyProfile() {
                 </div>
 
                 <button
-                  className="btn rounded-full border-none bg-[#0EA5E9] text-white "
+                  className="btn rounded-full border-none bg-sky-500 text-white "
                   onClick={() =>
                     document.getElementById("add_work_experience").showModal()
                   }
@@ -270,7 +266,7 @@ function MyProfile() {
           >
             <div className="w-full p-4 bg-white dark:bg-base-100 border border-base-300 rounded-lg text-center">
               <div className="flex flex-col items-center justify-center p-8">
-                <i className="bi bi-award-fill text-4xl  text-[#0EA5E9] px-2 py-2 rounded-lg  mb-8"></i>
+                <i className="bi bi-award-fill text-4xl  text-sky-500 px-2 py-2 rounded-lg  mb-8"></i>
                 <div>
                   <h1 className="font-semibold mb-1.5">
                     Sizda hali sertifikatlar mavjud emas
@@ -280,7 +276,7 @@ function MyProfile() {
                     berilgan sertifikatlarni ko’rishingiz mumkin bo’ladi.
                   </p>
                 </div>
-                <button className="btn rounded-full  bg-[#0EA5E9] text-white border-none">
+                <button className="btn rounded-full  bg-sky-500 text-white border-none">
                   Kurs sotib olish
                 </button>
               </div>
@@ -443,10 +439,12 @@ function MyProfile() {
             }`}
           >
             <div className="bg-white dark:bg-base-100 border border-base-300 p-4 rounded-xl">
-              <h1 className="font-semibold text-xl mb-4">To'lovlar tarixi</h1>
-              <div className="grid grid-cols-1  md:table w-full">
-                <div className="hidden md:table-header-group  bg-[#F5FAFF] dark:bg-[#2b3656] text-[#6eb4fb] rounded-2xl font-semibold">
-                  <div className="table-row ">
+              <h1 className="font-semibold text-xl mb-3">
+                To'lovlar tarixi
+              </h1>
+              <div className="grid grid-cols-1 md:table w-full gap-3">
+                <div className="hidden md:table-header-group  bg-[#F5FAFF] dark:bg-[#2b3656] text-sky-500 rounded-2xl font-semibold">
+                  <div className="table-row">
                     <div className="table-cell px-2 py-4">KURS NOMI</div>
                     <div className="table-cell px-2 py-4">SANA</div>
                     <div className="table-cell px-2 py-4">QIYMAT</div>
@@ -455,48 +453,48 @@ function MyProfile() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1  gap-2 md:table-row space-y-3 md:p-0 rounded-xl">
+                <div className="grid grid-cols-1 gap-2 md:table-row space-y-3 p-4 border border-sky-100/80 dark:border-sky-100/10 bg-sky-50/80 dark:bg-sky-50/10 rounded-md">
                   <div className="flex justify-between md:table-cell md:p-2">
-                    <span className="text-[#6eb4fb] font-semibold md:hidden">
-                      KURS NOMI:
+                    <span className="text-sky-500 font-semibold md:hidden">
+                      KURS NOMI
                     </span>
                     <div>
-                      <div className="text-black dark:text-white font-medium">
+                      <span className="font-semibold">
                         Professional Node.JS
-                      </div>
+                      </span>
                     </div>
                   </div>
 
                   <div className="flex justify-between md:table-cell md:p-2">
-                    <span className="text-[#6eb4fb] font-semibold md:hidden">
-                      SANA:
+                    <span className="text-sky-500 font-semibold md:hidden">
+                      SANA
                     </span>
-                    <span className="text-black dark:text-white">
+                    <span>
                       28.11.2024
                     </span>
                   </div>
 
                   <div className="flex justify-between md:table-cell md:p-2">
-                    <span className="text-[#6eb4fb] font-semibold md:hidden">
-                      QIYMAT:
+                    <span className="text-sky-500 font-semibold md:hidden">
+                      QIYMAT
                     </span>
-                    <span className="text-[#3F9CFB]">247.000 so'm</span>
+                    <span>247.000 so'm</span>
                   </div>
 
                   <div className="flex justify-between md:table-cell md:p-2">
-                    <span className="text-[#6eb4fb] font-semibold md:hidden">
-                      TO'LOV TURI:
+                    <span className="text-sky-500 font-semibold md:hidden">
+                      TO'LOV TURI
                     </span>
-                    <span className="text-black dark:text-white">
+                    <span>
                       Bir martalik toʻlov
                     </span>
                   </div>
 
                   <div className="flex justify-between md:table-cell md:p-2">
-                    <span className="text-[#6eb4fb] font-semibold md:hidden">
-                      STATUS:
+                    <span className="text-sky-500 font-semibold md:hidden">
+                      STATUS
                     </span>
-                    <span className="text-[#FDC724]">Jarayonda</span>
+                    <span className="text-amber-500">Jarayonda</span>
                   </div>
                 </div>
               </div>

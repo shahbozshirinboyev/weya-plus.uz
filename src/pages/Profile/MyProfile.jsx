@@ -87,7 +87,8 @@ function MyProfile() {
       <DeleteDevice />
 
       <section className="container mx-auto px-3 mt-4 flex items-start gap-4 text-gray-900 dark:text-gray-50">
-        <div className="md:w-52 xl:w-72 p-1 md:p-2 rounded-md absolute md:static bottom-3 left-3 right-3 bg-white dark:bg-base-100 border border-base-300">
+
+        <div className="md:w-52 xl:w-72 p-1 md:p-2 rounded-md fixed md:static bottom-3 left-3 right-3 bg-white dark:bg-base-100 border border-base-300">
           <ul className="flex justify-between md:flex-col gap-2 overflow-x-auto">
             {menus.map(({ to, icon, label }) => (
               <li key={to} className="w-full min-w-[70px]">
@@ -95,17 +96,14 @@ function MyProfile() {
                   onClick={() => {
                     setSelectMenu(to);
                   }}
-                  className={`w-full cursor-pointer flex flex-col md:flex-row border justify-start items-center gap-2 px-1 md:px-3 py-1 md:py-2 rounded-lg
-                ${
+                  className={`w-full cursor-pointer flex flex-col md:flex-row border justify-start items-center gap-2 px-1 md:px-3 py-1 md:py-2 rounded-lg ${
                   selectMenu === to
                     ? "bg-sky-100 border-sky-300 text-sky-500 dark:border-sky-300/10 dark:bg-sky-400/10"
                     : "text-slate-600 dark:text-slate-100 border-transparent"
                 } hover:bg-sky-100 hover:dark:bg-sky-400/10 hover:text-sky-500 transition-all duration-200`}
                 >
                   <i className={`bi ${icon} text-lg flex justify-center items-center`}></i>
-                  <span className="text-[8px] md:text-[14px] text-nowrap">
-                    {label}
-                  </span>
+                  <span className="text-[8px] md:text-[14px] text-nowrap">{label}</span>
                 </button>
               </li>
             ))}
@@ -114,11 +112,7 @@ function MyProfile() {
 
         <div className="w-[100%]  flex-1 overflow-x-auto rounded-md">
           {/* My Information */}
-          <div
-            className={`flex flex-col gap-2 ${
-              selectMenu === "my-info" ? "block" : "hidden"
-            }`}
-          >
+          <div className={`pb-28 flex flex-col gap-2 ${ selectMenu === "my-info" ? "block" : "hidden" }`} >
             <div className="w-ful rounded-2xl p-4 bg-white dark:bg-base-100 border border-base-300">
               <div className="flex justify-between items-center">
                 <div className="flex gap-4 justify-center items-center">
@@ -208,9 +202,7 @@ function MyProfile() {
           </div>
 
           {/* My experience */}
-          <div
-            className={`${selectMenu === "my-experience" ? "block" : "hidden"}`}
-          >
+          <div className={`pb-28 ${selectMenu === "my-experience" ? "block" : "hidden"}`} >
             <div className="w-full p-4 bg-white dark:bg-base-100 border border-base-300 rounded-lg text-center mb-6">
               <div className="flex flex-col items-center justify-center p-8">
                 <i className="bi bi-book-fill px-2 py-1 rounded-lg text-sky-500 text-2xl mb-8"></i>
@@ -259,11 +251,7 @@ function MyProfile() {
           </div>
 
           {/* My Certificate */}
-          <div
-            className={`${
-              selectMenu === "my-certificate" ? "block" : "hidden"
-            }`}
-          >
+          <div className={`pb-28 ${ selectMenu === "my-certificate" ? "block" : "hidden" }`} >
             <div className="w-full p-4 bg-white dark:bg-base-100 border border-base-300 rounded-lg text-center">
               <div className="flex flex-col items-center justify-center p-8">
                 <i className="bi bi-award-fill text-4xl  text-sky-500 px-2 py-2 rounded-lg  mb-8"></i>
@@ -284,9 +272,7 @@ function MyProfile() {
           </div>
 
           {/* My courses*/}
-          <div
-            className={`${selectMenu === "my-courses" ? "block" : "hidden"}`}
-          >
+          <div className={`pb-28 ${selectMenu === "my-courses" ? "block" : "hidden"}`} >
             <div className="card bg-white dark:bg-base-100 border border-base-300 w-66 shadow-sm">
               <figure>
                 <img
@@ -315,9 +301,7 @@ function MyProfile() {
           </div>
 
           {/* My activity*/}
-          <div
-            className={`${selectMenu === "my-activity" ? "block" : "hidden"}`}
-          >
+          <div className={`pb-28 ${selectMenu === "my-activity" ? "block" : "hidden"}`} >
             <div className=" space-y-4 ">
               <div className="bg-white dark:bg-base-100 border border-base-300 py-3 px-5 flex justify-between rounded-xl items-center shadow">
                 <div className="flex gap-3 items-center ">
@@ -365,11 +349,7 @@ function MyProfile() {
           </div>
 
           {/* My year activity*/}
-          <div
-            className={`${
-              selectMenu === "my-year-activity" ? "block" : "hidden"
-            }`}
-          >
+          <div className={`pb-28 ${ selectMenu === "my-year-activity" ? "block" : "hidden" }`} >
             <div className="p-4 bg-white dark:bg-base-100 border border-base-300">
               <div className="flex">
                 <div className="flex flex-col space-y-0.5 lg:space-y-0.5 xl:space-y-2 2xl:space-y-3.5 justify-end mr-2 text-slate-800 dark:text-white">
@@ -433,16 +413,11 @@ function MyProfile() {
           </div>
 
           {/* Payment History */}
-          <div
-            className={` ${
-              selectMenu === "my-paymenthistory" ? "block" : "hidden"
-            }`}
-          >
-            <div className="bg-white dark:bg-base-100 border border-base-300 p-4 rounded-xl">
-              <h1 className="font-semibold text-xl mb-3">
-                To'lovlar tarixi
-              </h1>
+          <div className={`pb-28 ${ selectMenu === "my-paymenthistory" ? "block" : "hidden" }`} >
+            <div className="bg-base-100 border border-base-300 p-4 rounded-xl">
+              <h1 className="font-semibold text-xl mb-3">To'lovlar tarixi</h1>
               <div className="grid grid-cols-1 md:table w-full gap-3 overflow-y-auto">
+
                 <div className="hidden md:table-header-group  bg-[#F5FAFF] dark:bg-[#2b3656] text-sky-500 rounded-2xl font-semibold">
                   <div className="table-row">
                     <div className="table-cell px-2 py-4">KURS NOMI</div>
@@ -469,9 +444,7 @@ function MyProfile() {
                     <span className="text-sky-500 font-semibold md:hidden">
                       SANA
                     </span>
-                    <span>
-                      28.11.2024
-                    </span>
+                    <span>28.11.2024</span>
                   </div>
 
                   <div className="flex justify-between md:table-cell md:p-2">
@@ -485,9 +458,7 @@ function MyProfile() {
                     <span className="text-sky-500 font-semibold md:hidden">
                       TO'LOV TURI
                     </span>
-                    <span>
-                      Bir martalik toʻlov
-                    </span>
+                    <span>Bir martalik toʻlov</span>
                   </div>
 
                   <div className="flex justify-between md:table-cell md:p-2">
@@ -514,9 +485,7 @@ function MyProfile() {
                     <span className="text-sky-500 font-semibold md:hidden">
                       SANA
                     </span>
-                    <span>
-                      28.11.2024
-                    </span>
+                    <span>28.11.2024</span>
                   </div>
 
                   <div className="flex justify-between md:table-cell md:p-2">
@@ -530,16 +499,7 @@ function MyProfile() {
                     <span className="text-sky-500 font-semibold md:hidden">
                       TO'LOV TURI
                     </span>
-                    <span>
-                      Bir martalik toʻlov
-                    </span>
-                  </div>
-
-                  <div className="flex justify-between md:table-cell md:p-2">
-                    <span className="text-sky-500 font-semibold md:hidden">
-                      STATUS
-                    </span>
-                    <span className="text-amber-500">Jarayonda</span>
+                    <span>Bir martalik toʻlov</span>
                   </div>
 
                   <div className="flex justify-between md:table-cell md:p-2">
@@ -566,9 +526,7 @@ function MyProfile() {
                     <span className="text-sky-500 font-semibold md:hidden">
                       SANA
                     </span>
-                    <span>
-                      28.11.2024
-                    </span>
+                    <span>28.11.2024</span>
                   </div>
 
                   <div className="flex justify-between md:table-cell md:p-2">
@@ -582,9 +540,48 @@ function MyProfile() {
                     <span className="text-sky-500 font-semibold md:hidden">
                       TO'LOV TURI
                     </span>
-                    <span>
-                      Bir martalik toʻlov
+                    <span>Bir martalik toʻlov</span>
+                  </div>
+
+                  <div className="flex justify-between md:table-cell md:p-2">
+                    <span className="text-sky-500 font-semibold md:hidden">
+                      STATUS
                     </span>
+                    <span className="text-amber-500">Jarayonda</span>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 gap-2 md:table-row space-y-3 p-4 border border-sky-100/80 dark:border-sky-100/10 bg-sky-50/80 dark:bg-sky-50/10 rounded-md">
+                  <div className="flex justify-between md:table-cell md:p-2">
+                    <span className="text-sky-500 font-semibold md:hidden">
+                      KURS NOMI
+                    </span>
+                    <div>
+                      <span className="font-semibold">
+                        Professional Node.JS
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="flex justify-between md:table-cell md:p-2">
+                    <span className="text-sky-500 font-semibold md:hidden">
+                      SANA
+                    </span>
+                    <span>28.11.2024</span>
+                  </div>
+
+                  <div className="flex justify-between md:table-cell md:p-2">
+                    <span className="text-sky-500 font-semibold md:hidden">
+                      QIYMAT
+                    </span>
+                    <span>247.000 so'm</span>
+                  </div>
+
+                  <div className="flex justify-between md:table-cell md:p-2">
+                    <span className="text-sky-500 font-semibold md:hidden">
+                      TO'LOV TURI
+                    </span>
+                    <span>Bir martalik toʻlov</span>
                   </div>
 
                   <div className="flex justify-between md:table-cell md:p-2">
@@ -599,29 +596,25 @@ function MyProfile() {
           </div>
 
           {/* My Devices */}
-          <div
-            className={`${selectMenu === "my-devices" ? "block" : "hidden"}`}
-          >
+          <div className={`pb-28 ${selectMenu === "my-devices" ? "block" : "hidden"}`} >
             <div className="bg-white dark:bg-base-100 border border-base-300 p-4 rounded-xl ">
               <div>
                 <h1 className="font-semibold text-xl">Faol qurilmalar</h1>
                 <p className=" mt-4 font-light text-[13px]">
-                  Siz bir vaqtning oʻzida faqat 2ta qurilma orqali taʻlim
-                  olishingiz mumkin.
+                  Siz bir vaqtning oʻzida faqat 2ta qurilma orqali taʻlim olishingiz mumkin.
                   <br />
-                  Ilovalarni uchinchi qurilmada faollashtirish uchun avval
-                  mavjud ikkita qurilma lardan birini oʻchirishingiz kerak.
+                  Ilovalarni uchinchi qurilmada faollashtirish uchun avval mavjud ikkita qurilma lardan birini oʻchirishingiz kerak.
                 </p>
               </div>
 
-              <div role="alert" className="alert alert-warning mt-4">
-                <i className="bi bi-exclamation-circle-fill mr-3"></i>
+              <div role="alert" className="alert alert-warning mt-3 rounded-md text-amber-900">
+                <i className="bi bi-exclamation-circle-fill"></i>
                 <span>Faqatgina 2ta qurilmadan kirishingiz mumkin.</span>
               </div>
 
-              <div className="mt-4">
+              <div className="mt-3">
                 <table className="table">
-                  <thead className="hidden md:table-header-group bg-[#F5FAFF] dark:bg-[#2b3656]">
+                  <thead className="hidden md:table-header-group bg-sky-500/10">
                     <tr className="text-[#3F9CFB]">
                       <th>QURUIMA NOMI</th>
                       <th>FOALLASHTIRILGAAN SANA</th>
@@ -629,16 +622,16 @@ function MyProfile() {
                     </tr>
                   </thead>
 
-                  <tbody className=" space-y-2">
-                    <tr className="flex flex-col md:table-row">
+                  <tbody className="space-y-3">
+                    <tr className="flex flex-col md:table-row border border-sky-100/80 dark:border-sky-100/10 bg-sky-50/80 dark:bg-sky-50/10 rounded-md">
                       <td className="flex flex-col md:flex-row md:items-center md:table-cell p-4">
-                        <div className="flex items-start">
+                        <div className="flex items-center">
                           <i className="bi bi-laptop p-2 rounded-md text-xl inline-flex items-center justify-center bg-sky-500"></i>
                           <div className="ml-3 w-full">
                             <h1 className="font-medium text-nowrap">
                               Mac OS 10.15.7, Chrome 133
                             </h1>
-                            <div className="mt-1 gap-2 flex md:items-center md:gap-2">
+                            <div className="flex md:items-center gap-2">
                               <p className="text-green-500 text-xs">
                                 Mazkur qurilma
                               </p>
@@ -652,16 +645,11 @@ function MyProfile() {
                       <td className="hidden md:table-cell">
                         11:05:01, 04.03.2025
                       </td>
-                      <td className="">
-                        <div className="mt-3 md:mt-0 flex md:justify-start justify-end">
+                      <td>
+                        <div className="flex md:justify-start justify-end">
                           <button
-                            className="btn w-full p-3  flex justify-center items-center border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600"
-                            onClick={() =>
-                              document
-                                .getElementById("delete_device")
-                                .showModal()
-                            }
-                          >
+                            className="btn w-full flex justify-center items-center border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600"
+                            onClick={() => document .getElementById("delete_device") .showModal() }>
                             <i className="bi bi-trash-fill flex justify-center items-center text-red-500 mr-1"></i>
                             <span>Delete</span>
                           </button>
@@ -669,20 +657,19 @@ function MyProfile() {
                       </td>
                     </tr>
 
-                    <tr className="flex flex-col md:table-row  ">
+                    <tr className="flex flex-col md:table-row border border-sky-100/80 dark:border-sky-100/10 bg-sky-50/80 dark:bg-sky-50/10 rounded-md">
                       <td className="flex flex-col md:flex-row md:items-center md:table-cell p-4">
-                        <div className="flex items-start">
-                          <i className="bi bi-phone p-2 rounded-md text-xl inline-flex items-center justify-center bg-sky-500"></i>
+                        <div className="flex items-center">
+                          <i className="bi bi-laptop p-2 rounded-md text-xl inline-flex items-center justify-center bg-sky-500"></i>
                           <div className="ml-3 w-full">
                             <h1 className="font-medium text-nowrap">
-                              {" "}
-                              Iphone 16.15.7, Chrome 133
+                              Mac OS 10.15.7, Chrome 133
                             </h1>
-                            <div className="mt-1 gap-2 flex md:items-center md:gap-2">
+                            <div className="flex md:items-center gap-2">
                               <p className="text-green-500 text-xs">
                                 Mazkur qurilma
                               </p>
-                              <span className="text-xs  md:hidden block">
+                              <span className="text-xs md:hidden block">
                                 11:05:01, 04.03.2025
                               </span>
                             </div>
@@ -692,16 +679,45 @@ function MyProfile() {
                       <td className="hidden md:table-cell">
                         11:05:01, 04.03.2025
                       </td>
-                      <td className="">
-                        <div className="mt-3 md:mt-0 flex md:justify-start justify-end">
+                      <td>
+                        <div className="flex md:justify-start justify-end">
                           <button
-                            className="btn w-full p-4  flex justify-center items-center border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600"
-                            onClick={() =>
-                              document
-                                .getElementById("delete_device")
-                                .showModal()
-                            }
-                          >
+                            className="btn w-full flex justify-center items-center border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600"
+                            onClick={() => document .getElementById("delete_device") .showModal() }>
+                            <i className="bi bi-trash-fill flex justify-center items-center text-red-500 mr-1"></i>
+                            <span>Delete</span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr className="flex flex-col md:table-row border border-sky-100/80 dark:border-sky-100/10 bg-sky-50/80 dark:bg-sky-50/10 rounded-md">
+                      <td className="flex flex-col md:flex-row md:items-center md:table-cell p-4">
+                        <div className="flex items-center">
+                          <i className="bi bi-laptop p-2 rounded-md text-xl inline-flex items-center justify-center bg-sky-500"></i>
+                          <div className="ml-3 w-full">
+                            <h1 className="font-medium text-nowrap">
+                              Mac OS 10.15.7, Chrome 133
+                            </h1>
+                            <div className="flex md:items-center gap-2">
+                              <p className="text-green-500 text-xs">
+                                Mazkur qurilma
+                              </p>
+                              <span className="text-xs md:hidden block">
+                                11:05:01, 04.03.2025
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td className="hidden md:table-cell">
+                        11:05:01, 04.03.2025
+                      </td>
+                      <td>
+                        <div className="flex md:justify-start justify-end">
+                          <button
+                            className="btn w-full flex justify-center items-center border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600"
+                            onClick={() => document .getElementById("delete_device") .showModal() }>
                             <i className="bi bi-trash-fill flex justify-center items-center text-red-500 mr-1"></i>
                             <span>Delete</span>
                           </button>

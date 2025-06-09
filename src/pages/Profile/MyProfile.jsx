@@ -442,7 +442,7 @@ function MyProfile() {
               <h1 className="font-semibold text-xl mb-3">
                 To'lovlar tarixi
               </h1>
-              <div className="grid grid-cols-1 md:table w-full gap-3">
+              <div className="grid grid-cols-1 md:table w-full gap-3 overflow-y-auto">
                 <div className="hidden md:table-header-group  bg-[#F5FAFF] dark:bg-[#2b3656] text-sky-500 rounded-2xl font-semibold">
                   <div className="table-row">
                     <div className="table-cell px-2 py-4">KURS NOMI</div>
@@ -450,6 +450,103 @@ function MyProfile() {
                     <div className="table-cell px-2 py-4">QIYMAT</div>
                     <div className="table-cell px-2 py-4">TO'LOV TURI</div>
                     <div className="table-cell px-2 py-4">STATUS</div>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 gap-2 md:table-row space-y-3 p-4 border border-sky-100/80 dark:border-sky-100/10 bg-sky-50/80 dark:bg-sky-50/10 rounded-md">
+                  <div className="flex justify-between md:table-cell md:p-2">
+                    <span className="text-sky-500 font-semibold md:hidden">
+                      KURS NOMI
+                    </span>
+                    <div>
+                      <span className="font-semibold">
+                        Professional Node.JS
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="flex justify-between md:table-cell md:p-2">
+                    <span className="text-sky-500 font-semibold md:hidden">
+                      SANA
+                    </span>
+                    <span>
+                      28.11.2024
+                    </span>
+                  </div>
+
+                  <div className="flex justify-between md:table-cell md:p-2">
+                    <span className="text-sky-500 font-semibold md:hidden">
+                      QIYMAT
+                    </span>
+                    <span>247.000 so'm</span>
+                  </div>
+
+                  <div className="flex justify-between md:table-cell md:p-2">
+                    <span className="text-sky-500 font-semibold md:hidden">
+                      TO'LOV TURI
+                    </span>
+                    <span>
+                      Bir martalik toʻlov
+                    </span>
+                  </div>
+
+                  <div className="flex justify-between md:table-cell md:p-2">
+                    <span className="text-sky-500 font-semibold md:hidden">
+                      STATUS
+                    </span>
+                    <span className="text-amber-500">Jarayonda</span>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 gap-2 md:table-row space-y-3 p-4 border border-sky-100/80 dark:border-sky-100/10 bg-sky-50/80 dark:bg-sky-50/10 rounded-md">
+                  <div className="flex justify-between md:table-cell md:p-2">
+                    <span className="text-sky-500 font-semibold md:hidden">
+                      KURS NOMI
+                    </span>
+                    <div>
+                      <span className="font-semibold">
+                        Professional Node.JS
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="flex justify-between md:table-cell md:p-2">
+                    <span className="text-sky-500 font-semibold md:hidden">
+                      SANA
+                    </span>
+                    <span>
+                      28.11.2024
+                    </span>
+                  </div>
+
+                  <div className="flex justify-between md:table-cell md:p-2">
+                    <span className="text-sky-500 font-semibold md:hidden">
+                      QIYMAT
+                    </span>
+                    <span>247.000 so'm</span>
+                  </div>
+
+                  <div className="flex justify-between md:table-cell md:p-2">
+                    <span className="text-sky-500 font-semibold md:hidden">
+                      TO'LOV TURI
+                    </span>
+                    <span>
+                      Bir martalik toʻlov
+                    </span>
+                  </div>
+
+                  <div className="flex justify-between md:table-cell md:p-2">
+                    <span className="text-sky-500 font-semibold md:hidden">
+                      STATUS
+                    </span>
+                    <span className="text-amber-500">Jarayonda</span>
+                  </div>
+
+                  <div className="flex justify-between md:table-cell md:p-2">
+                    <span className="text-sky-500 font-semibold md:hidden">
+                      STATUS
+                    </span>
+                    <span className="text-amber-500">Jarayonda</span>
                   </div>
                 </div>
 

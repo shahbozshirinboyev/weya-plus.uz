@@ -428,7 +428,7 @@ function MyProfile() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 gap-2 md:table-row space-y-3 p-4 border border-sky-100/80 dark:border-sky-100/10 bg-sky-50/80 dark:bg-sky-50/10 rounded-md">
+                <div className="grid grid-cols-1 gap-2 md:table-row space-y-3 p-4 border border-sky-100/80 dark:border-sky-100/10 bg-sky-50/80 dark:bg-sky-50/10 rounded-md cursor-pointer hover:bg-sky-100 hover:dark:bg-sky-50/20">
                   <div className="flex justify-between md:table-cell md:p-2">
                     <span className="text-sky-500 font-semibold md:hidden">
                       KURS NOMI
@@ -469,14 +469,14 @@ function MyProfile() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 gap-2 md:table-row space-y-3 p-4 border border-sky-100/80 dark:border-sky-100/10 bg-sky-50/80 dark:bg-sky-50/10 rounded-md">
+                <div className="grid grid-cols-1 gap-2 md:table-row space-y-3 p-4 border border-sky-100/80 dark:border-sky-100/10 bg-sky-50/80 dark:bg-sky-50/10 rounded-md cursor-pointer hover:bg-sky-100 hover:dark:bg-sky-50/20">
                   <div className="flex justify-between md:table-cell md:p-2">
                     <span className="text-sky-500 font-semibold md:hidden">
                       KURS NOMI
                     </span>
                     <div>
                       <span className="font-semibold">
-                        Professional Node.JS
+                        Full Stack Python
                       </span>
                     </div>
                   </div>
@@ -510,14 +510,14 @@ function MyProfile() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 gap-2 md:table-row space-y-3 p-4 border border-sky-100/80 dark:border-sky-100/10 bg-sky-50/80 dark:bg-sky-50/10 rounded-md">
+                <div className="grid grid-cols-1 gap-2 md:table-row space-y-3 p-4 border border-sky-100/80 dark:border-sky-100/10 bg-sky-50/80 dark:bg-sky-50/10 rounded-md cursor-pointer hover:bg-sky-100 hover:dark:bg-sky-50/20">
                   <div className="flex justify-between md:table-cell md:p-2">
                     <span className="text-sky-500 font-semibold md:hidden">
                       KURS NOMI
                     </span>
                     <div>
                       <span className="font-semibold">
-                        Professional Node.JS
+                        Git & Github
                       </span>
                     </div>
                   </div>
@@ -551,14 +551,14 @@ function MyProfile() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 gap-2 md:table-row space-y-3 p-4 border border-sky-100/80 dark:border-sky-100/10 bg-sky-50/80 dark:bg-sky-50/10 rounded-md">
+                <div className="grid grid-cols-1 gap-2 md:table-row space-y-3 p-4 border border-sky-100/80 dark:border-sky-100/10 bg-sky-50/80 dark:bg-sky-50/10 rounded-md cursor-pointer hover:bg-sky-100 hover:dark:bg-sky-50/20">
                   <div className="flex justify-between md:table-cell md:p-2">
                     <span className="text-sky-500 font-semibold md:hidden">
                       KURS NOMI
                     </span>
                     <div>
                       <span className="font-semibold">
-                        Professional Node.JS
+                        Graphic Designer
                       </span>
                     </div>
                   </div>
@@ -616,14 +616,14 @@ function MyProfile() {
                 <table className="table">
                   <thead className="hidden md:table-header-group bg-sky-500/10">
                     <tr className="text-[#3F9CFB]">
-                      <th>QURUIMA NOMI</th>
-                      <th>FOALLASHTIRILGAAN SANA</th>
+                      <th>QURILMA NOMI</th>
+                      <th>FOALLASHTIRILGAN SANA</th>
                       <th>HARAKARLAR</th>
                     </tr>
                   </thead>
 
                   <tbody className="space-y-3">
-                    <tr className="flex flex-col md:table-row border border-sky-100/80 dark:border-sky-100/10 bg-sky-50/80 dark:bg-sky-50/10 rounded-md">
+                    <tr className="flex flex-col md:table-row border border-sky-100/80 dark:border-sky-100/10 bg-sky-50/80 dark:bg-sky-50/10 rounded-md cursor-pointer hover:bg-sky-100 hover:dark:bg-sky-50/20">
                       <td className="flex flex-col md:flex-row md:items-center md:table-cell p-4">
                         <div className="flex items-center">
                           <i className="bi bi-laptop p-2 rounded-md text-xl inline-flex items-center justify-center bg-sky-500"></i>
@@ -657,13 +657,13 @@ function MyProfile() {
                       </td>
                     </tr>
 
-                    <tr className="flex flex-col md:table-row border border-sky-100/80 dark:border-sky-100/10 bg-sky-50/80 dark:bg-sky-50/10 rounded-md">
+                    <tr className="flex flex-col md:table-row border border-sky-100/80 dark:border-sky-100/10 bg-sky-50/80 dark:bg-sky-50/10 rounded-md cursor-pointer hover:bg-sky-100 hover:dark:bg-sky-50/20">
                       <td className="flex flex-col md:flex-row md:items-center md:table-cell p-4">
                         <div className="flex items-center">
                           <i className="bi bi-laptop p-2 rounded-md text-xl inline-flex items-center justify-center bg-sky-500"></i>
                           <div className="ml-3 w-full">
                             <h1 className="font-medium text-nowrap">
-                              Mac OS 10.15.7, Chrome 133
+                              Windows OS, Microsoft Edge 156
                             </h1>
                             <div className="flex md:items-center gap-2">
                               <p className="text-green-500 text-xs">
@@ -691,13 +691,13 @@ function MyProfile() {
                       </td>
                     </tr>
 
-                    <tr className="flex flex-col md:table-row border border-sky-100/80 dark:border-sky-100/10 bg-sky-50/80 dark:bg-sky-50/10 rounded-md">
+                    <tr className="flex flex-col md:table-row border border-sky-100/80 dark:border-sky-100/10 bg-sky-50/80 dark:bg-sky-50/10 rounded-md cursor-pointer hover:bg-sky-100 hover:dark:bg-sky-50/20">
                       <td className="flex flex-col md:flex-row md:items-center md:table-cell p-4">
                         <div className="flex items-center">
                           <i className="bi bi-laptop p-2 rounded-md text-xl inline-flex items-center justify-center bg-sky-500"></i>
                           <div className="ml-3 w-full">
                             <h1 className="font-medium text-nowrap">
-                              Mac OS 10.15.7, Chrome 133
+                              Iphone 13.3.1 Pro
                             </h1>
                             <div className="flex md:items-center gap-2">
                               <p className="text-green-500 text-xs">
